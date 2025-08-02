@@ -2,139 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prestige Griffin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --maroon: #6F0E0B;
+      --gold: #C99E47;
+      --white: #fff;
+    }
+
+    body, html {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0b0b0b;
-      color: #f5e8c7;
-      overflow-x: hidden;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--maroon);
+      color: var(--white);
+      overflow: hidden;
     }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: rgba(15, 15, 15, 0.95);
-      position: sticky;
+
+    .splash {
+      position: fixed;
       top: 0;
-      z-index: 999;
-      border-bottom: 1px solid #e2ba4c;
-    }
-    nav a {
-      color: #e2ba4c;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #fff6d4;
-    }
-    .hero {
+      left: 0;
+      width: 100%;
       height: 100vh;
+      background-color: var(--maroon);
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeOut 3s ease forwards 3s;
+    }
+
+    .splash img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .splash h1 {
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
       text-align: center;
-      background: radial-gradient(circle at center, #2c0c0b 0%, #000 100%);
+      margin: 0;
     }
-    .hero h1 {
-      font-size: 3.5rem;
-      color: #e2ba4c;
-      margin-bottom: 1rem;
-      animation: fadeInDown 1s ease-out;
+
+    .main {
+      display: none;
+      animation: fadeIn 1s ease forwards;
+      padding: 40px;
     }
-    .hero p {
-      font-size: 1.25rem;
-      color: #f0e6c0;
-      max-width: 800px;
-      animation: fadeInUp 1.2s ease-out;
+
+    .main h2 {
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
     }
+
     .section {
-      padding: 5rem 2rem;
-      max-width: 1080px;
-      margin: auto;
+      margin-bottom: 40px;
     }
-    .section h2 {
-      font-size: 2.5rem;
-      color: #e2ba4c;
-      text-align: center;
-      margin-bottom: 1.5rem;
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
-    .section p {
-      color: #f5d88c;
-      font-size: 1.1rem;
-      line-height: 1.8em;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-    .glass {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 2rem;
-      margin: 2rem 0;
-      backdrop-filter: blur(8px);
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div><img src="prestige_griffin_logo_maroon.png" alt="Prestige Griffin Logo" style="height:60px;"></div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#finance">Finance</a>
-      <a href="#tech">Technology</a>
-      <a href="#defense">Defense</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Prestige Griffin</h1>
-    <p>Empowering Innovation in Finance, Technology & Defense</p>
-  </section>
+  <div class="splash" id="splash">
+    <img src="prestige_griffin_logo_maroon.png" alt="Prestige Griffin Logo" />
+    <h1>Finance &nbsp;|&nbsp; Technology &nbsp;|&nbsp; Defence</h1>
+  </div>
 
-  <section id="finance" class="section glass">
-    <h2>Finance & Banking</h2>
-    <p>
-      Prestige Griffin connects ambitious ventures and visionary founders with elite capital partners. Our firm specializes in facilitating Series A fundraising through strategic investor matchmaking and financial structuring. <br><br>
-      We also provide exclusive access to Level 25 private banking services, tailored for ultra-high-net-worth individuals and institutional entities requiring discreet, sovereign-grade financial solutions.
-    </p>
-  </section>
+  <div class="main" id="main">
+    <section class="section">
+      <h2>Finance & Banking</h2>
+      <p>
+        Prestige Griffin provides strategic access to capital and elite financial services. 
+        We connect ventures seeking Series A funding with high-impact investors, and facilitate access to exclusive Level 25 banking solutions for individuals and institutions navigating global finance at the highest level.
+      </p>
+    </section>
 
-  <section id="tech" class="section glass">
-    <h2>Technology Consulting</h2>
-    <p>
-      From ideation to execution, Prestige Griffin engineers fintech products and neobanking platforms with speed and precision. We provide expertise in full-stack development, mobile and web banking, UI/UX design, and agile product management. <br><br>
-      Whether you’re building a prototype or scaling globally, we deliver the strategy, design, and technical execution to bring your digital vision to life.
-    </p>
-  </section>
+    <section class="section">
+      <h2>Technology Consulting</h2>
+      <p>
+        Our technology division specializes in end-to-end development of fintech ecosystems — including neobanking platforms, web and mobile banking applications. 
+        We offer expert services in UI/UX design, product strategy, agile project delivery, and full lifecycle management — from concept to working MVP or enterprise-grade implementation.
+      </p>
+    </section>
 
-  <section id="defense" class="section glass">
-    <h2>Defense & Arms Advisory</h2>
-    <p>
-      Operating at the highest levels of discretion and compliance, Prestige Griffin facilitates confidential transactions between qualified buyers and certified defense suppliers. <br><br>
-      Our team connects clients with access to tactical equipment, weaponry, and military-grade logistics while ensuring every transaction is governed by integrity and security.
-    </p>
-  </section>
+    <section class="section">
+      <h2>Defense & Arms Advisory</h2>
+      <p>
+        Acting as a trusted intermediary, we connect vetted buyers and suppliers of tactical equipment and military-grade weaponry. 
+        Our defense division ensures discreet, secure, and compliant transactions between defense contractors and sovereign procurement channels.
+      </p>
+    </section>
+  </div>
 
-  <footer id="contact" class="section" style="text-align:center;">
-    <p style="color:#888">© 2025 Prestige Griffin. All rights reserved.</p>
-  </footer>
+  <script>
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('main').style.display = 'block';
+    }, 6000); // splash stays for 6 seconds
+  </script>
 </body>
 </html>
