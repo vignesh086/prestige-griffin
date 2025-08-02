@@ -2,144 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prestige Griffin – Contact</title>
+  <title>Contact | Prestige Griffin</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #2c0c0b;
-      color: #e2ba4c;
-      background-image: radial-gradient(circle, rgba(117,20,20,0.2) 0%, rgba(0,0,0,0.9) 100%);
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      background-color: #2c0c0b;
-      border-bottom: 1px solid #e2ba4c;
-    }
-    nav a {
-      color: #e2ba4c;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .button {
-      background-color: #e2ba4c;
-      color: #111;
-      padding: 0.75rem 1.25rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: linear-gradient(to bottom, #7c0a02, #1a1a1a); color: #f0d9b5; }
+    header { background: radial-gradient(circle, #800000 0%, #1a0000 100%); text-align: center; padding: 60px 20px 40px; }
+    .logo { width: 180px; }
+    nav a { margin: 0 15px; text-decoration: none; color: #f0d9b5; font-weight: bold; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { border-color: #ffd700; }
+    .form { padding: 40px 20px; text-align: center; }
+    input, textarea { width: 90%; padding: 12px; margin: 8px 0; border-radius: 8px; border: none; }
+    button { background: #ffd700; color: #1a1a1a; padding: 12px 25px; border: none; font-size: 1rem; border-radius: 30px; cursor: pointer; }
+    footer { text-align: center; padding: 20px; background: #120202; color: #999; }
   </style>
 </head>
 <body>
   <header>
-    <div><img src="prestige_griffin_logo_maroon.png" alt="Prestige Griffin Logo" style="max-height:80px;"></div>
+    <img src="PG.png" alt="Prestige Griffin Logo" class="logo" />
+    <h1>Contact Us</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
-  
-    <main style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4rem 2rem;max-width:1080px;margin:auto;">
-      
-  <main>
-<section style="text-align:center; padding-top:2rem;">
-  <h2 style="font-size:2.75rem; margin-bottom:2rem; color:#e2ba4c;">Contact Us</h2>
-  <div style="display:flex;justify-content:center;padding:1rem;">
-    <form style="
-      width:100%;
-      max-width:640px;
-      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
-      border-radius: 20px;
-      padding: 2rem;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-      animation: fadeInUp 1s ease-out;
-      box-sizing: border-box;
-      margin: auto;
-    ">
-      <input type="text" placeholder="Full Name" required style="
-        width: 100%;
-        padding: 1rem;
-        border: 1px solid #e2ba4c;
-        margin: 0.75rem 0;
-        border-radius: 12px;
-        background: rgba(0,0,0,0.6);
-        color: #f5d88c;
-        font-size: 1rem;
-        box-sizing: border-box;
-      " />
-      <input type="email" placeholder="Email Address" required style="
-        width: 100%;
-        padding: 1rem;
-        border: 1px solid #e2ba4c;
-        margin: 0.75rem 0;
-        border-radius: 12px;
-        background: rgba(0,0,0,0.6);
-        color: #f5d88c;
-        font-size: 1rem;
-        box-sizing: border-box;
-      " />
-      <input type="text" placeholder="Organization" style="
-        width: 100%;
-        padding: 1rem;
-        border: 1px solid #e2ba4c;
-        margin: 0.75rem 0;
-        border-radius: 12px;
-        background: rgba(0,0,0,0.6);
-        color: #f5d88c;
-        font-size: 1rem;
-        box-sizing: border-box;
-      " />
-      <textarea placeholder="Message / Requirements" rows="5" style="
-        width: 100%;
-        padding: 1rem;
-        border: 1px solid #e2ba4c;
-        margin: 0.75rem 0;
-        border-radius: 12px;
-        background: rgba(0,0,0,0.6);
-        color: #f5d88c;
-        font-size: 1rem;
-        resize: vertical;
-        box-sizing: border-box;
-      "></textarea>
-      <label style="display: flex; align-items: center; gap: 10px; color: #e2ba4c; margin-top: 0.75rem;">
-        <input type="checkbox" /> I require an NDA before engagement
-      </label>
-      <button type="submit" class="button" style="
-        width: 100%;
-        background: #e2ba4c;
-        color: #111;
-        font-size: 1.1rem;
-        font-weight: bold;
-        border-radius: 999px;
-        margin-top: 1.5rem;
-        padding: 0.9rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      ">Send Message</button>
+  <section class="form">
+    <h2>Send us a message</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required /><br />
+      <input type="email" placeholder="Your Email" required /><br />
+      <textarea placeholder="Your Message" rows="5" required></textarea><br />
+      <button type="submit">Send</button>
     </form>
-  </div>
-</section>
-
-<style>
-@keyframes fadeInUp {
-  from { transform: translateY(25px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-</style>
-</main>
-</body>
-</html>
-
-    </main>
-    
+  </section>
+  <footer>&copy; 2025 Prestige Griffin. All rights reserved.</footer>
 </body>
 </html>
