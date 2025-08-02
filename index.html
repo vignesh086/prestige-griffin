@@ -2,58 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Home | Prestige Griffin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prestige Griffin</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #7c0a02, #1a1a1a);
-      color: #f0d9b5;
-    }
-    header {
-      background: radial-gradient(circle, #800000 0%, #1a0000 100%);
-      text-align: center;
-      padding: 60px 20px 40px;
-    }
-    .logo { width: 180px; }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #f0d9b5;
-      font-weight: bold;
-      border-bottom: 2px solid transparent;
-    }
-    nav a:hover, nav a.active {
-      border-color: #ffd700;
-    }
-    .cta {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #120202;
-      color: #999;
-    }
+    body { font-family: 'Inter', sans-serif; }
+    .text-gold-400 { color: #FFD700; }
   </style>
 </head>
-<body>
-  <header>
-    <img src="PG.png" alt="Prestige Griffin Logo" class="logo" />
-    <h1>Prestige Griffin</h1>
-    <p>Strategic · Elite · Unrivaled</p>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+<body class="bg-black text-white">
+  <header class="text-center py-10 border-b border-gray-800">
+    <img src="PG.png" alt="Prestige Griffin Logo" class="mx-auto w-24 md:w-32 mb-4" />
+    <h1 class="text-4xl md:text-5xl font-bold text-gold-400">Prestige Griffin</h1>
+    <p class="text-gray-400 mt-2">Strategic Capital · Fintech Innovation · Elite Defense</p>
+    <nav class="mt-6">
+      <a href="index.html" class="mx-4 text-gold-400 font-semibold">Home</a>
+      <a href="about.html" class="mx-4 text-gray-400">About</a>
+      <a href="services.html" class="mx-4 text-gray-400">Services</a>
+      <a href="contact.html" class="mx-4 text-gray-400">Contact</a>
     </nav>
   </header>
-  <section class="cta">
-    <h2>Welcome to Prestige Griffin</h2>
-    <p>Elite access to capital, disruptive technology, and sovereign-level defense solutions.</p>
+
+  <section class="text-center py-28 bg-gradient-to-b from-black via-zinc-900 to-black" data-aos="fade-down">
+    <h2 class="text-4xl font-extrabold mb-4 text-gold-400">Elite Access. Global Influence.</h2>
+    <p class="text-gray-300 max-w-xl mx-auto text-lg">
+      Welcome to Prestige Griffin — where high-impact capital meets cutting-edge fintech and world-class defense strategy.
+    </p>
   </section>
-  <footer>&copy; 2025 Prestige Griffin. All rights reserved.</footer>
+
+  <footer class="text-center py-6 text-gray-500 border-t border-gray-800 mt-16">
+    &copy; 2025 Prestige Griffin. All rights reserved.
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
