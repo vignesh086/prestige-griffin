@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prestige Griffin – Services</title>
+  <title>Services – Prestige Griffin</title>
+  <meta name="description" content="Explore the full range of services offered by Prestige Griffin.">
   <style>
     body {
       margin: 0;
@@ -25,20 +26,42 @@
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
-    .button {
-      background-color: #e2ba4c;
-      color: #111;
-      padding: 0.75rem 1.25rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: bold;
+    nav a:hover {
+      color: #f5d88c;
+    }
+    main {
+      max-width: 1080px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+    h1 {
+      font-size: 2.75rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: auto;
+    }
+    li {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #e2ba4c;
+      color: #f5d88c;
+      font-size: 1.05rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <div><img src="prestige_griffin_logo_maroon.png" alt="Prestige Griffin Logo" style="max-height:80px;"></div>
+    <div>
+      <img src="prestige_griffin_logo_maroon.png" alt="Prestige Griffin logo" style="max-height:80px;">
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -46,60 +69,15 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  
-    <main style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4rem 2rem;max-width:1080px;margin:auto;">
-      
+
   <main>
-<section style="text-align:center;padding-top:2rem;">
-  <h2 style="font-size:2.75rem;margin-bottom:2rem;color:#e2ba4c;">Our Services</h2>
-  <p style="color:#f0e6c0;margin-bottom:3rem;font-size:1.1rem;">At the intersection of innovation and execution across fintech, technology, and defense.</p>
-
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;">
-
-    <div style="flex:1 1 300px;max-width:350px;background:linear-gradient(to bottom,#740f0c,#2c0c0b);border:1px solid #e2ba4c;border-radius:20px;padding:2rem;backdrop-filter:blur(6px);color:#f5d88c;box-shadow:0 10px 25px rgba(0,0,0,0.5);transition:transform 0.3s ease;animation:floatCard 2s ease forwards;">
-      <h3 style="color:#fff;font-size:1.5rem;">🔐 Fintech & Banking</h3>
-      <ul style="text-align:left;line-height:1.8em;margin-top:1rem;">
-        <li>Digital banking architecture</li>
-        <li>Regulatory & compliance advisory</li>
-        <li>Embedded finance & onboarding flows</li>
-        <li>API integration & digital KYC</li>
-      </ul>
-    </div>
-
-    <div style="flex:1 1 300px;max-width:350px;background:linear-gradient(to bottom,#740f0c,#2c0c0b);border:1px solid #e2ba4c;border-radius:20px;padding:2rem;backdrop-filter:blur(6px);color:#f5d88c;box-shadow:0 10px 25px rgba(0,0,0,0.5);transition:transform 0.3s ease;animation:floatCard 2.3s ease forwards;">
-      <h3 style="color:#fff;font-size:1.5rem;">💻 Technology & Design</h3>
-      <ul style="text-align:left;line-height:1.8em;margin-top:1rem;">
-        <li>End-to-end product strategy</li>
-        <li>UI/UX for high-performance apps</li>
-        <li>Mobile & web development</li>
-        <li>Cross-platform infrastructure</li>
-      </ul>
-    </div>
-
-    <div style="flex:1 1 300px;max-width:350px;background:linear-gradient(to bottom,#740f0c,#2c0c0b);border:1px solid #e2ba4c;border-radius:20px;padding:2rem;backdrop-filter:blur(6px);color:#f5d88c;box-shadow:0 10px 25px rgba(0,0,0,0.5);transition:transform 0.3s ease;animation:floatCard 2.6s ease forwards;">
-      <h3 style="color:#fff;font-size:1.5rem;">🛡 Arms & Ammunition Advisory</h3>
-      <ul style="text-align:left;line-height:1.8em;margin-top:1rem;">
-        <li>Tactical procurement consulting</li>
-        <li>Equipment evaluation & usage protocols</li>
-        <li>Security & government-grade vetting</li>
-        <li>Defense training advisory</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<style>
-@keyframes floatCard {
-  0% { transform: translateY(60px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-</style>
-</main>
-</body>
-</html>
-
-    </main>
-    
+    <h1>Our Services</h1>
+    <ul>
+      <li><strong>Fintech Solutions</strong> – Core banking integrations, digital wallets, AML/KYC, and blockchain strategies.</li>
+      <li><strong>Tech & Product Design</strong> – UX/UI design, enterprise platforms, mobile apps, and web development.</li>
+      <li><strong>Defense Consulting</strong> – Secure systems architecture, surveillance technology, and strategic advisory.</li>
+      <li><strong>Cybersecurity</strong> – Threat modeling, penetration testing, zero-trust frameworks, and data protection protocols.</li>
+    </ul>
+  </main>
 </body>
 </html>
