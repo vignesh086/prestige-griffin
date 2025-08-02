@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prestige Griffin – Home</title>
+  <meta name="description" content="Prestige Griffin empowers innovation in finance, technology, and defense.">
+  <meta property="og:title" content="Prestige Griffin – Innovation in Finance, Tech & Defense">
+  <meta property="og:description" content="Partnering with government and private sector leaders to deliver secure, scalable, and strategic solutions.">
+  <meta property="og:image" content="URL_TO_YOUR_LOGO_OR_PREVIEW_IMAGE">
   <style>
     body {
       margin: 0;
@@ -25,6 +29,10 @@
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f5d88c;
     }
     .button {
       background-color: #e2ba4c;
@@ -33,12 +41,67 @@
       border-radius: 999px;
       text-decoration: none;
       font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #d4a534;
+      color: #000;
+    }
+    .button-outline {
+      background-color: #000;
+      color: #e2ba4c;
+      border: 2px solid #e2ba4c;
+    }
+    .button-outline:hover {
+      background-color: #2c0c0b;
+      color: #f5d88c;
+    }
+    main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      max-width: 1080px;
+      margin: auto;
+    }
+    section {
+      width: 100%;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+      color: #e2ba4c;
+      animation: fadeInDown 1s ease-out;
+    }
+    h2 {
+      font-size: 2.25rem;
+      text-align: center;
+      color: #e2ba4c;
+      animation: fadeInUp 1.8s ease-out;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7em;
+      color: #f5d88c;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <header>
-    <div><img src="prestige_griffin_logo_maroon.png" alt="Prestige Griffin Logo" style="max-height:80px;"></div>
+    <div>
+      <img src="prestige_griffin_logo_maroon.png" alt="Prestige Griffin logo with maroon and gold styling" style="max-height:80px;">
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -46,50 +109,30 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  
-    <main style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4rem 2rem;max-width:1080px;margin:auto;">
-      
+
   <main>
-<section style="text-align:center;padding-top:4rem;">
-  <h1 style="font-size:3.5rem;color:#e2ba4c;margin-bottom:1rem;animation:fadeInDown 1s ease-out;">
-    Prestige Griffin
-  </h1>
-  <p style="font-size:1.25rem;color:#f0e6c0;max-width:800px;margin:auto;animation:fadeInDown 1.2s ease-out;">
-    Empowering Innovation in Finance, Technology & Defense
-  </p>
-  <p style="margin-top:1.5rem;font-size:1.05rem;color:#f5d88c;animation:fadeInUp 1.4s ease-out;">
-    Partnering with government and private sector leaders to deliver secure, scalable, and strategic solutions.
-  </p>
-  <div style="margin-top:2.5rem;animation:fadeInUp 1.6s ease-out;">
-    <a href="services.html" class="button" style="margin:0 1rem;">Explore Services</a>
-    <a href="contact.html" class="button" style="margin:0 1rem;background:#000;color:#e2ba4c;border:2px solid #e2ba4c;">Contact Us</a>
-  </div>
-</section>
+    <section style="text-align:center; padding-top: 4rem;">
+      <h1>Prestige Griffin</h1>
+      <p style="font-size:1.25rem; max-width:800px; margin:auto; animation:fadeInDown 1.2s ease-out;">
+        Empowering Innovation in Finance, Technology & Defense
+      </p>
+      <p style="margin-top:1.5rem; font-size:1.05rem; animation:fadeInUp 1.4s ease-out;">
+        Partnering with government and private sector leaders to deliver secure, scalable, and strategic solutions.
+      </p>
+      <div style="margin-top:2.5rem; animation:fadeInUp 1.6s ease-out;">
+        <a href="services.html" class="button" style="margin: 0 1rem;">Explore Services</a>
+        <a href="contact.html" class="button button-outline" style="margin: 0 1rem;">Contact Us</a>
+      </div>
+    </section>
 
-<section style="margin-top:6rem;">
-  <h2 style="color:#e2ba4c;font-size:2.25rem;text-align:center;animation:fadeInUp 1.8s ease-out;">Who We Are</h2>
-  <p style="color:#f5d88c;text-align:center;max-width:850px;margin:auto;font-size:1.1rem;line-height:1.7em;padding-top:1rem;">
-    Prestige Griffin is a strategic consulting and development partner across three powerful verticals: 
-    <b>fintech and banking</b>, <b>technology and design</b>, and <b>arms and ammunition</b>.
-    We work with both government agencies and private sector leaders to help them innovate, operate securely, and scale intelligently.
-  </p>
-</section>
-
-<style>
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-</style>
-</main>
-</body>
-</html>
-
-    </main>
-    
+    <section style="margin-top: 6rem;">
+      <h2>Who We Are</h2>
+      <p style="text-align:center; max-width:850px; margin:auto; padding-top:1rem;">
+        Prestige Griffin is a strategic consulting and development partner across three powerful verticals: 
+        <b>fintech and banking</b>, <b>technology and design</b>, and <b>arms and ammunition</b>.
+        We work with both government agencies and private sector leaders to help them innovate, operate securely, and scale intelligently.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
