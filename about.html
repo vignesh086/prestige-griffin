@@ -2,35 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About | Prestige Griffin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Prestige Griffin</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    /* Same styling as index.html */
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: linear-gradient(to bottom, #7c0a02, #1a1a1a); color: #f0d9b5; }
-    header { background: radial-gradient(circle, #800000 0%, #1a0000 100%); text-align: center; padding: 60px 20px 40px; }
-    .logo { width: 180px; }
-    nav a { margin: 0 15px; text-decoration: none; color: #f0d9b5; font-weight: bold; border-bottom: 2px solid transparent; }
-    nav a:hover, nav a.active { border-color: #ffd700; }
-    .cta { padding: 40px 20px; text-align: center; }
-    footer { text-align: center; padding: 20px; background: #120202; color: #999; }
+    body { background-color: #800000; color: white; font-family: 'Poppins', sans-serif; }
+    .gold-text { color: #D4AF37; }
+    .section { padding-top: 5rem; padding-bottom: 5rem; }
   </style>
 </head>
 <body>
-  <header>
-    <img src="PG.png" alt="Prestige Griffin Logo" class="logo" />
-    <h1>About Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+
+<header class="bg-[#800000] fixed w-full z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold gold-text">Prestige Griffin</a>
+    <nav class="hidden md:flex space-x-6 text-white">
+      <a href="about.html" class="text-[#D4AF37]">About</a>
+      <a href="services.html" class="hover:text-[#D4AF37]">Services</a>
+      <a href="contact.html" class="hover:text-[#D4AF37]">Contact</a>
     </nav>
-  </header>
-  <section class="cta">
-    <p>
-      Prestige Griffin delivers high-impact financial services, innovative fintech ecosystems,
-      and elite defense solutions trusted by institutions and sovereign clients worldwide.
+  </div>
+</header>
+
+<section class="section text-center px-6 pt-24">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 gold-text">Who We Are</h2>
+    <p class="text-lg leading-relaxed text-white">
+      Prestige Griffin is a strategic digital consulting firm helping forward-thinking enterprises engineer scalable transformation through software, systems design, and operational clarity.<br><br>
+      Our teams combine elite technical acumen with business-first thinking to deliver meaningful outcomes — faster. We exist to empower the builders, rethinkers, and disruptors of tomorrow.
     </p>
-  </section>
-  <footer>&copy; 2025 Prestige Griffin. All rights reserved.</footer>
+  </div>
+</section>
+
 </body>
 </html>
