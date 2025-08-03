@@ -2,38 +2,260 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prestige Griffin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    body { background-color: #800000; color: white; font-family: 'Poppins', sans-serif; }
-    .gold-text { color: #D4AF37; }
-    .gold-bg { background-color: #D4AF37; color: black; }
-    .section { padding-top: 5rem; padding-bottom: 5rem; }
+    :root {
+      --maroon: #6F0E0B;
+      --gold: #C99E47;
+      --cream: #f5eac2;
+      --soft-gold: rgba(201, 158, 71, 0.15);
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--maroon);
+      color: var(--gold);
+      overflow-x: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--maroon);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      animation: fadeOut 2s ease-in-out forwards;
+      animation-delay: 3s;
+    }
+
+    .splash img {
+      max-width: 220px;
+      margin-bottom: 1rem;
+    }
+
+    .splash h1 {
+      font-size: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .main {
+      display: none;
+      position: relative;
+      z-index: 5;
+      animation: fadeIn 1s ease-in 3.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { display: block; opacity: 1; }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--maroon);
+      position: relative;
+      z-index: 5;
+    }
+
+    header img {
+      max-height: 60px;
+    }
+
+    nav a {
+      color: var(--gold);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 1rem auto;
+      color: var(--cream);
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+      color: var(--gold);
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--cream);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #1a0605;
+      color: var(--gold);
+    }
   </style>
 </head>
 <body>
-  <header class="bg-[#800000] fixed w-full z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="flex items-center space-x-3">
-        <img src="PG.png" alt="Prestige Griffin Logo" class="h-12 w-auto rounded-full border border-[#D4AF37]" />
-        <span class="text-2xl font-bold gold-text">Prestige Griffin</span>
-      </a>
-      <nav class="hidden md:flex space-x-6 text-white">
-        <a href="about.html" class="hover:text-[#D4AF37]">About</a>
-        <a href="services.html" class="hover:text-[#D4AF37]">Services</a>
-        <a href="contact.html" class="hover:text-[#D4AF37]">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="min-h-screen flex items-center justify-center text-center px-6 pt-24 section">
-    <div class="max-w-3xl">
-      <h1 class="text-5xl font-bold gold-text mb-6 leading-tight">Precision in Execution.<br> Power in Partnership.</h1>
-      <p class="text-xl text-white mb-8">We architect and accelerate digital change for the world’s most ambitious companies.</p>
-      <a href="contact.html" class="gold-bg text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">Get In Touch</a>
-    </div>
-  </section>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Splash Screen -->
+  <div class="splash">
+    <img src="PG.png" alt="Prestige Griffin Logo">
+    <h1>Finance • Technology • Defence</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header>
+      <img src="PG.png" alt="Prestige Griffin Logo">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Prestige Griffin</h1>
+      <p>
+        Empowering global innovation and elite partnerships across finance, technology, and defense. Our solutions are discreet, strategic, and meticulously executed for impact at the highest levels.
+      </p>
+    </section>
+
+    <section>
+      <h2>Finance & Banking</h2>
+      <p>
+        We facilitate Series A capital raises for high-growth ventures and provide privileged access to Level 25 banking services, tailored for clients requiring discrete wealth operations, liquidity movement, and global financial access.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technology Consulting</h2>
+      <p>
+        From ideation to deployment, we engineer financial and neobanking applications, build custom platforms, and deliver full-stack development, UI/UX, and agile product management services that bring fintech visions to life.
+      </p>
+    </section>
+
+    <section>
+      <h2>Defense & Arms Advisory</h2>
+      <p>
+        Prestige Griffin connects verified buyers and authorized global defense suppliers. We specialize in discreet transactions for tactical equipment and weaponry under full compliance with international arms trade regulations.
+      </p>
+    </section>
+
+    <footer>
+      &copy; 2025 Prestige Griffin. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- 3D Particle Background Script -->
+  <script>
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height, particles = [];
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.r = Math.random() * 2 + 1;
+        this.dx = (Math.random() - 0.5) * 0.5;
+        this.dy = (Math.random() - 0.5) * 0.5;
+      }
+
+      move() {
+        this.x += this.dx;
+        this.y += this.dy;
+        if (this.x < 0 || this.x > width) this.dx *= -1;
+        if (this.y < 0 || this.y > height) this.dy *= -1;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'var(--soft-gold)';
+        ctx.fill();
+      }
+    }
+
+    function initParticles(num = 100) {
+      particles = [];
+      for (let i = 0; i < num; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.move();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+
+    // Splash screen logic
+    setTimeout(() => {
+      document.querySelector('.splash').style.display = 'none';
+      document.querySelector('.main').style.display = 'block';
+    }, 4000);
+  </script>
+
 </body>
 </html>
