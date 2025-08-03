@@ -2,43 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Services | Prestige Griffin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Prestige Griffin</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: linear-gradient(to bottom, #7c0a02, #1a1a1a); color: #f0d9b5; }
-    header { background: radial-gradient(circle, #800000 0%, #1a0000 100%); text-align: center; padding: 60px 20px 40px; }
-    .logo { width: 180px; }
-    nav a { margin: 0 15px; text-decoration: none; color: #f0d9b5; font-weight: bold; border-bottom: 2px solid transparent; }
-    nav a:hover, nav a.active { border-color: #ffd700; }
-    .services { padding: 40px 20px; text-align: center; }
-    .service-card { background: #3d1a1a; border-radius: 12px; padding: 20px; margin: 20px auto; max-width: 500px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-    footer { text-align: center; padding: 20px; background: #120202; color: #999; }
+    body { background-color: #800000; color: white; font-family: 'Poppins', sans-serif; }
+    .gold-text { color: #D4AF37; }
+    .section { padding-top: 5rem; padding-bottom: 5rem; }
   </style>
 </head>
 <body>
-  <header>
-    <img src="PG.png" alt="Prestige Griffin Logo" class="logo" />
-    <h1>Our Services</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html" class="active">Services</a>
-      <a href="contact.html">Contact</a>
+
+<header class="bg-[#800000] fixed w-full z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-bold gold-text">Prestige Griffin</a>
+    <nav class="hidden md:flex space-x-6 text-white">
+      <a href="about.html" class="hover:text-[#D4AF37]">About</a>
+      <a href="services.html" class="text-[#D4AF37]">Services</a>
+      <a href="contact.html" class="hover:text-[#D4AF37]">Contact</a>
     </nav>
-  </header>
-  <section class="services">
-    <div class="service-card">
-      <h2>Finance & Banking</h2>
-      <p>Series A funding, elite investor access, and Level 25 banking for UHNWIs and institutions.</p>
+  </div>
+</header>
+
+<section class="section px-6 text-center pt-24">
+  <h2 class="text-3xl font-bold mb-12 gold-text">Our Services</h2>
+  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    <div class="p-6 border border-[#D4AF37] rounded-lg">
+      <h3 class="text-xl font-semibold gold-text mb-2">Digital Product Development</h3>
+      <p>We build digital tools that unlock new value, from mobile apps to enterprise-grade systems.</p>
     </div>
-    <div class="service-card">
-      <h2>Technology Consulting</h2>
-      <p>End-to-end fintech development — neobanking, mobile apps, UX design, MVPs.</p>
+    <div class="p-6 border border-[#D4AF37] rounded-lg">
+      <h3 class="text-xl font-semibold gold-text mb-2">Strategy & Transformation</h3>
+      <p>We partner with leadership to embed clarity, speed, and structure at every level.</p>
     </div>
-    <div class="service-card">
-      <h2>Defense & Arms Advisory</h2>
-      <p>Discreet arms brokerage and procurement for sovereign clients and defense contractors.</p>
+    <div class="p-6 border border-[#D4AF37] rounded-lg">
+      <h3 class="text-xl font-semibold gold-text mb-2">UX & Systems Design</h3>
+      <p>We turn complexity into elegant, scalable, human-centered solutions.</p>
     </div>
-  </section>
-  <footer>&copy; 2025 Prestige Griffin. All rights reserved.</footer>
+  </div>
+</section>
+
 </body>
 </html>
