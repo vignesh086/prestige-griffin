@@ -2,47 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services - Prestige Griffin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    body { background-color: #800000; color: white; font-family: 'Poppins', sans-serif; }
-    .gold-text { color: #D4AF37; }
-    .section { padding-top: 5rem; padding-bottom: 5rem; }
+    :root {
+      --maroon: #6F0E0B;
+      --gold: #C99E47;
+      --cream: #f5eac2;
+      --soft-gold: rgba(201, 158, 71, 0.15);
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--maroon);
+      color: var(--gold);
+      overflow-x: hidden;
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--maroon);
+      position: relative;
+      z-index: 5;
+    }
+    header img {
+      max-height: 100px;
+    }
+    nav a {
+      color: var(--gold);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+      color: var(--gold);
+    }
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--cream);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #1a0605;
+      color: var(--gold);
+    }
   </style>
 </head>
 <body>
-  <header class="bg-[#800000] fixed w-full z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="flex items-center space-x-3">
-        <img src="PG.png" alt="Prestige Griffin Logo" class="h-12 w-auto rounded-full border border-[#D4AF37]" />
-        <span class="text-2xl font-bold gold-text">Prestige Griffin</span>
-      </a>
-      <nav class="hidden md:flex space-x-6 text-white">
-        <a href="about.html" class="hover:text-[#D4AF37]">About</a>
-        <a href="services.html" class="text-[#D4AF37]">Services</a>
-        <a href="contact.html" class="hover:text-[#D4AF37]">Contact</a>
-      </nav>
-    </div>
-  </header>
+<canvas id="bg-canvas"></canvas>
+<header>
+  <img src="PG.png" alt="Prestige Griffin Logo" class="h-20 w-auto rounded-full border-2 border-[#D4AF37] shadow-lg" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <section class="section px-6 text-center pt-24">
-    <h2 class="text-3xl font-bold mb-12 gold-text">Our Services</h2>
-    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-      <div class="p-6 border border-[#D4AF37] rounded-lg">
-        <h3 class="text-xl font-semibold gold-text mb-2">Digital Product Development</h3>
-        <p>We build digital tools that unlock new value, from mobile apps to enterprise-grade systems.</p>
-      </div>
-      <div class="p-6 border border-[#D4AF37] rounded-lg">
-        <h3 class="text-xl font-semibold gold-text mb-2">Strategy & Transformation</h3>
-        <p>We partner with leadership to embed clarity, speed, and structure at every level.</p>
-      </div>
-      <div class="p-6 border border-[#D4AF37] rounded-lg">
-        <h3 class="text-xl font-semibold gold-text mb-2">UX & Systems Design</h3>
-        <p>We turn complexity into elegant, scalable, human-centered solutions.</p>
-      </div>
-    </div>
-  </section>
+<section>
+  <h2>Capital Solutions</h2>
+  <p>
+    Navigate complex financial systems with ease. From capital raises to global banking,
+    our financial network empowers ventures with strategic funding and cross-border liquidity options.
+  </p>
+</section>
+
+<section>
+  <h2>Digital Execution</h2>
+  <p>
+    Full-lifecycle technology delivery including custom software, neobanking infrastructure,
+    and agile fintech architecture, tailored for operational scale and compliance.
+  </p>
+</section>
+
+<section>
+  <h2>Defense Intermediary</h2>
+  <p>
+    Discreetly advising on international arms transactions and military equipment procurement.
+    We connect verified buyers with authorized global defense suppliers in full compliance with ITAR and UN treaties.
+  </p>
+</section>
+
+<footer>&copy; 2025 Prestige Griffin. All rights reserved.</footer>
+
+<script>
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+let width, height, particles = [];
+
+function resizeCanvas() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * width;
+    this.y = Math.random() * height;
+    this.r = Math.random() * 2 + 1;
+    this.dx = (Math.random() - 0.5) * 0.5;
+    this.dy = (Math.random() - 0.5) * 0.5;
+  }
+  move() {
+    this.x += this.dx;
+    this.y += this.dy;
+    if (this.x < 0 || this.x > width) this.dx *= -1;
+    if (this.y < 0 || this.y > height) this.dy *= -1;
+  }
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+    ctx.fillStyle = 'var(--soft-gold)';
+    ctx.fill();
+  }
+}
+function initParticles(num = 100) {
+  particles = [];
+  for (let i = 0; i < num; i++) {
+    particles.push(new Particle());
+  }
+}
+function animate() {
+  ctx.clearRect(0, 0, width, height);
+  particles.forEach(p => {
+    p.move();
+    p.draw();
+  });
+  requestAnimationFrame(animate);
+}
+initParticles();
+animate();
+</script>
 </body>
 </html>
