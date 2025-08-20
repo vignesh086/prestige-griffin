@@ -2,155 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Prestige Griffin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Prestige Griffin</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     :root {
-      --maroon: #6F0E0B;
-      --gold: #C99E47;
-      --cream: #f5eac2;
-      --soft-gold: rgba(201, 158, 71, 0.15);
+      --primary-red: #7a0a0a;
+      --dark-red: #4a0303;
+      --gold: #d4af37;
+      --cream: #f5f5dc;
     }
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: var(--maroon);
-      color: var(--gold);
-      overflow-x: hidden;
-    }
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: var(--maroon);
-      position: relative;
-      z-index: 5;
-    }
-    header img {
-      max-height: 100px;
-    }
-    nav a {
-      color: var(--gold);
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2rem;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 1rem;
-      color: var(--gold);
-    }
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--cream);
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background-color: #1a0605;
-      color: var(--gold);
-    }
+    body { margin:0; font-family:'Open Sans',sans-serif; background-color:var(--dark-red); color:var(--cream); padding-top:80px; }
+    header { display:flex; align-items:center; padding:1rem 2rem; border-bottom:2px solid var(--gold); background-color:var(--primary-red); position:fixed; top:0; left:0; width:100%; z-index:1000; justify-content:space-between; }
+    .brand { display:flex; align-items:center; gap:10px; }
+    .brand img { max-height:50px; }
+    .brand h1 { font-family:'Playfair Display', serif; color:var(--gold); font-size:1.1rem; margin:0; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; }
+    nav { display:flex; align-items:center; gap:1.5rem; }
+    nav a { text-decoration:none; font-weight:900; color:var(--gold); font-size:1.1rem; text-transform:uppercase; transition:color 0.3s ease; }
+    nav a:hover { color:var(--cream); }
+    .page-title { text-align:center; padding:3rem 2rem 1rem; color:var(--gold); font-family:'Playfair Display', serif; font-size:2.5rem; }
+    .about-content { max-width:900px; margin:0 auto; padding:1rem 2rem; font-size:1.2rem; line-height:1.8; }
+    .footer { background:var(--primary-red); text-align:center; padding:0.5rem; margin-top:2rem; }
+    .footer p { margin:0; font-size:0.8rem; color:var(--gold); }
   </style>
 </head>
 <body>
-<canvas id="bg-canvas"></canvas>
-<header>
-  <img src="PG.png" alt="Prestige Griffin Logo" class="h-20 w-auto rounded-full border-2 border-[#D4AF37] shadow-lg" />
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <div class="brand">
+      <img src="PG.png" alt="Prestige Griffin Logo">
+      <h1>Prestige Griffin</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
 
-<section>
-  <h2>Our Story</h2>
-  <p>
-    Founded on principles of discretion, strategic impact, and elite performance,
-    Prestige Griffin was created to serve clients operating at the highest levels of influence.
-    Our team brings decades of experience in finance, technology, and defense to every engagement.
-  </p>
-</section>
+  <h2 class="page-title" data-aos="fade-up">About Us</h2>
+  <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+    <p>
+      Prestige Griffin is a premier advisory firm providing strategic solutions in finance, banking, technology, defense, and commodities trading. 
+      Our mission is to empower businesses with insights, intelligence, and innovative strategies that drive long-term growth and sustainable results.
+    </p>
+    <p>
+      With a team of experienced professionals, we leverage global expertise to help our clients navigate complex industries and achieve their strategic objectives. 
+      We pride ourselves on delivering bespoke solutions that balance risk, opportunity, and impact.
+    </p>
+  </div>
 
-<section>
-  <h2>Mission & Vision</h2>
-  <p>
-    Our mission is to empower global innovators, decision-makers, and institutions
-    by offering uncompromising expertise and access across critical sectors.
-    We envision a future where strategic advantage is built through precision, discretion, and trust.
-  </p>
-</section>
+  <footer class="footer">
+    <p>© 2018 Prestige Griffin. All rights reserved.</p>
+  </footer>
 
-<footer>&copy; 2025 Prestige Griffin. All rights reserved.</footer>
-
-<script>
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-let width, height, particles = [];
-
-function resizeCanvas() {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-
-class Particle {
-  constructor() {
-    this.x = Math.random() * width;
-    this.y = Math.random() * height;
-    this.r = Math.random() * 2 + 1;
-    this.dx = (Math.random() - 0.5) * 0.5;
-    this.dy = (Math.random() - 0.5) * 0.5;
-  }
-  move() {
-    this.x += this.dx;
-    this.y += this.dy;
-    if (this.x < 0 || this.x > width) this.dx *= -1;
-    if (this.y < 0 || this.y > height) this.dy *= -1;
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = 'var(--soft-gold)';
-    ctx.fill();
-  }
-}
-function initParticles(num = 100) {
-  particles = [];
-  for (let i = 0; i < num; i++) {
-    particles.push(new Particle());
-  }
-}
-function animate() {
-  ctx.clearRect(0, 0, width, height);
-  particles.forEach(p => {
-    p.move();
-    p.draw();
-  });
-  requestAnimationFrame(animate);
-}
-initParticles();
-animate();
-</script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init({ duration:1200 }); </script>
 </body>
 </html>
