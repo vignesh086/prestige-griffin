@@ -105,6 +105,82 @@
       font-size: 0.8rem;
       color: var(--gold);
     }
+        .intro::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(45deg, rgba(212,175,55,0.1) 0px, rgba(212,175,55,0.1) 2px, transparent 2px, transparent 40px),
+                  repeating-linear-gradient(-45deg, rgba(212,175,55,0.1) 0px, rgba(212,175,55,0.1) 2px, transparent 2px, transparent 40px);
+      background-size: 80px 80px;
+      animation: moveGrid 8s linear infinite;
+      z-index: 1;
+    }
+    @keyframes moveGrid {
+      0% {background-position: 0 0, 0 0;}
+      100% {background-position: 80px 80px, -80px -80px;}
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 3rem;
+    }
+    .service-box {
+      background: rgba(212, 175, 55, 0.05);
+      border: 2px solid var(--gold);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1.5s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      background: rgba(212, 175, 55, 0.15);
+    }
+    .service-box h3 {
+      color: var(--gold);
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 1.3rem;
+    }
+    .service-box h3 i {
+      font-size: 1.6rem;
+      color: var(--gold);
+    }
+    .service-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+      40% {transform: translateY(-10px);} 
+      60% {transform: translateY(-5px);} 
+    }
+    .footer {
+      background: var(--primary-red);
+      text-align: center;
+      padding: 0.5rem;
+      position: fixed; /* Sticky footer */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .footer p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: var(--gold);
+    }
+
   </style>
 </head>
 <body>
@@ -120,7 +196,7 @@
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
-
+  <section class="intro">
   <h2 class="page-title" data-aos="fade-up">About Us</h2>
   <div class="about-content" data-aos="fade-up" data-aos-delay="200">
     <p>
@@ -132,7 +208,7 @@
       We pride ourselves on delivering bespoke solutions that balance risk, opportunity, and impact.
     </p>
   </div>
-
+ </section>
   <footer class="footer">
     <p>© 2018 Prestige Griffin. All rights reserved.</p>
   </footer>
