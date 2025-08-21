@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Prestige Griffin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    :root { --primary-red:#7a0a0a; --dark-red:#4a0303; --gold:#d4af37; --cream:#f5f5dc; }
+    body { margin:0; font-family:'Open Sans',sans-serif; background-color:var(--dark-red); color:var(--cream); padding-top:80px; }
+    header {
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid var(--gold);
+      background-color: var(--primary-red);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      justify-content: flex-start; /* Align items to start */
+      gap: 10rem; /* Space between brand and nav */
+          }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand img {
+      max-height: 50px;
+      animation: fadeInDown 1.5s ease;
+    }
+    .brand h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }    nav { display:flex; align-items:center; gap:1.5rem; }
+    nav a { text-decoration:none; font-weight:900; color:var(--gold); font-size:1.1rem; text-transform:uppercase; transition:color 0.3s ease; }
+    nav a:hover { color:var(--cream); }
+    .page-title { text-align:center; padding:3rem 2rem 1rem; color:var(--gold); font-family:'Playfair Display', serif; font-size:2.5rem; }
+    .contact-form { max-width:600px; margin:0 auto; padding:1rem 2rem; display:flex; flex-direction:column; gap:1rem; }
+    .contact-form input, .contact-form textarea { padding:0.8rem; border-radius:8px; border:2px solid var(--gold); background:var(--dark-red); color:var(--cream); font-size:1rem; width:100%; }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color:var(--gold); opacity:0.7; }
+    .contact-form button { padding:0.8rem; border:none; border-radius:8px; background:var(--gold); color:var(--dark-red); font-weight:900; font-size:1rem; cursor:pointer; transition: background 0.3s ease; width: 630px; }
+    .contact-form button:hover { background:rgba(212,175,55,0.8);}
+    .footer { background:var(--primary-red); text-align:center; padding:0.5rem; margin-top:2rem; }
+    .footer p { margin:0; font-size:0.8rem; color:var(--gold); }
+  </style>
+</head>
 <body>
   <header>
     <div class="brand">
