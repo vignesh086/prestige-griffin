@@ -74,28 +74,29 @@
       color: var(--cream);
     }
     .intro {
+      min-height: 90vh; /* Almost full screen */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Vertical center */
+      align-items: center; /* Horizontal center */
       text-align: center;
-      padding: 5rem 2rem;
-      position: relative;
-      overflow: hidden;
+      padding: 2rem;
+     /* Optional: add a background color or image */
     }
-    .intro h2 {
+  .intro h2 {
+      font-size: 3rem; /* Bigger heading for hero feel */
+      margin-bottom: 1rem;
       color: var(--gold);
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
       position: relative;
       z-index: 2;
     }
-    .intro p {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: var(--cream);
-      position: relative;
-      z-index: 2;
-    }
+  .intro p {
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--cream);
+  }
     /* Geometric animated background */
     .intro::before {
       content: "";
