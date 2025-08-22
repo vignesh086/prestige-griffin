@@ -144,37 +144,40 @@
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
-  <section class="intro">
-  <h2 class="page-title" data-aos="fade-up">Contact Us</h2>
-  <form class="contact-form" data-aos="fade-up" data-aos-delay="200" onsubmit="sendEmail(event)">
+ <form id="contact-form" class="contact-form" data-aos="fade-up" data-aos-delay="200">
     <input type="text" name="name" placeholder="Full Name" required>
     <input type="email" name="email" placeholder="Email Address" required>
     <input type="text" name="phone" placeholder="Phone Number" required>
     <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
-  </form>
-  </section>
+    <p id="status-message" style="text-align:center;margin-top:10px;"></p>
+</form>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script type="text/javascript">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
   (function() {
-    emailjs.init("SMObHLtyNQbqvGQEU");
+    emailjs.init("SMObHLtyNQbqvGQEU"); // Your Public Key
   })();
 
-  function sendEmail(e) {
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    emailjs.send("service_lhua6ns", "template_z53lnqk", {
-      name: document.querySelector("[name='name']").value,
-      email: document.querySelector("[name='email']").value,
-      phone: document.querySelector("[name='phone']").value,
-      message: document.querySelector("[name='message']").value,
-    }).then(() => {
-      alert("Message sent successfully!");
-    }, (err) => {
-      alert("Failed to send message: " + JSON.stringify(err));
-    });
-  }
+    const statusMessage = document.getElementById('status-message');
+    statusMessage.innerHTML = "Sending message...";
+    statusMessage.style.color = "yellow";
+
+    emailjs.sendForm("service_lhua6ns", "template_z53lnqk", this)
+      .then(() => {
+        statusMessage.innerHTML = "✅ Message sent successfully!";
+        statusMessage.style.color = "lightgreen";
+        this.reset(); // clear form
+      })
+      .catch((error) => {
+        statusMessage.innerHTML = "❌ Failed to send message. Please try again.";
+        statusMessage.style.color = "red";
+        console.error("EmailJS Error:", error);
+      });
+  });
 </script>
 
   <footer class="footer">
