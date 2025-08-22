@@ -146,14 +146,36 @@
   </header>
   <section class="intro">
   <h2 class="page-title" data-aos="fade-up">Contact Us</h2>
-  <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <input type="text" placeholder="Phone Number" required>
-    <textarea rows="5" placeholder="Your Message" required></textarea>
+  <form class="contact-form" data-aos="fade-up" data-aos-delay="200" onsubmit="sendEmail(event)">
+    <input type="text" name="name"placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="text" name="phone" placeholder="Phone Number" required>
+    <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
   </section>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("SMObHLtyNQbqvGQEU");
+  })();
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.send("service_lhua6ns", "template_z53lnqk", {
+      name: document.querySelector("[name='name']").value,
+      email: document.querySelector("[name='email']").value,
+      phone: document.querySelector("[name='phone']").value,
+      message: document.querySelector("[name='message']").value,
+    }).then(() => {
+      alert("Message sent successfully!");
+    }, (err) => {
+      alert("Failed to send message: " + JSON.stringify(err));
+    });
+  }
+</script>
 
   <footer class="footer">
     <p>© 2018 Prestige Griffin. All rights reserved.</p>
