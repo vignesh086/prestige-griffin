@@ -151,7 +151,7 @@ function Contact() {
 
       {/* Telegram Floating Button */}
       <a
-        href="https://t.me/60126880357"
+        href="https://t.me/+60126880357"
         className="telegram-float"
         target="_blank"
         rel="noopener noreferrer"
