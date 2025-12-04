@@ -6,9 +6,9 @@ function Services() {
   }, []);
 
   return (
-    <>
+    <section className="intro">
       <h2 className="page-title" data-aos="fade-up">Our Services</h2>
-      <section className="services intro">
+      <div className="services">
         <div className="service-box" data-aos="fade-up" data-aos-delay="100">
           <h3><i className="fas fa-university"></i> Finance & Banking</h3>
           <p>Expert advisory in global finance, investment strategies, and banking solutions tailored to our clients' needs.</p>
@@ -25,8 +25,8 @@ function Services() {
           <h3><i className="fas fa-oil-can"></i> Commodities Trading</h3>
           <p>Specialized in global commodities such as oil, gas, and raw materials, delivering value through trusted trading networks.</p>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
