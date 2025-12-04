@@ -135,6 +135,19 @@ function Contact() {
           </p>
         )}
       </form>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/60126880357"
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Chat with us on WhatsApp"
+        data-aos="zoom-in"
+        data-aos-delay="400"
+      >
+        <i className="fab fa-whatsapp"></i>
+      </a>
     </section>
   );
 }
