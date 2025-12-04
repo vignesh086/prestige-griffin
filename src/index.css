@@ -256,8 +256,8 @@ nav a.active {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
-  width: 100%;
-  max-width: 100%;
+  width: 300%;
+  max-width: 300%;
   position: relative;
   z-index: 2;
 }
