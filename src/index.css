@@ -289,31 +289,6 @@ nav a.active {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
 }
 
-.telegram-float {
-  position: fixed;
-  bottom: 150px;
-  right: 30px;
-  background-color: #0088cc;
-  color: white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-  z-index: 999;
-}
-
-.telegram-float:hover {
-  background-color: #006699;
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
-}
-
 .footer {
   background: var(--primary-red);
   text-align: center;
@@ -555,20 +530,12 @@ nav a.active {
     min-height: 48px;
   }
 
-  .whatsapp-float,
-  .telegram-float {
+  .whatsapp-float {
     width: 54px;
     height: 54px;
     font-size: 1.6rem;
     right: 20px;
-  }
-
-  .whatsapp-float {
     bottom: 70px;
-  }
-
-  .telegram-float {
-    bottom: 134px;
   }
 
   .footer p {
@@ -714,20 +681,12 @@ nav a.active {
     min-height: 44px;
   }
 
-  .whatsapp-float,
-  .telegram-float {
+  .whatsapp-float {
     width: 48px;
     height: 48px;
     font-size: 1.4rem;
     right: 15px;
-  }
-
-  .whatsapp-float {
     bottom: 60px;
-  }
-
-  .telegram-float {
-    bottom: 118px;
   }
 
   .footer {
@@ -856,20 +815,12 @@ nav a.active {
     padding: 0.65rem;
   }
 
-  .whatsapp-float,
-  .telegram-float {
+  .whatsapp-float {
     width: 44px;
     height: 44px;
     font-size: 1.3rem;
     right: 12px;
-  }
-
-  .whatsapp-float {
     bottom: 55px;
-  }
-
-  .telegram-float {
-    bottom: 108px;
   }
 }
 
@@ -941,19 +892,11 @@ nav a.active {
     max-width: 80%;
   }
 
-  .whatsapp-float,
-  .telegram-float {
+  .whatsapp-float {
     width: 44px;
     height: 44px;
     font-size: 1.3rem;
-  }
-
-  .whatsapp-float {
     bottom: 50px;
-  }
-
-  .telegram-float {
-    bottom: 102px;
   }
 
   .footer {
