@@ -148,6 +148,10 @@ nav a.active {
   position: relative;
 }
 
+.intro > .services {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .service-box {
   background: rgba(212, 175, 55, 0.05);
   border: 2px solid var(--gold);
@@ -380,6 +384,10 @@ nav a.active {
   .services {
     padding: 2rem;
     gap: 1.5rem;
+  }
+
+  .intro > .services {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-content {
