@@ -206,12 +206,56 @@ nav a.active {
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
   font-size: 1.2rem;
   line-height: 1.8;
+}
+
+.about-intro,
+.about-services-overview,
+.about-differentiators {
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-intro:hover,
+.about-services-overview:hover,
+.about-differentiators:hover {
+  background: rgba(212, 175, 55, 0.12);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.about-intro p,
+.about-services-overview p,
+.about-differentiators p {
+  margin: 0;
+  color: var(--cream);
+}
+
+.about-intro strong,
+.about-services-overview strong,
+.about-differentiators strong {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.about-differentiators h3 {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .contact-form {
@@ -387,6 +431,13 @@ nav a.active {
     font-size: 1.1rem;
   }
 
+  .about-intro,
+  .about-services-overview,
+  .about-differentiators {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
   .contact-form button,
   .contact-form input,
   .contact-form textarea {
@@ -520,6 +571,17 @@ nav a.active {
   .about-content {
     padding: 1rem;
     font-size: 1rem;
+  }
+
+  .about-intro,
+  .about-services-overview,
+  .about-differentiators {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-differentiators h3 {
+    font-size: 1.3rem;
   }
 
   .contact-form {
@@ -665,6 +727,17 @@ nav a.active {
     line-height: 1.6;
   }
 
+  .about-intro,
+  .about-services-overview,
+  .about-differentiators {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-differentiators h3 {
+    font-size: 1.2rem;
+  }
+
   .contact-form {
     padding: 1rem 0.8rem;
     max-width: 100%;
@@ -806,6 +879,17 @@ nav a.active {
     font-size: 0.88rem;
   }
 
+  .about-intro,
+  .about-services-overview,
+  .about-differentiators {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .about-differentiators h3 {
+    font-size: 1.1rem;
+  }
+
   .contact-form {
     padding: 0.8rem 0.5rem;
   }
@@ -887,6 +971,13 @@ nav a.active {
 
   .about-content {
     padding: 1rem 2rem;
+  }
+
+  .about-intro,
+  .about-services-overview,
+  .about-differentiators {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .contact-form {
