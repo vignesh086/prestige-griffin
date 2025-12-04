@@ -213,7 +213,7 @@ nav a.active {
 }
 
 .contact-form {
-  max-width: 1200px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
@@ -226,7 +226,7 @@ nav a.active {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 1.6rem;
+  padding: 3.2rem;
   border-radius: 8px;
   border: 2px solid var(--gold);
   background: var(--dark-red);
