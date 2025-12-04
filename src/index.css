@@ -230,6 +230,8 @@ nav a.active {
   color: var(--cream);
   font-size: 1rem;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
 
