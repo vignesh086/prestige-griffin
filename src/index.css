@@ -232,8 +232,8 @@ nav a.active {
   background: var(--dark-red);
   color: var(--cream);
   font-size: 1rem;
-  width: 100%;
-  max-width: 100%;
+  width: 300%;
+  max-width: 300%;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   position: relative;
