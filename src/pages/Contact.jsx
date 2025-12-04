@@ -148,6 +148,19 @@ function Contact() {
       >
         <i className="fab fa-whatsapp"></i>
       </a>
+
+      {/* Telegram Floating Button */}
+      <a
+        href="https://t.me/60126880357"
+        className="telegram-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Chat with us on Telegram"
+        data-aos="zoom-in"
+        data-aos-delay="500"
+      >
+        <i className="fab fa-telegram-plane"></i>
+      </a>
     </section>
   );
 }

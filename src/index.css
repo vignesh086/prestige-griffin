@@ -213,7 +213,7 @@ nav a.active {
 }
 
 .contact-form {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
@@ -221,16 +221,17 @@ nav a.active {
   gap: 1rem;
   position: relative;
   z-index: 2;
+  align-items: center;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.8rem;
+  padding: 1.6rem;
   border-radius: 8px;
   border: 2px solid var(--gold);
   background: var(--dark-red);
   color: var(--cream);
-  font-size: 1rem;
+  font-size: 2rem;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -246,13 +247,13 @@ nav a.active {
 }
 
 .contact-form button {
-  padding: 0.8rem;
+  padding: 1.6rem;
   border: none;
   border-radius: 8px;
   background: var(--gold);
   color: var(--dark-red);
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 2rem;
   cursor: pointer;
   transition: background 0.3s ease;
   width: 100%;
@@ -290,6 +291,31 @@ nav a.active {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
 }
 
+.telegram-float {
+  position: fixed;
+  bottom: 150px;
+  right: 30px;
+  background-color: #0088cc;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.telegram-float:hover {
+  background-color: #006699;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
 .footer {
   background: var(--primary-red);
   text-align: center;
@@ -310,4 +336,5 @@ nav a.active {
 #status-message {
   text-align: center;
   margin-top: 10px;
+  font-size: 1.5rem;
 }
