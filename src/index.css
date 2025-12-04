@@ -251,6 +251,34 @@ nav a.active {
   opacity: 0.7;
 }
 
+.phone-input-group {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.country-code-select {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid var(--gold);
+  background: var(--dark-red);
+  color: var(--cream);
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+.country-code-select:focus {
+  outline: none;
+  border-color: var(--cream);
+}
+
+.phone-input-group input[type="tel"] {
+  flex: 1;
+}
+
 .contact-form button {
   padding: 0.8rem;
   border: none;
@@ -286,7 +314,7 @@ nav a.active {
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
-  z-index: 999;
+  z-index: 1001;
 }
 
 .whatsapp-float:hover {
@@ -685,6 +713,13 @@ nav a.active {
     min-height: 44px;
   }
 
+  .country-code-select {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+    min-width: 130px;
+    min-height: 44px;
+  }
+
   .contact-form button {
     padding: 0.7rem;
     font-size: 0.95rem;
@@ -823,6 +858,16 @@ nav a.active {
   .contact-form button {
     font-size: 0.9rem;
     padding: 0.65rem;
+  }
+
+  .country-code-select {
+    font-size: 0.9rem;
+    padding: 0.65rem;
+    min-width: 120px;
+  }
+
+  .phone-input-group {
+    gap: 0.3rem;
   }
 
   .whatsapp-float {
