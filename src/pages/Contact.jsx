@@ -139,26 +139,26 @@ function Contact() {
         <input type="email" name="email" placeholder="Email Address" required />
         <div className="phone-input-group">
           <select name="country_code" className="country-code-select" required>
-            <option value="+60">+60 (Malaysia)</option>
-            <option value="+1">+1 (USA/Canada)</option>
-            <option value="+44">+44 (UK)</option>
-            <option value="+91">+91 (India)</option>
-            <option value="+86">+86 (China)</option>
-            <option value="+81">+81 (Japan)</option>
-            <option value="+82">+82 (South Korea)</option>
-            <option value="+65">+65 (Singapore)</option>
-            <option value="+61">+61 (Australia)</option>
-            <option value="+971">+971 (UAE)</option>
-            <option value="+966">+966 (Saudi Arabia)</option>
-            <option value="+33">+33 (France)</option>
-            <option value="+49">+49 (Germany)</option>
-            <option value="+39">+39 (Italy)</option>
-            <option value="+34">+34 (Spain)</option>
-            <option value="+7">+7 (Russia)</option>
-            <option value="+55">+55 (Brazil)</option>
-            <option value="+52">+52 (Mexico)</option>
-            <option value="+27">+27 (South Africa)</option>
-            <option value="+234">+234 (Nigeria)</option>
+            <option value="+60">🇲🇾 +60</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+91">🇮🇳 +91</option>
+            <option value="+86">🇨🇳 +86</option>
+            <option value="+81">🇯🇵 +81</option>
+            <option value="+82">🇰🇷 +82</option>
+            <option value="+65">🇸🇬 +65</option>
+            <option value="+61">🇦🇺 +61</option>
+            <option value="+971">🇦🇪 +971</option>
+            <option value="+966">🇸🇦 +966</option>
+            <option value="+33">🇫🇷 +33</option>
+            <option value="+49">🇩🇪 +49</option>
+            <option value="+39">🇮🇹 +39</option>
+            <option value="+34">🇪🇸 +34</option>
+            <option value="+7">🇷🇺 +7</option>
+            <option value="+55">🇧🇷 +55</option>
+            <option value="+52">🇲🇽 +52</option>
+            <option value="+27">🇿🇦 +27</option>
+            <option value="+234">🇳🇬 +234</option>
           </select>
           <input
             type="tel"
