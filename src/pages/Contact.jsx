@@ -11,9 +11,93 @@ function Contact() {
     emailjs.init("SMObHLtyNQbqvGQEU");
   }, []);
 
+  const validateName = (name) => {
+    if (!name || name.trim().length === 0) {
+      return 'Name is required';
+    }
+    if (name.trim().length < 2) {
+      return 'Name must be at least 2 characters long';
+    }
+    if (!/^[a-zA-Z\s'-]+$/.test(name)) {
+      return 'Name can only contain letters, spaces, hyphens, and apostrophes';
+    }
+    return null;
+  };
+
+  const validateEmail = (email) => {
+    if (!email || email.trim().length === 0) {
+      return 'Email is required';
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return 'Please enter a valid email address';
+    }
+    return null;
+  };
+
+  const validatePhone = (phone) => {
+    if (!phone || phone.trim().length === 0) {
+      return 'Phone number is required';
+    }
+    const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+    if (!phoneRegex.test(phone)) {
+      return 'Please enter a valid phone number (digits, spaces, hyphens, parentheses, and + allowed)';
+    }
+    const digitsOnly = phone.replace(/\D/g, '');
+    if (digitsOnly.length < 10) {
+      return 'Phone number must contain at least 10 digits';
+    }
+    return null;
+  };
+
+  const validateMessage = (message) => {
+    if (!message || message.trim().length === 0) {
+      return 'Message is required';
+    }
+    if (message.trim().length < 10) {
+      return 'Message must be at least 10 characters long';
+    }
+    return null;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const formData = new FormData(e.target);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const message = formData.get('message');
+
+    // Validate all fields
+    const nameError = validateName(name);
+    const emailError = validateEmail(email);
+    const phoneError = validatePhone(phone);
+    const messageError = validateMessage(message);
+
+    // Display first error found
+    if (nameError) {
+      setStatusMessage(`❌ ${nameError}`);
+      setStatusColor("red");
+      return;
+    }
+    if (emailError) {
+      setStatusMessage(`❌ ${emailError}`);
+      setStatusColor("red");
+      return;
+    }
+    if (phoneError) {
+      setStatusMessage(`❌ ${phoneError}`);
+      setStatusColor("red");
+      return;
+    }
+    if (messageError) {
+      setStatusMessage(`❌ ${messageError}`);
+      setStatusColor("red");
+      return;
+    }
+
+    // All validations passed, send the form
     setStatusMessage("Sending message...");
     setStatusColor("yellow");
 
