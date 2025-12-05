@@ -247,22 +247,36 @@ nav a.active {
 .phone-input-wrapper {
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 10;
+  background: #4a0303;
+  border-radius: 8px;
 }
 
 .PhoneInput {
   width: 100%;
   border-radius: 8px;
   border: 2px solid var(--gold);
-  background: var(--dark-red);
-  background-color: #4a0303;
+  background: #4a0303 !important;
+  background-color: #4a0303 !important;
   padding: 0.8rem;
   box-sizing: border-box;
   position: relative;
-  z-index: 3;
+  z-index: 10;
 }
 
 .PhoneInput::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: #4a0303;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.PhoneInput::after {
   content: "";
   position: absolute;
   top: 0;
@@ -271,7 +285,8 @@ nav a.active {
   bottom: 0;
   background: #4a0303;
   border-radius: 6px;
-  z-index: -1;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .PhoneInputCountry {
@@ -279,6 +294,8 @@ nav a.active {
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .PhoneInputCountryIcon {
@@ -322,6 +339,8 @@ nav a.active {
   outline: none;
   flex: 1;
   min-width: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .PhoneInputInput::placeholder {
