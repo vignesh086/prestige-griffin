@@ -153,36 +153,70 @@ function Contact() {
   };
 
   return (
-    <section className="intro">
-      <h2 className="page-title" data-aos="fade-up">Contact Us</h2>
-      <form
-        id="contact-form"
-        className="contact-form"
-        onSubmit={handleSubmit}
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <div className="phone-input-wrapper">
-          <PhoneInput
-            international
-            defaultCountry="MY"
-            value={phoneValue}
-            onChange={setPhoneValue}
-            placeholder="Phone Number"
-            className="phone-input-custom"
-            required
-          />
+    <section className="intro contact-page">
+      {/* Hero Section */}
+      <div className="contact-hero" data-aos="fade-up">
+        <h2 className="contact-title">How can we help?</h2>
+        <p className="contact-subtitle">Let's talk about your project</p>
+      </div>
+
+      {/* Interaction Cards */}
+      <div className="contact-cards" data-aos="fade-up" data-aos-delay="100">
+        <div className="contact-card" data-aos="fade-up" data-aos-delay="150">
+          <div className="card-icon">
+            <i className="fas fa-briefcase"></i>
+          </div>
+          <h3>Business Partnership</h3>
+          <p>Let's make something special together</p>
         </div>
-        <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-        {statusMessage && (
-          <p id="status-message" style={{ color: statusColor }}>
-            {statusMessage}
-          </p>
-        )}
-      </form>
+
+        <div className="contact-card" data-aos="fade-up" data-aos-delay="200">
+          <div className="card-icon">
+            <i className="fas fa-lightbulb"></i>
+          </div>
+          <h3>Project Inquiry</h3>
+          <p>Have a project in mind? We'd love to hear about it</p>
+        </div>
+
+        <div className="contact-card" data-aos="fade-up" data-aos-delay="250">
+          <div className="card-icon">
+            <i className="fas fa-coffee"></i>
+          </div>
+          <h3>General Questions</h3>
+          <p>Any burning questions? Let's chat</p>
+        </div>
+      </div>
+
+      {/* Contact Form Section */}
+      <div className="form-section" data-aos="fade-up" data-aos-delay="300">
+        <h3 className="form-title">Get in Touch</h3>
+        <form
+          id="contact-form"
+          className="contact-form"
+          onSubmit={handleSubmit}
+        >
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <div className="phone-input-wrapper">
+            <PhoneInput
+              international
+              defaultCountry="MY"
+              value={phoneValue}
+              onChange={setPhoneValue}
+              placeholder="Phone Number"
+              className="phone-input-custom"
+              required
+            />
+          </div>
+          <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+          {statusMessage && (
+            <p id="status-message" style={{ color: statusColor }}>
+              {statusMessage}
+            </p>
+          )}
+        </form>
+      </div>
 
       {/* WhatsApp Floating Button */}
       <a
