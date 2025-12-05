@@ -217,7 +217,7 @@ nav a.active {
 }
 
 .contact-form {
-  max-width: 1200px;
+  max-width: 2400px;
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
@@ -537,7 +537,7 @@ nav a.active {
 }
 
 .form-section {
-  max-width: 1400px;
+  max-width: 2800px;
   margin: 0 auto;
   padding: 2rem;
   background: rgba(212, 175, 55, 0.03);
