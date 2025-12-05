@@ -391,14 +391,20 @@ nav a.active {
 
 /* Contact Page Styles */
 .contact-page {
-  padding: 3rem 2rem;
+  padding: 2rem 3rem;
   max-width: 1400px;
   margin: 0 auto;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .contact-hero {
-  text-align: center;
-  margin-bottom: 3rem;
+  flex: 0 0 40%;
+  text-align: left;
   position: relative;
   z-index: 2;
 }
@@ -407,8 +413,9 @@ nav a.active {
   font-size: 3.5rem;
   color: var(--gold);
   font-family: 'Playfair Display', serif;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .contact-subtitle {
@@ -417,14 +424,14 @@ nav a.active {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   opacity: 0.9;
+  line-height: 1.4;
 }
 
 .contact-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-  padding: 0 1rem;
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   position: relative;
   z-index: 2;
 }
@@ -433,7 +440,7 @@ nav a.active {
   background: rgba(212, 175, 55, 0.05);
   border: 2px solid rgba(212, 175, 55, 0.3);
   border-radius: 15px;
-  padding: 2.5rem 2rem;
+  padding: 1.5rem 2rem;
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -466,9 +473,9 @@ nav a.active {
 }
 
 .card-icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 1.5rem;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
   background: rgba(212, 175, 55, 0.1);
   border-radius: 50%;
   display: flex;
@@ -493,17 +500,17 @@ nav a.active {
 }
 
 .contact-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--gold);
   font-family: 'Playfair Display', serif;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .contact-card p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--cream);
-  line-height: 1.6;
+  line-height: 1.5;
   opacity: 0.9;
 }
 
@@ -653,6 +660,17 @@ nav a.active {
     min-height: 44px;
   }
 
+  .contact-page {
+    flex-direction: column;
+    gap: 2.5rem;
+    min-height: auto;
+  }
+
+  .contact-hero {
+    text-align: center;
+    flex: none;
+  }
+
   .contact-title {
     font-size: 2.8rem;
   }
@@ -662,6 +680,7 @@ nav a.active {
   }
 
   .contact-cards {
+    flex: none;
     gap: 1.5rem;
   }
 
@@ -813,7 +832,15 @@ nav a.active {
   }
 
   .contact-page {
+    flex-direction: column;
     padding: 2rem 1rem;
+    gap: 2rem;
+    min-height: auto;
+  }
+
+  .contact-hero {
+    text-align: center;
+    flex: none;
   }
 
   .contact-title {
@@ -825,9 +852,8 @@ nav a.active {
   }
 
   .contact-cards {
-    grid-template-columns: 1fr;
+    flex: none;
     gap: 1.5rem;
-    margin-bottom: 3rem;
   }
 
   .contact-card {
@@ -1004,10 +1030,12 @@ nav a.active {
 
   .contact-page {
     padding: 1.5rem 0.8rem;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .contact-hero {
-    margin-bottom: 2rem;
+    text-align: center;
   }
 
   .contact-title {
@@ -1020,8 +1048,6 @@ nav a.active {
 
   .contact-cards {
     gap: 1rem;
-    margin-bottom: 2rem;
-    padding: 0 0.5rem;
   }
 
   .contact-card {
@@ -1233,6 +1259,7 @@ nav a.active {
 
   .contact-page {
     padding: 1rem 0.5rem;
+    flex-direction: column;
   }
 
   .contact-title {
@@ -1244,7 +1271,7 @@ nav a.active {
   }
 
   .contact-cards {
-    padding: 0 0.3rem;
+    gap: 1rem;
   }
 
   .contact-card {
@@ -1355,6 +1382,12 @@ nav a.active {
 
   .contact-page {
     padding: 1.5rem 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-hero {
+    text-align: center;
   }
 
   .contact-title {
@@ -1366,9 +1399,7 @@ nav a.active {
   }
 
   .contact-cards {
-    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin-bottom: 2rem;
   }
 
   .contact-card {
