@@ -255,10 +255,23 @@ nav a.active {
   border-radius: 8px;
   border: 2px solid var(--gold);
   background: var(--dark-red);
+  background-color: #4a0303;
   padding: 0.8rem;
   box-sizing: border-box;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+}
+
+.PhoneInput::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #4a0303;
+  border-radius: 6px;
+  z-index: -1;
 }
 
 .PhoneInputCountry {
