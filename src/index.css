@@ -392,21 +392,23 @@ nav a.active {
 /* Contact Page Styles */
 .contact-page {
   padding: 1.5rem 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
   min-height: calc(100vh - 100px);
   max-height: calc(100vh - 100px);
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 3rem;
 }
 
-.contact-page::before {
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
+.contact-page-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1400px;
+  width: 100%;
 }
 
 .contact-hero {
@@ -668,9 +670,12 @@ nav a.active {
   }
 
   .contact-page {
+    min-height: auto;
+  }
+
+  .contact-page-content {
     flex-direction: column;
     gap: 2.5rem;
-    min-height: auto;
   }
 
   .contact-hero {
@@ -839,10 +844,13 @@ nav a.active {
   }
 
   .contact-page {
-    flex-direction: column;
     padding: 2rem 1rem;
-    gap: 2rem;
     min-height: auto;
+  }
+
+  .contact-page-content {
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .contact-hero {
@@ -1037,6 +1045,9 @@ nav a.active {
 
   .contact-page {
     padding: 1.5rem 0.8rem;
+  }
+
+  .contact-page-content {
     flex-direction: column;
     gap: 2rem;
   }
@@ -1266,6 +1277,9 @@ nav a.active {
 
   .contact-page {
     padding: 1rem 0.5rem;
+  }
+
+  .contact-page-content {
     flex-direction: column;
   }
 
@@ -1389,6 +1403,9 @@ nav a.active {
 
   .contact-page {
     padding: 1.5rem 2rem;
+  }
+
+  .contact-page-content {
     flex-direction: column;
     gap: 1.5rem;
   }
