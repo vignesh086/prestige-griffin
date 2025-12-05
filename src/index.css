@@ -130,6 +130,7 @@ nav a.active {
   background-size: 80px 80px;
   animation: moveGrid 8s linear infinite;
   z-index: 1;
+  pointer-events: none;
 }
 
 @keyframes moveGrid {
