@@ -14,51 +14,53 @@ function Contact() {
 
   return (
     <section className="intro contact-page">
-      {/* Hero Section */}
-      <div className="contact-hero" data-aos="fade-up">
-        <h2 className="contact-title">How can we help?</h2>
-        <p className="contact-subtitle">Let's talk about your project</p>
-      </div>
-
-      {/* Interaction Cards */}
-      <div className="contact-cards" data-aos="fade-up" data-aos-delay="100">
-        <div
-          className="contact-card"
-          data-aos="fade-up"
-          data-aos-delay="150"
-          onClick={() => handleCardClick('Business Partnership')}
-        >
-          <div className="card-icon">
-            <i className="fas fa-briefcase"></i>
-          </div>
-          <h3>Business Partnership</h3>
-          <p>Let's make something special together</p>
+      <div className="contact-page-content">
+        {/* Hero Section */}
+        <div className="contact-hero" data-aos="fade-up">
+          <h2 className="contact-title">How can we help?</h2>
+          <p className="contact-subtitle">Let's talk about your project</p>
         </div>
 
-        <div
-          className="contact-card"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          onClick={() => handleCardClick('Project Inquiry')}
-        >
-          <div className="card-icon">
-            <i className="fas fa-lightbulb"></i>
+        {/* Interaction Cards */}
+        <div className="contact-cards" data-aos="fade-up" data-aos-delay="100">
+          <div
+            className="contact-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+            onClick={() => handleCardClick('Business Partnership')}
+          >
+            <div className="card-icon">
+              <i className="fas fa-briefcase"></i>
+            </div>
+            <h3>Business Partnership</h3>
+            <p>Let's make something special together</p>
           </div>
-          <h3>Project Inquiry</h3>
-          <p>Have a project in mind? We'd love to hear about it</p>
-        </div>
 
-        <div
-          className="contact-card"
-          data-aos="fade-up"
-          data-aos-delay="250"
-          onClick={() => handleCardClick('General Questions')}
-        >
-          <div className="card-icon">
-            <i className="fas fa-coffee"></i>
+          <div
+            className="contact-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            onClick={() => handleCardClick('Project Inquiry')}
+          >
+            <div className="card-icon">
+              <i className="fas fa-lightbulb"></i>
+            </div>
+            <h3>Project Inquiry</h3>
+            <p>Have a project in mind? We'd love to hear about it</p>
           </div>
-          <h3>General Questions</h3>
-          <p>Any burning questions? Let's chat</p>
+
+          <div
+            className="contact-card"
+            data-aos="fade-up"
+            data-aos-delay="250"
+            onClick={() => handleCardClick('General Questions')}
+          >
+            <div className="card-icon">
+              <i className="fas fa-coffee"></i>
+            </div>
+            <h3>General Questions</h3>
+            <p>Any burning questions? Let's chat</p>
+          </div>
         </div>
       </div>
 
