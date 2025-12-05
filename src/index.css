@@ -80,6 +80,7 @@ nav a {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 nav a:hover,
@@ -388,6 +389,18 @@ nav a.active {
   }
 }
 
+/* MacBook Pro 14 inch and similar screens (max-width: 1600px) */
+@media (max-width: 1600px) {
+  nav {
+    gap: 1.2rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+  }
+}
+
 /* Tablet and smaller desktop (max-width: 1024px) */
 @media (max-width: 1024px) {
   header {
@@ -401,7 +414,7 @@ nav a.active {
   }
 
   nav a {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.5rem 0.8rem;
     min-height: 44px;
     display: flex;
