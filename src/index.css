@@ -403,6 +403,12 @@ nav a.active {
   gap: 3rem;
 }
 
+.contact-page::before {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+
 .contact-hero {
   flex: 0 0 40%;
   text-align: left;
