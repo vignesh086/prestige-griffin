@@ -1411,7 +1411,7 @@ nav a.active {
 
   .contact-form {
     padding: 1rem 2rem;
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .contact-page {
@@ -1444,7 +1444,7 @@ nav a.active {
   }
 
   .form-section {
-    max-width: 90%;
+    max-width: 100%;
     padding: 1.5rem;
   }
 
@@ -1480,7 +1480,7 @@ nav a.active {
   }
 
   .contact-form {
-    max-width: 85%;
+    max-width: 100%;
   }
 }
 
