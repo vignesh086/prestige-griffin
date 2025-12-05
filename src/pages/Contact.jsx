@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 
 function Contact() {
   const [statusMessage, setStatusMessage] = useState('');
   const [statusColor, setStatusColor] = useState('');
+  const [phoneValue, setPhoneValue] = useState('');
 
   useEffect(() => {
     document.title = 'Contact Us - Prestige Griffin';
@@ -18,8 +21,18 @@ function Contact() {
     if (name.trim().length < 2) {
       return 'Name must be at least 2 characters long';
     }
+    // Strict validation: only letters, spaces, hyphens, and apostrophes
+    // No numbers or special characters allowed
     if (!/^[a-zA-Z\s'-]+$/.test(name)) {
-      return 'Name can only contain letters, spaces, hyphens, and apostrophes';
+      return 'Name can only contain letters, spaces, hyphens, and apostrophes. Numbers and special characters are not allowed.';
+    }
+    // Check for numbers explicitly
+    if (/\d/.test(name)) {
+      return 'Name cannot contain numbers';
+    }
+    // Check for special characters (excluding allowed ones)
+    if (/[^a-zA-Z\s'-]/.test(name)) {
+      return 'Name cannot contain special characters (except hyphens and apostrophes)';
     }
     return null;
   };
@@ -28,24 +41,37 @@ function Contact() {
     if (!email || email.trim().length === 0) {
       return 'Email is required';
     }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Enhanced email validation with stricter rules
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
-      return 'Please enter a valid email address';
+      return 'Please enter a valid email address (e.g., example@domain.com)';
+    }
+    // Check for consecutive dots
+    if (/\.\./.test(email)) {
+      return 'Email cannot contain consecutive dots';
+    }
+    // Check if email starts or ends with special characters
+    if (/^[._-]|[._-]@/.test(email)) {
+      return 'Email cannot start with a special character';
     }
     return null;
   };
 
   const validatePhone = (phone) => {
-    if (!phone || phone.trim().length === 0) {
+    if (!phone || phone.length === 0) {
       return 'Phone number is required';
     }
-    const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-    if (!phoneRegex.test(phone)) {
-      return 'Please enter a valid phone number (digits, spaces, hyphens, parentheses, and + allowed)';
+    // Phone value comes from PhoneInput in E.164 format (e.g., +1234567890)
+    // Basic validation - the PhoneInput component handles format validation
+    if (!phone.startsWith('+')) {
+      return 'Please select a country and enter a valid phone number';
     }
     const digitsOnly = phone.replace(/\D/g, '');
     if (digitsOnly.length < 10) {
       return 'Phone number must contain at least 10 digits';
+    }
+    if (digitsOnly.length > 15) {
+      return 'Phone number is too long';
     }
     return null;
   };
@@ -66,13 +92,12 @@ function Contact() {
     const formData = new FormData(e.target);
     const name = formData.get('name');
     const email = formData.get('email');
-    const phone = formData.get('phone');
     const message = formData.get('message');
 
     // Validate all fields
     const nameError = validateName(name);
     const emailError = validateEmail(email);
-    const phoneError = validatePhone(phone);
+    const phoneError = validatePhone(phoneValue);
     const messageError = validateMessage(message);
 
     // Display first error found
@@ -101,16 +126,29 @@ function Contact() {
     setStatusMessage("Sending message...");
     setStatusColor("yellow");
 
-    emailjs.sendForm("service_lhua6ns", "template_z53lnqk", e.target)
+    // Create a temporary input for phone to include in EmailJS form data
+    const form = e.target;
+    const phoneInput = document.createElement('input');
+    phoneInput.type = 'hidden';
+    phoneInput.name = 'phone';
+    phoneInput.value = phoneValue;
+    form.appendChild(phoneInput);
+
+    emailjs.sendForm("service_lhua6ns", "template_z53lnqk", form)
       .then(() => {
         setStatusMessage("✅ Message sent successfully!");
         setStatusColor("lightgreen");
-        e.target.reset();
+        form.reset();
+        setPhoneValue('');
+        form.removeChild(phoneInput);
       })
       .catch((error) => {
         setStatusMessage("❌ Failed to send message. Please try again.");
         setStatusColor("red");
         console.error("EmailJS Error:", error);
+        if (form.contains(phoneInput)) {
+          form.removeChild(phoneInput);
+        }
       });
   };
 
@@ -126,7 +164,17 @@ function Contact() {
       >
         <input type="text" name="name" placeholder="Full Name" required />
         <input type="email" name="email" placeholder="Email Address" required />
-        <input type="text" name="phone" placeholder="Phone Number" required />
+        <div className="phone-input-wrapper">
+          <PhoneInput
+            international
+            defaultCountry="MY"
+            value={phoneValue}
+            onChange={setPhoneValue}
+            placeholder="Phone Number"
+            className="phone-input-custom"
+            required
+          />
+        </div>
         <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
         {statusMessage && (

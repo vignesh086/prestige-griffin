@@ -242,6 +242,79 @@ nav a.active {
   z-index: 2;
 }
 
+/* Phone Input Styles */
+.phone-input-wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.PhoneInput {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--gold);
+  background: var(--dark-red);
+  padding: 0.8rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.PhoneInputCountry {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.PhoneInputCountryIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+.PhoneInputCountrySelect {
+  background: transparent;
+  border: none;
+  color: var(--gold);
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  padding-right: 0.5rem;
+}
+
+.PhoneInputCountrySelect:hover {
+  color: var(--cream);
+}
+
+.PhoneInputCountrySelectArrow {
+  color: var(--gold);
+  width: 0.4rem;
+  height: 0.4rem;
+  border: none;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-left: 0.3rem;
+}
+
+.PhoneInputInput {
+  background: transparent;
+  border: none;
+  color: var(--cream);
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.PhoneInputInput::placeholder {
+  color: var(--gold);
+  opacity: 0.7;
+}
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: var(--gold);
@@ -405,6 +478,10 @@ nav a.active {
   .contact-form textarea {
     min-height: 44px;
   }
+
+  .PhoneInput {
+    min-height: 44px;
+  }
 }
 
 /* iPad Pro and similar tablets (max-width: 912px) */
@@ -542,6 +619,10 @@ nav a.active {
   .contact-form button,
   .contact-form input,
   .contact-form textarea {
+    min-height: 48px;
+  }
+
+  .PhoneInput {
     min-height: 48px;
   }
 
@@ -696,6 +777,15 @@ nav a.active {
     min-height: 44px;
   }
 
+  .PhoneInput {
+    padding: 0.7rem;
+    min-height: 44px;
+  }
+
+  .PhoneInputInput {
+    font-size: 0.95rem;
+  }
+
   .whatsapp-float {
     width: 48px;
     height: 48px;
@@ -828,6 +918,19 @@ nav a.active {
   .contact-form button {
     font-size: 0.9rem;
     padding: 0.65rem;
+  }
+
+  .PhoneInput {
+    padding: 0.65rem;
+  }
+
+  .PhoneInputInput {
+    font-size: 0.9rem;
+  }
+
+  .PhoneInputCountryIcon {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   .whatsapp-float {
