@@ -1,155 +1,15 @@
-import { useEffect, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Contact() {
-  const [statusMessage, setStatusMessage] = useState('');
-  const [statusColor, setStatusColor] = useState('');
-  const [phoneValue, setPhoneValue] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = 'Contact Us - Prestige Griffin';
-    // Initialize EmailJS
-    emailjs.init("SMObHLtyNQbqvGQEU");
   }, []);
 
-  const validateName = (name) => {
-    if (!name || name.trim().length === 0) {
-      return 'Name is required';
-    }
-    if (name.trim().length < 2) {
-      return 'Name must be at least 2 characters long';
-    }
-    // Strict validation: only letters, spaces, hyphens, and apostrophes
-    // No numbers or special characters allowed
-    if (!/^[a-zA-Z\s'-]+$/.test(name)) {
-      return 'Name can only contain letters, spaces, hyphens, and apostrophes. Numbers and special characters are not allowed.';
-    }
-    // Check for numbers explicitly
-    if (/\d/.test(name)) {
-      return 'Name cannot contain numbers';
-    }
-    // Check for special characters (excluding allowed ones)
-    if (/[^a-zA-Z\s'-]/.test(name)) {
-      return 'Name cannot contain special characters (except hyphens and apostrophes)';
-    }
-    return null;
-  };
-
-  const validateEmail = (email) => {
-    if (!email || email.trim().length === 0) {
-      return 'Email is required';
-    }
-    // Enhanced email validation with stricter rules
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email)) {
-      return 'Please enter a valid email address (e.g., example@domain.com)';
-    }
-    // Check for consecutive dots
-    if (/\.\./.test(email)) {
-      return 'Email cannot contain consecutive dots';
-    }
-    // Check if email starts or ends with special characters
-    if (/^[._-]|[._-]@/.test(email)) {
-      return 'Email cannot start with a special character';
-    }
-    return null;
-  };
-
-  const validatePhone = (phone) => {
-    if (!phone || phone.length === 0) {
-      return 'Phone number is required';
-    }
-    // Phone value comes from PhoneInput in E.164 format (e.g., +1234567890)
-    // Basic validation - the PhoneInput component handles format validation
-    if (!phone.startsWith('+')) {
-      return 'Please select a country and enter a valid phone number';
-    }
-    const digitsOnly = phone.replace(/\D/g, '');
-    if (digitsOnly.length < 10) {
-      return 'Phone number must contain at least 10 digits';
-    }
-    if (digitsOnly.length > 15) {
-      return 'Phone number is too long';
-    }
-    return null;
-  };
-
-  const validateMessage = (message) => {
-    if (!message || message.trim().length === 0) {
-      return 'Message is required';
-    }
-    if (message.trim().length < 10) {
-      return 'Message must be at least 10 characters long';
-    }
-    return null;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(e.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-
-    // Validate all fields
-    const nameError = validateName(name);
-    const emailError = validateEmail(email);
-    const phoneError = validatePhone(phoneValue);
-    const messageError = validateMessage(message);
-
-    // Display first error found
-    if (nameError) {
-      setStatusMessage(`❌ ${nameError}`);
-      setStatusColor("red");
-      return;
-    }
-    if (emailError) {
-      setStatusMessage(`❌ ${emailError}`);
-      setStatusColor("red");
-      return;
-    }
-    if (phoneError) {
-      setStatusMessage(`❌ ${phoneError}`);
-      setStatusColor("red");
-      return;
-    }
-    if (messageError) {
-      setStatusMessage(`❌ ${messageError}`);
-      setStatusColor("red");
-      return;
-    }
-
-    // All validations passed, send the form
-    setStatusMessage("Sending message...");
-    setStatusColor("yellow");
-
-    // Create a temporary input for phone to include in EmailJS form data
-    const form = e.target;
-    const phoneInput = document.createElement('input');
-    phoneInput.type = 'hidden';
-    phoneInput.name = 'phone';
-    phoneInput.value = phoneValue;
-    form.appendChild(phoneInput);
-
-    emailjs.sendForm("service_lhua6ns", "template_z53lnqk", form)
-      .then(() => {
-        setStatusMessage("✅ Message sent successfully!");
-        setStatusColor("lightgreen");
-        form.reset();
-        setPhoneValue('');
-        form.removeChild(phoneInput);
-      })
-      .catch((error) => {
-        setStatusMessage("❌ Failed to send message. Please try again.");
-        setStatusColor("red");
-        console.error("EmailJS Error:", error);
-        if (form.contains(phoneInput)) {
-          form.removeChild(phoneInput);
-        }
-      });
+  const handleCardClick = (inquiryType) => {
+    navigate('/get-in-touch', { state: { inquiryType } });
   };
 
   return (
@@ -162,7 +22,12 @@ function Contact() {
 
       {/* Interaction Cards */}
       <div className="contact-cards" data-aos="fade-up" data-aos-delay="100">
-        <div className="contact-card" data-aos="fade-up" data-aos-delay="150">
+        <div
+          className="contact-card"
+          data-aos="fade-up"
+          data-aos-delay="150"
+          onClick={() => handleCardClick('Business Partnership')}
+        >
           <div className="card-icon">
             <i className="fas fa-briefcase"></i>
           </div>
@@ -170,7 +35,12 @@ function Contact() {
           <p>Let's make something special together</p>
         </div>
 
-        <div className="contact-card" data-aos="fade-up" data-aos-delay="200">
+        <div
+          className="contact-card"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          onClick={() => handleCardClick('Project Inquiry')}
+        >
           <div className="card-icon">
             <i className="fas fa-lightbulb"></i>
           </div>
@@ -178,44 +48,18 @@ function Contact() {
           <p>Have a project in mind? We'd love to hear about it</p>
         </div>
 
-        <div className="contact-card" data-aos="fade-up" data-aos-delay="250">
+        <div
+          className="contact-card"
+          data-aos="fade-up"
+          data-aos-delay="250"
+          onClick={() => handleCardClick('General Questions')}
+        >
           <div className="card-icon">
             <i className="fas fa-coffee"></i>
           </div>
           <h3>General Questions</h3>
           <p>Any burning questions? Let's chat</p>
         </div>
-      </div>
-
-      {/* Contact Form Section */}
-      <div className="form-section" data-aos="fade-up" data-aos-delay="300">
-        <h3 className="form-title">Get in Touch</h3>
-        <form
-          id="contact-form"
-          className="contact-form"
-          onSubmit={handleSubmit}
-        >
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input type="email" name="email" placeholder="Email Address" required />
-          <div className="phone-input-wrapper">
-            <PhoneInput
-              international
-              defaultCountry="MY"
-              value={phoneValue}
-              onChange={setPhoneValue}
-              placeholder="Phone Number"
-              className="phone-input-custom"
-              required
-            />
-          </div>
-          <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-          {statusMessage && (
-            <p id="status-message" style={{ color: statusColor }}>
-              {statusMessage}
-            </p>
-          )}
-        </form>
       </div>
 
       {/* WhatsApp Floating Button */}
@@ -226,7 +70,7 @@ function Contact() {
         rel="noopener noreferrer"
         title="Chat with us on WhatsApp"
         data-aos="zoom-in"
-        data-aos-delay="400"
+        data-aos-delay="300"
       >
         <i className="fab fa-whatsapp"></i>
       </a>
