@@ -398,6 +398,8 @@ nav a.active {
 .contact-hero {
   text-align: center;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-title {
@@ -422,6 +424,8 @@ nav a.active {
   gap: 2rem;
   margin-bottom: 4rem;
   padding: 0 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-card {
