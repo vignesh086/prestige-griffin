@@ -388,6 +388,137 @@ nav a.active {
   font-size: 1rem;
 }
 
+/* Contact Page Styles */
+.contact-page {
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.contact-subtitle {
+  font-size: 1.5rem;
+  color: var(--cream);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+.contact-card {
+  background: rgba(212, 175, 55, 0.05);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+}
+
+.contact-card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .card-icon {
+  background: var(--gold);
+  transform: scale(1.1);
+}
+
+.card-icon i {
+  font-size: 2rem;
+  color: var(--gold);
+  transition: color 0.3s ease;
+}
+
+.contact-card:hover .card-icon i {
+  color: var(--dark-red);
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: var(--cream);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.form-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(212, 175, 55, 0.03);
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
 /* Mobile Menu Toggle Button */
 .menu-toggle {
   display: none;
@@ -481,6 +612,22 @@ nav a.active {
 
   .PhoneInput {
     min-height: 44px;
+  }
+
+  .contact-title {
+    font-size: 2.8rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .contact-cards {
+    gap: 1.5rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
   }
 }
 
@@ -624,6 +771,36 @@ nav a.active {
 
   .PhoneInput {
     min-height: 48px;
+  }
+
+  .contact-page {
+    padding: 2rem 1rem;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
   }
 
   .whatsapp-float {
@@ -786,6 +963,59 @@ nav a.active {
     font-size: 0.95rem;
   }
 
+  .contact-page {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .contact-hero {
+    margin-bottom: 2rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-cards {
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-card p {
+    font-size: 0.9rem;
+  }
+
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .card-icon i {
+    font-size: 1.5rem;
+  }
+
+  .form-section {
+    padding: 1.2rem 1rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
   .whatsapp-float {
     width: 48px;
     height: 48px;
@@ -839,6 +1069,35 @@ nav a.active {
 
   .contact-form {
     padding: 0.8rem;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .contact-card {
+    padding: 1.3rem 0.9rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .form-section {
+    padding: 1rem 0.8rem;
+  }
+
+  .form-title {
+    font-size: 1.4rem;
   }
 }
 
@@ -933,6 +1192,51 @@ nav a.active {
     height: 1.2rem;
   }
 
+  .contact-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .contact-cards {
+    padding: 0 0.3rem;
+  }
+
+  .contact-card {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1rem;
+  }
+
+  .contact-card p {
+    font-size: 0.85rem;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-icon i {
+    font-size: 1.3rem;
+  }
+
+  .form-section {
+    padding: 0.9rem 0.6rem;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+  }
+
   .whatsapp-float {
     width: 44px;
     height: 44px;
@@ -1008,6 +1312,33 @@ nav a.active {
   .contact-form {
     padding: 1rem 2rem;
     max-width: 80%;
+  }
+
+  .contact-page {
+    padding: 1.5rem 2rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-section {
+    max-width: 80%;
+    padding: 1.5rem;
   }
 
   .whatsapp-float {
