@@ -446,6 +446,7 @@ nav a.active {
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .contact-card:hover {
