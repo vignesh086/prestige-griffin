@@ -997,7 +997,7 @@ nav a.active {
     width: 100%;
     margin-bottom: 0;
     padding: 0.5rem 0;
-    text-align: left;
+    text-align: center;
     max-width: 100%;
     order: 1;
   }
@@ -1276,7 +1276,7 @@ nav a.active {
     order: 1;
     margin-bottom: 0;
     padding: 0.5rem 0;
-    text-align: left;
+    text-align: center;
     max-width: 100%;
     width: 100%;
   }
@@ -1292,13 +1292,13 @@ nav a.active {
   .get-in-touch-page .contact-title {
     font-size: 1.8rem;
     margin: 0.5rem 0;
-    text-align: left;
+    text-align: center;
   }
 
   .get-in-touch-page .contact-subtitle {
     font-size: 1rem;
     margin: 0.3rem 0 1.5rem 0;
-    text-align: left;
+    text-align: center;
   }
 
   .get-in-touch-page .form-section {
@@ -1495,7 +1495,7 @@ nav a.active {
     flex: none;
     order: 1;
     padding: 0.4rem 0;
-    text-align: left;
+    text-align: center;
     width: 100%;
   }
 
@@ -1509,13 +1509,13 @@ nav a.active {
   .get-in-touch-page .contact-title {
     font-size: 1.6rem;
     margin: 0.4rem 0;
-    text-align: left;
+    text-align: center;
   }
 
   .get-in-touch-page .contact-subtitle {
     font-size: 0.9rem;
     margin: 0.2rem 0 1.2rem 0;
-    text-align: left;
+    text-align: center;
   }
 
   .get-in-touch-page .form-section {
