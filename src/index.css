@@ -244,7 +244,7 @@ nav a.active {
   width: 100%;
 }
 
-.contact-form input,
+.contact-form input:not(.PhoneInputInput),
 .contact-form textarea {
   padding: 0.8rem;
   border-radius: 8px;
@@ -260,10 +260,15 @@ nav a.active {
   transition: border-color 0.3s ease;
 }
 
-.contact-form input:focus,
+.contact-form input:not(.PhoneInputInput):focus,
 .contact-form textarea:focus {
   border-color: var(--cream);
   outline: none;
+}
+
+/* Ensure phone input has no border */
+.contact-form .PhoneInputInput {
+  border: none !important;
 }
 
 .contact-form textarea {
@@ -952,7 +957,7 @@ nav a.active {
   }
 
   .contact-form button,
-  .contact-form input,
+  .contact-form input:not(.PhoneInputInput),
   .contact-form textarea {
     min-height: 48px;
     border: 2px solid var(--gold) !important;
@@ -1173,7 +1178,7 @@ nav a.active {
     max-width: 100% !important;
   }
 
-  .contact-form input,
+  .contact-form input:not(.PhoneInputInput),
   .contact-form textarea {
     padding: 0.75rem;
     font-size: 1rem;
@@ -1402,7 +1407,7 @@ nav a.active {
     margin: 0 0.3rem;
   }
 
-  .contact-form input,
+  .contact-form input:not(.PhoneInputInput),
   .contact-form textarea {
     font-size: 0.95rem;
     padding: 0.7rem;
