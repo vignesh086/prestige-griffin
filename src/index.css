@@ -9,12 +9,28 @@
   box-sizing: border-box;
 }
 
+/* iOS Safe Area Support for iPhone X and newer */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+
+  .get-in-touch-page {
+    padding-left: max(1rem, env(safe-area-inset-left)) !important;
+    padding-right: max(1rem, env(safe-area-inset-right)) !important;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom)) !important;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background-color: var(--dark-red);
   color: var(--cream);
   padding-top: 90px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
@@ -241,6 +257,19 @@ nav a.active {
   font-family: 'Open Sans', sans-serif;
   position: relative;
   z-index: 2;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--cream);
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.6;
 }
 
 /* Phone Input Styles */
@@ -262,6 +291,11 @@ nav a.active {
   box-sizing: border-box;
   position: relative;
   z-index: 10;
+  transition: border-color 0.3s ease;
+}
+
+.PhoneInput:focus-within {
+  border-color: var(--cream);
 }
 
 .PhoneInput::before {
@@ -289,6 +323,10 @@ nav a.active {
   pointer-events: none;
 }
 
+.PhoneInput * {
+  background-color: #4a0303 !important;
+}
+
 .PhoneInputCountry {
   margin-right: 0.5rem;
   display: flex;
@@ -296,16 +334,20 @@ nav a.active {
   gap: 0.3rem;
   position: relative;
   z-index: 2;
+  background: #4a0303 !important;
+  padding: 0.2rem;
+  border-radius: 4px;
 }
 
 .PhoneInputCountryIcon {
   width: 1.5rem;
   height: 1.5rem;
   box-shadow: 0 0 4px rgba(0,0,0,0.4);
+  background: #4a0303 !important;
 }
 
 .PhoneInputCountrySelect {
-  background: transparent;
+  background: #4a0303 !important;
   border: none;
   color: var(--gold);
   font-size: 1rem;
@@ -331,7 +373,7 @@ nav a.active {
 }
 
 .PhoneInputInput {
-  background: transparent;
+  background: #4a0303 !important;
   border: none;
   color: var(--cream);
   font-size: 1rem;
@@ -341,6 +383,7 @@ nav a.active {
   min-width: 0;
   position: relative;
   z-index: 2;
+  padding: 0.2rem;
 }
 
 .PhoneInputInput::placeholder {
@@ -431,6 +474,28 @@ nav a.active {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+}
+
+/* Get in Touch Page - Mobile-First Stacked Layout */
+.get-in-touch-page {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 1.5rem 1rem;
+  min-height: 100vh;
+  max-height: none;
+  gap: 1.5rem;
+}
+
+.get-in-touch-page .contact-hero {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+}
+
+.get-in-touch-page .form-section {
+  width: 100%;
+  margin: 0;
 }
 
 .contact-page-content {
@@ -863,16 +928,40 @@ nav a.active {
 
   .contact-form {
     padding: 1rem;
+    max-width: 100% !important;
   }
 
   .contact-form button,
   .contact-form input,
   .contact-form textarea {
     min-height: 48px;
+    border: 2px solid var(--gold) !important;
   }
 
   .PhoneInput {
     min-height: 48px;
+    border: 2px solid var(--gold) !important;
+  }
+
+  .form-section {
+    max-width: 100% !important;
+    padding: 1.5rem 1rem;
+  }
+
+  .get-in-touch-page {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .get-in-touch-page .contact-hero {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .get-in-touch-page .form-section {
+    margin: 0;
+    width: 100%;
+    padding: 1.5rem 1rem;
   }
 
   .contact-page {
@@ -1050,29 +1139,92 @@ nav a.active {
 
   .contact-form {
     padding: 1rem 0.8rem;
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .contact-form input,
   .contact-form textarea {
-    padding: 0.7rem;
-    font-size: 0.95rem;
-    min-height: 44px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    min-height: 48px;
+    border: 2px solid var(--gold) !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
   }
 
   .contact-form button {
-    padding: 0.7rem;
-    font-size: 0.95rem;
-    min-height: 44px;
+    padding: 0.85rem;
+    font-size: 1rem;
+    min-height: 48px;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .PhoneInput {
-    padding: 0.7rem;
-    min-height: 44px;
+    padding: 0.75rem;
+    min-height: 48px;
+    border: 2px solid var(--gold) !important;
+    display: flex;
+    align-items: center;
   }
 
   .PhoneInputInput {
+    font-size: 1rem;
+    min-height: 32px;
+    padding: 0.3rem;
+  }
+
+  .PhoneInputCountry {
+    padding: 0.3rem;
+  }
+
+  .form-section {
+    max-width: 100% !important;
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 16px;
+  }
+
+  .get-in-touch-page {
+    padding: 1rem !important;
+    gap: 1rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .get-in-touch-page .contact-hero {
+    margin-bottom: 0;
+    padding: 0.5rem 0;
+  }
+
+  .get-in-touch-page .contact-title {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+  }
+
+  .get-in-touch-page .contact-subtitle {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+  }
+
+  .get-in-touch-page .form-section {
+    padding: 1.5rem 1rem;
+    margin: 0;
+  }
+
+  .back-button {
+    min-height: 44px;
+    min-width: 80px;
+    padding: 0.6rem 1rem;
     font-size: 0.95rem;
+    margin-bottom: 0.5rem;
   }
 
   .contact-page {
@@ -1124,6 +1276,11 @@ nav a.active {
 
   .form-section {
     padding: 1.2rem 1rem;
+    max-width: 100% !important;
+  }
+
+  .contact-form {
+    max-width: 100% !important;
   }
 
   .form-title {
@@ -1184,6 +1341,74 @@ nav a.active {
 
   .contact-form {
     padding: 0.8rem;
+    max-width: 100% !important;
+  }
+
+  .form-section {
+    max-width: 100% !important;
+    padding: 1rem 0.8rem;
+    margin: 0 0.3rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+    border: 2px solid var(--gold) !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .contact-form textarea {
+    min-height: 110px;
+    resize: vertical;
+  }
+
+  .PhoneInput {
+    border: 2px solid var(--gold) !important;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .PhoneInputInput {
+    padding: 0.25rem;
+  }
+
+  .PhoneInputCountry {
+    padding: 0.25rem;
+  }
+
+  .back-button {
+    min-height: 44px;
+    min-width: 75px;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .get-in-touch-page {
+    padding: 0.8rem !important;
+    gap: 0.8rem;
+  }
+
+  .get-in-touch-page .contact-hero {
+    padding: 0.3rem 0;
+  }
+
+  .get-in-touch-page .contact-title {
+    font-size: 1.6rem;
+    margin: 0.4rem 0;
+  }
+
+  .get-in-touch-page .contact-subtitle {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+  }
+
+  .get-in-touch-page .form-section {
+    padding: 1rem 0.8rem;
   }
 
   .contact-title {
