@@ -474,6 +474,19 @@ nav a.active {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  overflow: hidden;
+}
+
+/* Mobile viewport fix - remove height constraints on mobile */
+@media (max-width: 768px) {
+  .contact-page {
+    min-height: auto;
+    max-height: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Get in Touch Page - Mobile-First Stacked Layout */
@@ -967,6 +980,11 @@ nav a.active {
   .contact-page {
     padding: 2rem 1rem;
     min-height: auto;
+    max-height: none;
+  }
+
+  .contact-page:not(.get-in-touch-page) {
+    overflow-y: auto;
   }
 
   .contact-page-content {
@@ -1229,11 +1247,18 @@ nav a.active {
 
   .contact-page {
     padding: 1.5rem 0.8rem;
+    min-height: auto;
+    max-height: none;
+  }
+
+  .contact-page:not(.get-in-touch-page) {
+    overflow-y: auto;
+    padding-bottom: 2rem;
   }
 
   .contact-page-content {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .contact-hero {
@@ -1253,21 +1278,27 @@ nav a.active {
   }
 
   .contact-card {
-    padding: 1.5rem 1rem;
+    padding: 1.2rem 1rem;
   }
 
   .contact-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
   }
 
   .contact-card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 
   .card-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 0.8rem;
+  }
+
+  .contact-cards {
+    gap: 1rem;
   }
 
   .card-icon i {
@@ -1420,16 +1451,36 @@ nav a.active {
   }
 
   .contact-card {
-    padding: 1.3rem 0.9rem;
+    padding: 1rem 0.8rem;
   }
 
   .contact-card h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-card p {
+    font-size: 0.8rem;
+    line-height: 1.3;
   }
 
   .card-icon {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.6rem;
+  }
+
+  .contact-cards {
+    gap: 0.8rem;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.95rem;
   }
 
   .form-section {
@@ -1534,43 +1585,50 @@ nav a.active {
 
   .contact-page {
     padding: 1rem 0.5rem;
+    min-height: auto;
+    max-height: none;
   }
 
   .contact-page-content {
     flex-direction: column;
+    gap: 0.8rem;
   }
 
   .contact-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
   }
 
   .contact-subtitle {
-    font-size: 0.88rem;
+    font-size: 0.8rem;
   }
 
   .contact-cards {
-    gap: 1rem;
+    gap: 0.6rem;
   }
 
   .contact-card {
-    padding: 1.2rem 0.8rem;
+    padding: 0.8rem 0.6rem;
   }
 
   .contact-card h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
   }
 
   .contact-card p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    line-height: 1.3;
   }
 
   .card-icon {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 0.4rem;
   }
 
   .card-icon i {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .form-section {
