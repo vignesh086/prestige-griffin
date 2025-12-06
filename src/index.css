@@ -485,33 +485,47 @@ nav a.active {
   }
 }
 
-/* Get in Touch Page - Desktop View (Original) */
+/* Get in Touch Page - Desktop View: Left Hero, Right Form */
 .get-in-touch-page {
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 2rem 3rem;
-  gap: 2rem;
+  gap: 3rem;
   min-height: calc(100vh - 100px);
 }
 
 .get-in-touch-page .contact-hero {
-  text-align: center;
-  max-width: 800px;
-  width: 100%;
+  flex: 0 0 35%;
+  text-align: left;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .get-in-touch-page .back-button {
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+}
+
+.get-in-touch-page .contact-title {
+  text-align: left;
   margin-bottom: 1rem;
 }
 
+.get-in-touch-page .contact-subtitle {
+  text-align: left;
+}
+
 .get-in-touch-page .form-section {
-  width: 100%;
-  max-width: 2800px;
+  flex: 1;
+  max-width: 800px;
+  margin: 0;
 }
 
 .get-in-touch-page .contact-form {
-  max-width: 2400px;
+  max-width: 100%;
 }
 
 .contact-page-content {
