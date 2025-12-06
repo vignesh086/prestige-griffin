@@ -105,7 +105,8 @@ nav a.active {
 }
 
 .intro {
-  min-height: 90vh;
+  height: calc(100vh - 90px);
+  max-height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -912,7 +913,8 @@ nav a.active {
   }
 
   .intro {
-    min-height: 80vh;
+    height: calc(100vh - 70px);
+    max-height: calc(100vh - 70px);
     padding: 1.5rem;
   }
 
@@ -1153,7 +1155,8 @@ nav a.active {
   }
 
   .intro {
-    min-height: 70vh;
+    height: calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
     padding: 1rem;
   }
 
@@ -1600,6 +1603,8 @@ nav a.active {
   }
 
   .intro {
+    height: calc(100vh - 55px);
+    max-height: calc(100vh - 55px);
     padding: 0.8rem;
   }
 
@@ -1763,7 +1768,8 @@ nav a.active {
   }
 
   .intro {
-    min-height: auto;
+    height: calc(100vh - 50px);
+    max-height: calc(100vh - 50px);
     padding: 1.5rem 2rem;
   }
 
