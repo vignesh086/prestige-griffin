@@ -276,15 +276,13 @@ nav a.active {
 .phone-input-wrapper {
   width: 100%;
   position: relative;
-  z-index: 10;
-  background: #4a0303;
-  border-radius: 8px;
+  z-index: 2;
 }
 
 .PhoneInput {
   width: 100%;
   border-radius: 8px;
-  border: 2px solid var(--gold);
+  border: 2px solid var(--gold) !important;
   background: #4a0303 !important;
   background-color: #4a0303 !important;
   padding: 0.8rem;
@@ -292,25 +290,19 @@ nav a.active {
   position: relative;
   z-index: 10;
   transition: border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 0 1px var(--gold);
+  outline: none;
 }
 
 .PhoneInput:focus-within {
-  border-color: var(--cream);
+  border-color: var(--cream) !important;
+  box-shadow: 0 0 0 1px var(--cream);
 }
 
+/* Remove pseudo-elements that might hide the border */
 .PhoneInput::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: #4a0303;
-  border-radius: 8px;
-  z-index: -1;
-}
-
-.PhoneInput::after {
   content: "";
   position: absolute;
   top: 0;
@@ -319,8 +311,12 @@ nav a.active {
   bottom: 0;
   background: #4a0303;
   border-radius: 6px;
-  z-index: 0;
+  z-index: -2;
   pointer-events: none;
+}
+
+.PhoneInput::after {
+  display: none;
 }
 
 .PhoneInput * {
@@ -777,6 +773,8 @@ nav a.active {
 
   .PhoneInput {
     min-height: 44px;
+    border: 2px solid var(--gold) !important;
+    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .contact-page {
@@ -954,6 +952,7 @@ nav a.active {
   .PhoneInput {
     min-height: 48px;
     border: 2px solid var(--gold) !important;
+    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .form-section {
@@ -1191,6 +1190,7 @@ nav a.active {
     border: 2px solid var(--gold) !important;
     display: flex;
     align-items: center;
+    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .PhoneInputInput {
@@ -1401,6 +1401,7 @@ nav a.active {
     padding: 0.7rem;
     display: flex;
     align-items: center;
+    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .PhoneInputInput {
@@ -1572,6 +1573,8 @@ nav a.active {
 
   .PhoneInput {
     padding: 0.65rem;
+    border: 2px solid var(--gold) !important;
+    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .PhoneInputInput {
