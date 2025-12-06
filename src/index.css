@@ -288,7 +288,7 @@ nav a.active {
 .PhoneInput {
   width: 100%;
   border-radius: 8px;
-  border: none !important;
+  border: 2px solid var(--gold) !important;
   background: var(--dark-red) !important;
   background-color: var(--dark-red) !important;
   background-image: none !important;
@@ -299,6 +299,11 @@ nav a.active {
   display: flex;
   align-items: center;
   outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.PhoneInput:focus-within {
+  border-color: var(--cream);
 }
 
 /* Completely remove any pseudo-elements */
@@ -324,14 +329,9 @@ nav a.active {
   z-index: 2;
   background: var(--dark-red) !important;
   background-image: none !important;
-  padding: 0.5rem;
-  border-radius: 8px;
-  border: 2px solid var(--gold);
-  transition: border-color 0.3s ease;
-}
-
-.PhoneInputCountry:hover {
-  border-color: var(--cream);
+  padding: 0.2rem;
+  border-radius: 4px;
+  border: none;
 }
 
 .PhoneInputCountryIcon {
@@ -794,7 +794,7 @@ nav a.active {
 
   .PhoneInput {
     min-height: 44px;
-    border: none !important;
+    border: 2px solid var(--gold) !important;
   }
 
   .contact-page {
@@ -971,7 +971,7 @@ nav a.active {
 
   .PhoneInput {
     min-height: 48px;
-    border: none !important;
+    border: 2px solid var(--gold) !important;
   }
 
   .form-section {
@@ -1212,7 +1212,7 @@ nav a.active {
   .PhoneInput {
     padding: 0.75rem;
     min-height: 48px;
-    border: none !important;
+    border: 2px solid var(--gold) !important;
     display: flex;
     align-items: center;
   }
@@ -1429,7 +1429,7 @@ nav a.active {
   }
 
   .PhoneInput {
-    border: none !important;
+    border: 2px solid var(--gold) !important;
     padding: 0.7rem;
     display: flex;
     align-items: center;
@@ -1611,7 +1611,7 @@ nav a.active {
 
   .PhoneInput {
     padding: 0.65rem;
-    border: none !important;
+    border: 2px solid var(--gold) !important;
   }
 
   .PhoneInputInput {
