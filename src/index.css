@@ -294,13 +294,11 @@ nav a.active {
   transition: border-color 0.3s ease;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 0 1px var(--gold);
   outline: none;
 }
 
 .PhoneInput:focus-within {
   border-color: var(--cream) !important;
-  box-shadow: 0 0 0 1px var(--cream);
 }
 
 /* Completely remove any pseudo-elements */
@@ -791,7 +789,6 @@ nav a.active {
   .PhoneInput {
     min-height: 44px;
     border: 2px solid var(--gold) !important;
-    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .contact-page {
@@ -969,7 +966,6 @@ nav a.active {
   .PhoneInput {
     min-height: 48px;
     border: 2px solid var(--gold) !important;
-    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .form-section {
@@ -1213,7 +1209,6 @@ nav a.active {
     border: 2px solid var(--gold) !important;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .PhoneInputInput {
@@ -1432,7 +1427,6 @@ nav a.active {
     padding: 0.7rem;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .PhoneInputInput {
@@ -1612,7 +1606,6 @@ nav a.active {
   .PhoneInput {
     padding: 0.65rem;
     border: 2px solid var(--gold) !important;
-    box-shadow: 0 0 0 1px var(--gold);
   }
 
   .PhoneInputInput {
