@@ -460,7 +460,7 @@ nav a.active {
   font-size: 1rem;
 }
 
-/* Contact Page Styles */
+/* Contact Page Styles - Original Desktop Design */
 .contact-page {
   padding: 1.5rem 3rem;
   min-height: calc(100vh - 100px);
@@ -473,16 +473,8 @@ nav a.active {
   overflow: hidden;
 }
 
-/* Mobile viewport fix - remove height constraints on mobile */
-@media (max-width: 768px) {
-  .contact-page {
-    min-height: auto;
-    max-height: none;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-  }
+.contact-page:not(.get-in-touch-page) {
+  /* Original design: side-by-side layout maintained on desktop */
 }
 
 /* Get in Touch Page - Desktop View: Left Hero, Right Form */
@@ -1005,13 +997,11 @@ nav a.active {
     max-width: 100%;
   }
 
-  .contact-page {
+  /* Mobile-only Contact Us page adjustments */
+  .contact-page:not(.get-in-touch-page) {
     padding: 2rem 1rem;
     min-height: auto;
     max-height: none;
-  }
-
-  .contact-page:not(.get-in-touch-page) {
     overflow-y: auto;
   }
 
@@ -1284,13 +1274,11 @@ nav a.active {
     margin-bottom: 0.5rem;
   }
 
-  .contact-page {
+  /* Mobile Contact Us page */
+  .contact-page:not(.get-in-touch-page) {
     padding: 1.5rem 0.8rem;
     min-height: auto;
     max-height: none;
-  }
-
-  .contact-page:not(.get-in-touch-page) {
     overflow-y: auto;
     padding-bottom: 2rem;
   }
@@ -1300,7 +1288,7 @@ nav a.active {
     gap: 1.5rem;
   }
 
-  .contact-hero {
+  .contact-page:not(.get-in-touch-page) .contact-hero {
     text-align: center;
   }
 
@@ -1632,7 +1620,8 @@ nav a.active {
     height: 1.2rem;
   }
 
-  .contact-page {
+  /* Very small mobile Contact Us page */
+  .contact-page:not(.get-in-touch-page) {
     padding: 1rem 0.5rem;
     min-height: auto;
     max-height: none;
