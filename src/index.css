@@ -915,16 +915,21 @@ nav a.active {
   .intro {
     height: calc(100vh - 70px);
     max-height: calc(100vh - 70px);
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .intro h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    padding: 0 0.5rem;
   }
 
   .intro p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     max-width: 500px;
+    line-height: 1.5;
+    padding: 0 0.5rem;
   }
 
   .page-title {
@@ -933,25 +938,27 @@ nav a.active {
   }
 
   .services {
-    padding: 1.5rem;
-    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    gap: 1.2rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .service-box {
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
 
   .service-box h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.3;
   }
 
   .service-box h3 i {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .service-box p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   .about-content {
@@ -1157,17 +1164,20 @@ nav a.active {
   .intro {
     height: calc(100vh - 60px);
     max-height: calc(100vh - 60px);
-    padding: 1rem;
+    padding: 0.8rem 1rem;
   }
 
   .intro h2 {
-    font-size: 1.6rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.2;
+    padding: 0 0.3rem;
   }
 
   .intro p {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0 0.3rem;
   }
 
   .page-title {
@@ -1177,27 +1187,28 @@ nav a.active {
   }
 
   .services {
-    padding: 1rem;
-    gap: 1rem;
+    padding: 0.8rem 1rem;
+    gap: 0.9rem;
     grid-template-columns: 1fr;
   }
 
   .service-box {
-    padding: 1.2rem;
+    padding: 1rem;
   }
 
   .service-box h3 {
-    font-size: 1rem;
-    gap: 8px;
+    font-size: 0.95rem;
+    gap: 6px;
+    line-height: 1.3;
   }
 
   .service-box h3 i {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .service-box p {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 
   .about-content {
@@ -1605,16 +1616,20 @@ nav a.active {
   .intro {
     height: calc(100vh - 55px);
     max-height: calc(100vh - 55px);
-    padding: 0.8rem;
+    padding: 0.6rem 0.8rem;
   }
 
   .intro h2 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+    padding: 0 0.2rem;
   }
 
   .intro p {
-    font-size: 0.88rem;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    padding: 0 0.2rem;
   }
 
   .page-title {
@@ -1623,24 +1638,26 @@ nav a.active {
   }
 
   .services {
-    padding: 0.8rem;
-    gap: 0.8rem;
+    padding: 0.6rem 0.8rem;
+    gap: 0.7rem;
   }
 
   .service-box {
-    padding: 0.9rem;
+    padding: 0.8rem;
   }
 
   .service-box h3 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.3;
   }
 
   .service-box h3 i {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .service-box p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
   }
 
   .about-content {
