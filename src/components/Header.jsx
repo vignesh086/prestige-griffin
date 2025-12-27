@@ -24,9 +24,10 @@ function Header() {
       </button>
       <nav className={isMenuOpen ? 'active' : ''}>
         <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={closeMenu}>Home</Link>
-        <Link to="/services" className={location.pathname === '/services' ? 'active' : ''} onClick={closeMenu}>Services</Link>
         <Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={closeMenu}>About Us</Link>
-        <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={closeMenu}>Contact Us</Link>
+        <Link to="/services" className={location.pathname === '/services' ? 'active' : ''} onClick={closeMenu}>Services</Link>
+        <Link to="/careers" className={location.pathname === '/careers' ? 'active' : ''} onClick={closeMenu}>Careers</Link>
+        <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={closeMenu}>Contact</Link>
       </nav>
     </header>
   );
