@@ -2278,21 +2278,11 @@ textarea:focus-visible {
 /* Home Page */
 .home-page {
   width: 100%;
-}
-
-/* Hero Section */
-.hero-section {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 2rem;
   position: relative;
   overflow: hidden;
 }
 
-.hero-section::before {
+.home-page::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2305,6 +2295,24 @@ textarea:focus-visible {
   animation: moveGrid 8s linear infinite;
   z-index: 1;
   pointer-events: none;
+}
+
+/* Ensure all sections appear above the animated background */
+.home-page > section {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
