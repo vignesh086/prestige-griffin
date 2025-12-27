@@ -7,10 +7,6 @@ function Footer() {
         <div className="footer-section footer-company">
           <h3>Prestige Griffin</h3>
           <p className="footer-tagline">Strategic Growth Through Innovation</p>
-          <div className="footer-contact">
-            <p><i className="fas fa-envelope"></i> info@prestigegriffin.com</p>
-            <p><i className="fas fa-phone"></i> +60 12 688 0357</p>
-          </div>
         </div>
 
         <div className="footer-section footer-links">
@@ -18,7 +14,6 @@ function Footer() {
           <nav className="footer-nav">
             <Link to="/">Home</Link>
             <Link to="/about">About Us</Link>
-            <Link to="/services">Services</Link>
             <Link to="/careers">Careers</Link>
             <Link to="/contact">Contact</Link>
           </nav>
