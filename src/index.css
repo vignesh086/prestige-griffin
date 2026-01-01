@@ -54,6 +54,7 @@ body {
   background-attachment: fixed;
   color: var(--cream);
   padding-top: 90px;
+  padding-bottom: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
@@ -672,21 +673,17 @@ nav a.active {
 }
 
 /* ===================================
-   MODERN FOOTER
+   MODERN FOOTER - AMAP Style
    =================================== */
 
 .footer {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  text-align: center;
-  padding: 0.8rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
   border-top: 1px solid var(--glass-border);
+  position: relative;
+  margin-top: 4rem;
+  padding: 3rem 2rem 2rem;
 }
 
 .footer::before {
@@ -700,11 +697,90 @@ nav a.active {
   opacity: 0.4;
 }
 
-.footer p {
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--cream);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all var(--transition-smooth);
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+.footer-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width var(--transition-smooth);
+}
+
+.footer-nav a:hover {
+  color: var(--gold);
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+.footer-contact {
+  text-align: center;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-contact p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--cream);
+  opacity: 0.9;
+}
+
+.footer-contact a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: all var(--transition-smooth);
+}
+
+.footer-contact a:hover {
+  color: var(--gold-light);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.footer-bottom p {
   margin: 0;
   font-size: 0.85rem;
   color: var(--gold);
-  opacity: 0.9;
+  opacity: 0.8;
   letter-spacing: 0.5px;
 }
 
@@ -2341,7 +2417,7 @@ textarea:focus-visible {
 
 /* Value Proposition Section */
 .value-proposition-section {
-  padding: 5rem 3rem;
+  padding: 4rem 2rem;
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
   position: relative;
 }
@@ -2385,7 +2461,7 @@ textarea:focus-visible {
 
 /* Services Preview Section */
 .services-preview-section {
-  padding: 5rem 3rem;
+  padding: 4rem 2rem;
 }
 
 .services-grid {
@@ -2483,7 +2559,7 @@ textarea:focus-visible {
 
 /* About Preview Section */
 .about-preview-section {
-  padding: 5rem 3rem;
+  padding: 4rem 2rem;
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.03) 0%, transparent 100%);
 }
 
@@ -2494,7 +2570,7 @@ textarea:focus-visible {
 
 /* Careers CTA Section */
 .careers-cta-section {
-  padding: 5rem 3rem;
+  padding: 4rem 2rem;
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
 }
 
@@ -3271,14 +3347,21 @@ textarea:focus-visible {
     gap: 0.5rem;
   }
 
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .footer {
+    padding: 2rem 1.5rem 1.5rem;
   }
 
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
+  .footer-nav {
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-contact {
+    padding: 0.8rem 0;
+  }
+
+  .footer-contact p {
+    font-size: 0.9rem;
   }
 }
 
@@ -3331,5 +3414,26 @@ textarea:focus-visible {
 
   .position-title-section h3 {
     font-size: 1.3rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .footer-nav {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .footer-nav a {
+    font-size: 0.85rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
   }
 }
