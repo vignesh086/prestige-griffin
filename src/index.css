@@ -163,12 +163,12 @@ header.scrolled {
 }
 
 .brand img {
-  max-height: 48px;
+  max-height: 144px;
   transition: all var(--transition-slow);
 }
 
 header.scrolled .brand img {
-  max-height: 40px;
+  max-height: 120px;
 }
 
 .brand img:hover {
@@ -831,7 +831,7 @@ nav a.active {
 }
 
 .footer-logo img {
-  height: 35px;
+  height: 105px;
 }
 
 .footer-logo span {
@@ -1433,7 +1433,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 40px;
+    max-height: 120px;
   }
 
   .menu-toggle {
@@ -1707,7 +1707,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 38px;
+    max-height: 114px;
   }
 
   .intro h2 {
@@ -1740,7 +1740,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 35px;
+    max-height: 105px;
   }
 
   .menu-toggle {
@@ -2014,7 +2014,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 32px;
+    max-height: 96px;
   }
 
   .intro h2 {
@@ -2183,7 +2183,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 30px;
+    max-height: 90px;
   }
 
   .menu-toggle {
@@ -2351,7 +2351,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 30px;
+    max-height: 90px;
   }
 
   .brand h1 {
