@@ -133,7 +133,7 @@ function Services() {
           <p className="section-description">
             Let's discuss how our expertise can help you achieve your strategic objectives and drive sustainable growth.
           </p>
-          <div className="cta-container" data-aos="fade-up" data-aos-delay="200">
+          <div className="cta-container" data-aos="fade-up" data-aos-delay="100">
             <Link to="/contact" className="cta-button cta-button-large">
               Contact Us Today <i className="fas fa-arrow-right"></i>
             </Link>

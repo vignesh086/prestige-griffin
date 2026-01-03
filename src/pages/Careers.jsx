@@ -26,28 +26,28 @@ function Careers() {
             At Prestige Griffin, we believe that our people are our greatest asset. We foster a culture of collaboration, continuous learning, and professional growth. When you join our team, you become part of a global network of experts dedicated to making a meaningful impact across industries.
           </p>
           <div className="benefits-grid">
-            <div className="benefit-card" data-aos="fade-up" data-aos-delay="150">
+            <div className="benefit-card" data-aos="fade-up" data-aos-delay="200">
               <div className="benefit-icon">
                 <i className="fas fa-chart-line"></i>
               </div>
               <h3>Career Growth</h3>
               <p>Accelerate your career with ongoing training, mentorship, and advancement opportunities.</p>
             </div>
-            <div className="benefit-card" data-aos="fade-up" data-aos-delay="200">
+            <div className="benefit-card" data-aos="fade-up" data-aos-delay="300">
               <div className="benefit-icon">
                 <i className="fas fa-users"></i>
               </div>
               <h3>Collaborative Environment</h3>
               <p>Work alongside industry leaders and experts in a supportive, team-oriented culture.</p>
             </div>
-            <div className="benefit-card" data-aos="fade-up" data-aos-delay="250">
+            <div className="benefit-card" data-aos="fade-up" data-aos-delay="400">
               <div className="benefit-icon">
                 <i className="fas fa-globe"></i>
               </div>
               <h3>Global Impact</h3>
               <p>Contribute to projects that shape industries and drive meaningful change worldwide.</p>
             </div>
-            <div className="benefit-card" data-aos="fade-up" data-aos-delay="300">
+            <div className="benefit-card" data-aos="fade-up" data-aos-delay="500">
               <div className="benefit-icon">
                 <i className="fas fa-balance-scale"></i>
               </div>

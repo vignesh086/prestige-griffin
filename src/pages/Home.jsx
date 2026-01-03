@@ -62,28 +62,28 @@ function Home() {
       <section className="services-section">
         <h2 className="section-title" data-aos="fade-up">Strategic Solutions That Drive Success</h2>
         <div className="services-grid">
-          <div className="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div className="service-box" data-aos="fade-up" data-aos-delay="100">
             <div className="service-icon">
               <i className="fas fa-university"></i>
             </div>
             <h3>Finance & Banking</h3>
             <p>Expert advisory in global finance, investment strategies, and banking solutions tailored to drive growth and ensure long-term stability.</p>
           </div>
-          <div className="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div className="service-box" data-aos="fade-up" data-aos-delay="200">
             <div className="service-icon">
               <i className="fas fa-microchip"></i>
             </div>
             <h3>AI & Technology</h3>
             <p>Driving innovation with digital transformation, AI integration, and scalable technology solutions to create competitive advantages.</p>
           </div>
-          <div className="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div className="service-box" data-aos="fade-up" data-aos-delay="300">
             <div className="service-icon">
               <i className="fas fa-shield-alt"></i>
             </div>
             <h3>Defense</h3>
             <p>Strategic insights and partnerships in defense, ensuring secure and sustainable security investments with ethical considerations.</p>
           </div>
-          <div className="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div className="service-box" data-aos="fade-up" data-aos-delay="400">
             <div className="service-icon">
               <i className="fas fa-oil-can"></i>
             </div>

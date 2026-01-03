@@ -60,35 +60,35 @@ function About() {
             <h3>Integrity</h3>
             <p>We conduct business with the highest ethical standards, ensuring transparency, honesty, and accountability in all our interactions.</p>
           </div>
-          <div className="value-card" data-aos="fade-up" data-aos-delay="150">
+          <div className="value-card" data-aos="fade-up" data-aos-delay="200">
             <div className="value-icon">
               <i className="fas fa-lightbulb"></i>
             </div>
             <h3>Innovation</h3>
             <p>We embrace creativity and forward-thinking approaches, constantly seeking new ways to solve complex challenges and create value.</p>
           </div>
-          <div className="value-card" data-aos="fade-up" data-aos-delay="200">
+          <div className="value-card" data-aos="fade-up" data-aos-delay="300">
             <div className="value-icon">
               <i className="fas fa-award"></i>
             </div>
             <h3>Excellence</h3>
             <p>We are committed to delivering exceptional quality in everything we do, setting the highest standards for ourselves and exceeding client expectations.</p>
           </div>
-          <div className="value-card" data-aos="fade-up" data-aos-delay="250">
+          <div className="value-card" data-aos="fade-up" data-aos-delay="400">
             <div className="value-icon">
               <i className="fas fa-hands-helping"></i>
             </div>
             <h3>Collaboration</h3>
             <p>We believe in the power of partnership, working closely with clients and stakeholders to achieve shared success and mutual growth.</p>
           </div>
-          <div className="value-card" data-aos="fade-up" data-aos-delay="300">
+          <div className="value-card" data-aos="fade-up" data-aos-delay="500">
             <div className="value-icon">
               <i className="fas fa-leaf"></i>
             </div>
             <h3>Sustainability</h3>
             <p>We prioritize responsible business practices, ensuring that our solutions create long-term value while respecting environmental and social considerations.</p>
           </div>
-          <div className="value-card" data-aos="fade-up" data-aos-delay="350">
+          <div className="value-card" data-aos="fade-up" data-aos-delay="600">
             <div className="value-icon">
               <i className="fas fa-graduation-cap"></i>
             </div>

@@ -26,7 +26,7 @@ function Contact() {
           <div
             className="contact-card"
             data-aos="fade-up"
-            data-aos-delay="150"
+            data-aos-delay="200"
             onClick={() => handleCardClick('Business Partnership')}
           >
             <div className="card-icon">
@@ -39,7 +39,7 @@ function Contact() {
           <div
             className="contact-card"
             data-aos="fade-up"
-            data-aos-delay="200"
+            data-aos-delay="300"
             onClick={() => handleCardClick('Project Inquiry')}
           >
             <div className="card-icon">
@@ -52,7 +52,7 @@ function Contact() {
           <div
             className="contact-card"
             data-aos="fade-up"
-            data-aos-delay="250"
+            data-aos-delay="400"
             onClick={() => handleCardClick('General Questions')}
           >
             <div className="card-icon">
@@ -72,7 +72,7 @@ function Contact() {
         rel="noopener noreferrer"
         title="Chat with us on WhatsApp"
         data-aos="zoom-in"
-        data-aos-delay="300"
+        data-aos-delay="200"
       >
         <i className="fab fa-whatsapp"></i>
       </a>
