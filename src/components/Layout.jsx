@@ -5,6 +5,7 @@ import Footer from './Footer';
 function Layout() {
   return (
     <>
+      <div className="bg-animation"></div>
       <Header />
       <main>
         <Outlet />
