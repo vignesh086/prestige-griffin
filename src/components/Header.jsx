@@ -26,7 +26,7 @@ function Header() {
   return (
     <header className={isScrolled ? 'scrolled' : ''}>
       <div className="brand">
-        <img src="/griffin-logo.svg" alt="Prestige Griffin Logo" />
+        <img src="/griffin-logo.png" alt="Prestige Griffin Logo" />
         <h1>Prestige Griffin</h1>
       </div>
       <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
