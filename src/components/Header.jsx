@@ -1,9 +1,19 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Header() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,7 +24,7 @@ function Header() {
   };
 
   return (
-    <header>
+    <header className={isScrolled ? 'scrolled' : ''}>
       <div className="brand">
         <img src="/PG.png" alt="Prestige Griffin Logo" />
         <h1>Prestige Griffin</h1>
