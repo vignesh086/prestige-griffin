@@ -7,7 +7,7 @@ function Footer() {
         {/* Left Column - Logo & Tagline */}
         <div className="footer-column footer-brand">
           <div className="footer-logo">
-            <img src="/PG.png" alt="Prestige Griffin" />
+            <img src="/griffin-logo.svg" alt="Prestige Griffin" />
             <span>PRESTIGE GRIFFIN</span>
           </div>
           <p className="footer-tagline">
