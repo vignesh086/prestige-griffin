@@ -6,9 +6,9 @@
 
 :root {
   /* Brand Colors - Prestige Griffin */
-  --primary-red: #7a0a0a;
-  --dark-red: #1a0303;
-  --darker-red: #0d0101;
+  --primary-red: #8B0000;
+  --dark-red: #5c0000;
+  --darker-red: #3d0000;
   --gold: #d4af37;
   --gold-light: #e8c547;
   --gold-dark: #b8962e;
@@ -163,12 +163,12 @@ header.scrolled {
 }
 
 .brand img {
-  max-height: 144px;
+  max-height: 96px;
   transition: all var(--transition-slow);
 }
 
 header.scrolled .brand img {
-  max-height: 120px;
+  max-height: 80px;
 }
 
 .brand img:hover {
@@ -831,7 +831,7 @@ nav a.active {
 }
 
 .footer-logo img {
-  height: 105px;
+  height: 70px;
 }
 
 .footer-logo span {
@@ -1433,7 +1433,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 120px;
+    max-height: 80px;
   }
 
   .menu-toggle {
@@ -1707,7 +1707,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 114px;
+    max-height: 76px;
   }
 
   .intro h2 {
@@ -1740,7 +1740,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 105px;
+    max-height: 70px;
   }
 
   .menu-toggle {
@@ -2014,7 +2014,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 96px;
+    max-height: 64px;
   }
 
   .intro h2 {
@@ -2183,7 +2183,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 90px;
+    max-height: 60px;
   }
 
   .menu-toggle {
@@ -2351,7 +2351,7 @@ nav a.active {
   }
 
   .brand img {
-    max-height: 90px;
+    max-height: 60px;
   }
 
   .brand h1 {
