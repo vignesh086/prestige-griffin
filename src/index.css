@@ -1324,6 +1324,8 @@ nav a.active::after {
 
 .footer-links {
   gap: 0;
+  text-align: left;
+  align-items: flex-start;
 }
 
 .footer-brand {
@@ -1370,9 +1372,10 @@ nav a.active::after {
 .footer-nav {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
   margin: 0;
   padding: 0;
+  align-items: flex-start;
 }
 
 .footer-nav a {
@@ -1380,6 +1383,7 @@ nav a.active::after {
   color: var(--cream);
   opacity: 0.75;
   transition: var(--transition-fast);
+  line-height: 1.4;
 }
 
 .footer-nav a:hover {
