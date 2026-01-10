@@ -22,6 +22,7 @@ function LoadingScreen({ onComplete }) {
 
   return (
     <div className={`loading-screen ${fadeOut ? 'fade-out' : ''}`}>
+      <div className="bg-animation"></div>
       <div className="loading-content">
         <div className="loading-logo">
           <img src="/griffin-logo.png" alt="Prestige Griffin Logo" />
