@@ -171,7 +171,6 @@ header.scrolled {
 .brand img {
   height: 60px;
   transition: var(--transition-smooth);
-  mix-blend-mode: multiply;
   border-radius: 8px;
 }
 
