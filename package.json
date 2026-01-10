@@ -13,11 +13,14 @@
     "aos": "^2.3.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
     "react-phone-number-input": "^3.4.14",
     "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.0.5"
+    "sharp": "^0.34.5",
+    "vite": "^6.0.5",
+    "vite-plugin-image-optimizer": "^2.0.3"
   }
 }

@@ -1,12 +1,14 @@
-import { useEffect } from 'react';
+import SEO from '../components/SEO';
 
 function About() {
-  useEffect(() => {
-    document.title = 'About Us - Prestige Griffin';
-  }, []);
-
   return (
     <div className="about-page">
+      <SEO
+        title="About Us"
+        description="Learn about Prestige Griffin's mission, vision, and values. We are a premier advisory firm providing strategic solutions in finance, technology, defense, and commodities with a global reach."
+        canonical="/about"
+      />
+
       {/* Hero Section */}
       <section className="page-hero-section">
         <div className="page-hero-content" data-aos="fade-up">

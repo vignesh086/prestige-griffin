@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import SEO from '../components/SEO';
 
 function GetInTouch() {
   const [statusMessage, setStatusMessage] = useState('');
@@ -15,7 +16,6 @@ function GetInTouch() {
   const inquiryType = location.state?.inquiryType || 'General Inquiry';
 
   useEffect(() => {
-    document.title = 'Get in Touch - Prestige Griffin';
     // Initialize EmailJS
     emailjs.init("SMObHLtyNQbqvGQEU");
   }, []);
@@ -179,6 +179,12 @@ function GetInTouch() {
 
   return (
     <section className="intro contact-page get-in-touch-page">
+      <SEO
+        title="Get In Touch"
+        description="Send us a message and let's start a conversation. Whether you have a project inquiry, partnership opportunity, or general question, we'd love to hear from you."
+        canonical="/get-in-touch"
+      />
+
       {/* Hero Section */}
       <div className="contact-hero" data-aos="fade-up">
         <button className="back-button" onClick={handleBackToContact}>

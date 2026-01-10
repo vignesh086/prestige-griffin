@@ -1,13 +1,15 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 function Services() {
-  useEffect(() => {
-    document.title = 'Services - Prestige Griffin';
-  }, []);
-
   return (
     <div className="services-page">
+      <SEO
+        title="Our Services"
+        description="Comprehensive strategic advisory services in Finance & Banking, AI & Technology, Defense, and Commodities. Tailored solutions to drive sustainable growth and competitive advantage."
+        canonical="/services"
+      />
+
       {/* Hero Section */}
       <section className="page-hero-section">
         <div className="page-hero-content" data-aos="fade-up">

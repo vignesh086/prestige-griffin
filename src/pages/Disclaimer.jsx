@@ -1,14 +1,20 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 function Disclaimer() {
   useEffect(() => {
-    document.title = 'Disclaimer - Prestige Griffin';
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="legal-page">
+      <SEO
+        title="Disclaimer"
+        description="Important disclaimers regarding Prestige Griffin's website content and advisory services. Read our legal notices and limitations."
+        canonical="/disclaimer"
+        noindex={true}
+      />
       <section className="legal-hero-section">
         <div className="legal-hero-content" data-aos="fade-up">
           <h1 className="legal-hero-title">Disclaimer</h1>

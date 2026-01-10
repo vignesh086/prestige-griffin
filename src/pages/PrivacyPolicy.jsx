@@ -1,14 +1,20 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 function PrivacyPolicy() {
   useEffect(() => {
-    document.title = 'Privacy Policy - Prestige Griffin';
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="legal-page">
+      <SEO
+        title="Privacy Policy"
+        description="Prestige Griffin's privacy policy explains how we collect, use, and protect your personal information. Learn about your rights and our data protection practices."
+        canonical="/privacy"
+        noindex={true}
+      />
       <section className="legal-hero-section">
         <div className="legal-hero-content" data-aos="fade-up">
           <h1 className="legal-hero-title">Privacy Policy</h1>

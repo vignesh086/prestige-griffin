@@ -25,7 +25,7 @@ function LoadingScreen({ onComplete }) {
       <div className="bg-animation"></div>
       <div className="loading-content">
         <div className="loading-logo">
-          <img src="/griffin-logo.png" alt="Prestige Griffin Logo" />
+          <img src="/griffin-logo.png" alt="Prestige Griffin Logo" width="120" height="120" />
         </div>
         <h1 className="loading-title">Prestige Griffin</h1>
         <div className="loading-spinner"></div>
