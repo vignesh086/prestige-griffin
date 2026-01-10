@@ -1666,13 +1666,13 @@ nav a.active::after {
 
 .job-application-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 50%, var(--darker-red) 100%);
+  background: var(--dark-red);
 }
 
 .application-hero-section {
   padding: var(--space-32) var(--space-6) var(--space-16);
   text-align: center;
-  background: radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.1), transparent 60%);
+  background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
 }
 
 .application-hero-content {
