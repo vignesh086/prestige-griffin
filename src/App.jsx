@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Careers from './pages/Careers';
+import JobApplication from './pages/JobApplication';
 import Contact from './pages/Contact';
 import GetInTouch from './pages/GetInTouch';
 import './index.css';
@@ -25,6 +26,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="services" element={<Services />} />
           <Route path="careers" element={<Careers />} />
+          <Route path="careers/apply/:position" element={<JobApplication />} />
           <Route path="contact" element={<Contact />} />
           <Route path="get-in-touch" element={<GetInTouch />} />
         </Route>

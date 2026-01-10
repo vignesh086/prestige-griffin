@@ -1,10 +1,18 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Careers() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = 'Careers - Prestige Griffin';
   }, []);
+
+  const handleApply = (jobTitle, department) => {
+    navigate(`/careers/apply/${encodeURIComponent(jobTitle)}`, {
+      state: { jobTitle, department }
+    });
+  };
 
   return (
     <div className="careers-page">
@@ -86,6 +94,12 @@ function Careers() {
               <span className="tag">Investment Strategy</span>
               <span className="tag">Risk Analysis</span>
             </div>
+            <button
+              className="apply-now-btn"
+              onClick={() => handleApply('Senior Financial Analyst', 'Finance & Banking')}
+            >
+              Apply Now <i className="fas fa-arrow-right"></i>
+            </button>
           </div>
 
           {/* AI & Technology */}
@@ -108,6 +122,12 @@ function Careers() {
               <span className="tag">Cloud Architecture</span>
               <span className="tag">Digital Transformation</span>
             </div>
+            <button
+              className="apply-now-btn"
+              onClick={() => handleApply('AI Solutions Architect', 'AI & Technology')}
+            >
+              Apply Now <i className="fas fa-arrow-right"></i>
+            </button>
           </div>
 
           {/* Defense */}
@@ -130,6 +150,12 @@ function Careers() {
               <span className="tag">Compliance</span>
               <span className="tag">Government Relations</span>
             </div>
+            <button
+              className="apply-now-btn"
+              onClick={() => handleApply('Defense Strategy Consultant', 'Defense and Arms')}
+            >
+              Apply Now <i className="fas fa-arrow-right"></i>
+            </button>
           </div>
 
           {/* Commodities */}
@@ -152,6 +178,12 @@ function Careers() {
               <span className="tag">Market Analysis</span>
               <span className="tag">Risk Management</span>
             </div>
+            <button
+              className="apply-now-btn"
+              onClick={() => handleApply('Commodities Trading Specialist', 'Commodities')}
+            >
+              Apply Now <i className="fas fa-arrow-right"></i>
+            </button>
           </div>
 
           {/* Business Development */}
@@ -174,6 +206,12 @@ function Careers() {
               <span className="tag">Strategic Partnerships</span>
               <span className="tag">Revenue Growth</span>
             </div>
+            <button
+              className="apply-now-btn"
+              onClick={() => handleApply('Business Development Manager', 'Business Development')}
+            >
+              Apply Now <i className="fas fa-arrow-right"></i>
+            </button>
           </div>
 
           {/* Operations */}
@@ -196,6 +234,12 @@ function Careers() {
               <span className="tag">Process Optimization</span>
               <span className="tag">Team Coordination</span>
             </div>
+            <button
+              className="apply-now-btn"
+              onClick={() => handleApply('Operations Coordinator', 'Operations')}
+            >
+              Apply Now <i className="fas fa-arrow-right"></i>
+            </button>
           </div>
         </div>
       </section>
