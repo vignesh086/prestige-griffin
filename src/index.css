@@ -196,7 +196,7 @@ nav {
 
 nav a {
   color: var(--cream);
-  font-size: 0.938rem;
+  font-size: 1.0625rem;
   font-weight: 500;
   position: relative;
   padding: var(--space-2) 0;
