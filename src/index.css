@@ -159,8 +159,16 @@ strong {
 
 .loading-screen .bg-animation {
   position: absolute;
-  opacity: 0.15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
+}
+
+.loading-screen .bg-animation::before,
+.loading-screen .bg-animation::after {
+  opacity: 0.25;
 }
 
 .loading-content {
@@ -359,11 +367,49 @@ nav a.active::after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.03;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
   pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-animation::before,
+.bg-animation::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(80px);
+  animation: floatBg 15s ease-in-out infinite;
+}
+
+.bg-animation::before {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, transparent 70%);
+  top: -200px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.bg-animation::after {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+  bottom: -200px;
+  right: -100px;
+  animation-delay: -7.5s;
+}
+
+@keyframes floatBg {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(50px, 30px) scale(1.1);
+  }
+  50% {
+    transform: translate(20px, -20px) scale(0.95);
+  }
+  75% {
+    transform: translate(-30px, 20px) scale(1.05);
+  }
 }
 
 /* ===================================
