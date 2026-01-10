@@ -157,12 +157,20 @@ strong {
   opacity: 0;
 }
 
+.loading-screen .bg-animation {
+  position: absolute;
+  opacity: 0.15;
+  z-index: 0;
+}
+
 .loading-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-6);
   animation: fadeInUp 1s ease-out;
+  position: relative;
+  z-index: 1;
 }
 
 .loading-logo {
