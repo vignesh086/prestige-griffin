@@ -214,6 +214,21 @@ strong {
   animation: spin 1s linear infinite;
 }
 
+/* Page loader for lazy-loaded components */
+.page-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background: var(--primary-red);
+}
+
+.page-loader .loading-spinner {
+  width: 50px;
+  height: 50px;
+  border-width: 4px;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

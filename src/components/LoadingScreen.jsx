@@ -4,15 +4,15 @@ function LoadingScreen({ onComplete }) {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Start fade out after 4.5 seconds
+    // Start fade out after 1.2 seconds (reduced from 4.5s for better UX)
     const fadeTimer = setTimeout(() => {
       setFadeOut(true);
-    }, 4500);
+    }, 1200);
 
-    // Complete loading after 5 seconds
+    // Complete loading after 1.5 seconds (reduced from 5s for better UX)
     const completeTimer = setTimeout(() => {
       onComplete();
-    }, 5000);
+    }, 1500);
 
     return () => {
       clearTimeout(fadeTimer);
