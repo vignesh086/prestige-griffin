@@ -8,9 +8,9 @@ function Careers() {
     document.title = 'Careers - Prestige Griffin';
   }, []);
 
-  const handleApply = (jobTitle, department) => {
-    navigate(`/careers/apply/${encodeURIComponent(jobTitle)}`, {
-      state: { jobTitle, department }
+  const handleApply = (jobDetails) => {
+    navigate(`/careers/apply/${encodeURIComponent(jobDetails.title)}`, {
+      state: { job: jobDetails }
     });
   };
 
@@ -96,7 +96,28 @@ function Careers() {
             </div>
             <button
               className="apply-now-btn"
-              onClick={() => handleApply('Senior Financial Analyst', 'Finance & Banking')}
+              onClick={() => handleApply({
+                title: 'Senior Financial Analyst',
+                department: 'Finance & Banking',
+                location: 'Global / Remote',
+                type: 'Full-time',
+                description: 'Lead financial analysis and strategic planning initiatives for high-profile clients. Requires expertise in global markets, investment strategies, and risk management.',
+                requirements: ['Financial Modeling', 'Investment Strategy', 'Risk Analysis'],
+                responsibilities: [
+                  'Conduct comprehensive financial analysis and modeling for strategic decision-making',
+                  'Develop investment strategies aligned with client objectives and risk tolerance',
+                  'Monitor global market trends and provide actionable insights',
+                  'Prepare detailed financial reports and presentations for stakeholders',
+                  'Collaborate with cross-functional teams to optimize financial performance'
+                ],
+                qualifications: [
+                  "Bachelor's degree in Finance, Economics, or related field; MBA preferred",
+                  '5+ years of experience in financial analysis or investment banking',
+                  'Strong proficiency in financial modeling and valuation techniques',
+                  'Excellent analytical and problem-solving skills',
+                  'CFA certification is a plus'
+                ]
+              })}
             >
               Apply Now <i className="fas fa-arrow-right"></i>
             </button>
@@ -124,7 +145,28 @@ function Careers() {
             </div>
             <button
               className="apply-now-btn"
-              onClick={() => handleApply('AI Solutions Architect', 'AI & Technology')}
+              onClick={() => handleApply({
+                title: 'AI Solutions Architect',
+                department: 'AI & Technology',
+                location: 'Hybrid',
+                type: 'Full-time',
+                description: 'Design and implement cutting-edge AI solutions for clients across diverse industries. Drive digital transformation through innovative technology integration.',
+                requirements: ['Machine Learning', 'Cloud Architecture', 'Digital Transformation'],
+                responsibilities: [
+                  'Design and architect AI/ML solutions tailored to client business needs',
+                  'Lead the implementation of machine learning models and data pipelines',
+                  'Evaluate and recommend emerging technologies for client adoption',
+                  'Collaborate with stakeholders to define technical requirements and roadmaps',
+                  'Mentor team members on AI best practices and methodologies'
+                ],
+                qualifications: [
+                  "Master's degree in Computer Science, AI, or related field",
+                  '7+ years of experience in software architecture with 3+ years in AI/ML',
+                  'Proficiency in Python, TensorFlow, PyTorch, and cloud platforms (AWS/Azure/GCP)',
+                  'Experience with large-scale distributed systems',
+                  'Strong communication skills to translate technical concepts for business audiences'
+                ]
+              })}
             >
               Apply Now <i className="fas fa-arrow-right"></i>
             </button>
@@ -152,7 +194,28 @@ function Careers() {
             </div>
             <button
               className="apply-now-btn"
-              onClick={() => handleApply('Defense Strategy Consultant', 'Defense and Arms')}
+              onClick={() => handleApply({
+                title: 'Defense Strategy Consultant',
+                department: 'Defense and Arms',
+                location: 'On-site',
+                type: 'Full-time',
+                description: 'Provide strategic advisory services to defense sector clients. Ensure compliance with international regulations while delivering sustainable security solutions.',
+                requirements: ['Strategic Planning', 'Compliance', 'Government Relations'],
+                responsibilities: [
+                  'Develop and implement strategic plans for defense sector clients',
+                  'Ensure compliance with international defense regulations and export controls',
+                  'Build and maintain relationships with government and military stakeholders',
+                  'Conduct risk assessments and provide mitigation strategies',
+                  'Advise on sustainable and ethical security solutions'
+                ],
+                qualifications: [
+                  "Bachelor's degree in International Relations, Political Science, or related field",
+                  '8+ years of experience in defense consulting or government relations',
+                  'Deep understanding of international defense regulations (ITAR, EAR)',
+                  'Security clearance or ability to obtain one',
+                  'Strong network within government and defense sectors'
+                ]
+              })}
             >
               Apply Now <i className="fas fa-arrow-right"></i>
             </button>
@@ -180,7 +243,28 @@ function Careers() {
             </div>
             <button
               className="apply-now-btn"
-              onClick={() => handleApply('Commodities Trading Specialist', 'Commodities')}
+              onClick={() => handleApply({
+                title: 'Commodities Trading Specialist',
+                department: 'Commodities',
+                location: 'Global / Remote',
+                type: 'Full-time',
+                description: 'Execute and manage commodity trading strategies in oil, gas, and raw materials markets. Build and maintain strategic partnerships across global networks.',
+                requirements: ['Commodities Trading', 'Market Analysis', 'Risk Management'],
+                responsibilities: [
+                  'Execute trading strategies across oil, gas, and raw materials markets',
+                  'Analyze market trends, supply-demand dynamics, and pricing patterns',
+                  'Develop and maintain relationships with global trading partners',
+                  'Manage portfolio risk and optimize trading positions',
+                  'Provide market intelligence and recommendations to clients'
+                ],
+                qualifications: [
+                  "Bachelor's degree in Finance, Economics, or related field",
+                  '5+ years of experience in commodities trading or brokerage',
+                  'Strong understanding of global commodity markets and derivatives',
+                  'Proven track record of profitable trading strategies',
+                  'Excellent negotiation and relationship-building skills'
+                ]
+              })}
             >
               Apply Now <i className="fas fa-arrow-right"></i>
             </button>
@@ -208,7 +292,28 @@ function Careers() {
             </div>
             <button
               className="apply-now-btn"
-              onClick={() => handleApply('Business Development Manager', 'Business Development')}
+              onClick={() => handleApply({
+                title: 'Business Development Manager',
+                department: 'Business Development',
+                location: 'Hybrid',
+                type: 'Full-time',
+                description: 'Identify and pursue new business opportunities, build client relationships, and drive revenue growth across all service lines.',
+                requirements: ['Client Relations', 'Strategic Partnerships', 'Revenue Growth'],
+                responsibilities: [
+                  'Identify and pursue new business opportunities across target markets',
+                  'Build and nurture long-term client relationships',
+                  'Develop and execute strategic partnership initiatives',
+                  'Create compelling proposals and presentations for prospective clients',
+                  'Collaborate with service teams to ensure successful client onboarding'
+                ],
+                qualifications: [
+                  "Bachelor's degree in Business, Marketing, or related field",
+                  '6+ years of experience in business development or sales',
+                  'Proven track record of meeting and exceeding revenue targets',
+                  'Strong networking and relationship management skills',
+                  'Experience in professional services or consulting preferred'
+                ]
+              })}
             >
               Apply Now <i className="fas fa-arrow-right"></i>
             </button>
@@ -236,7 +341,28 @@ function Careers() {
             </div>
             <button
               className="apply-now-btn"
-              onClick={() => handleApply('Operations Coordinator', 'Operations')}
+              onClick={() => handleApply({
+                title: 'Operations Coordinator',
+                department: 'Operations',
+                location: 'Remote',
+                type: 'Full-time',
+                description: 'Support day-to-day operations, coordinate cross-functional projects, and ensure seamless execution of client engagements.',
+                requirements: ['Project Management', 'Process Optimization', 'Team Coordination'],
+                responsibilities: [
+                  'Coordinate daily operations and ensure smooth workflow across teams',
+                  'Manage project timelines, deliverables, and resource allocation',
+                  'Implement and optimize operational processes and procedures',
+                  'Facilitate communication between departments and stakeholders',
+                  'Track and report on key operational metrics and KPIs'
+                ],
+                qualifications: [
+                  "Bachelor's degree in Business Administration or related field",
+                  '3+ years of experience in operations or project coordination',
+                  'Strong organizational and multitasking abilities',
+                  'Proficiency in project management tools (Asana, Monday, etc.)',
+                  'Excellent communication and interpersonal skills'
+                ]
+              })}
             >
               Apply Now <i className="fas fa-arrow-right"></i>
             </button>

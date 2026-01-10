@@ -15,13 +15,21 @@ function JobApplication() {
   const { position } = useParams();
 
   // Get job details from location state or URL params
-  const jobTitle = location.state?.jobTitle || decodeURIComponent(position || 'General Application');
-  const jobDepartment = location.state?.department || '';
+  const job = location.state?.job || {
+    title: decodeURIComponent(position || 'General Application'),
+    department: '',
+    location: '',
+    type: '',
+    description: '',
+    requirements: [],
+    responsibilities: [],
+    qualifications: []
+  };
 
   useEffect(() => {
-    document.title = `Apply - ${jobTitle} - Prestige Griffin`;
+    document.title = `Apply - ${job.title} - Prestige Griffin`;
     emailjs.init("SMObHLtyNQbqvGQEU");
-  }, [jobTitle]);
+  }, [job.title]);
 
   const validateName = (name) => {
     if (!name || name.trim().length === 0) {
@@ -142,8 +150,8 @@ function JobApplication() {
       name: name,
       email: email,
       phone: phoneValue,
-      position: jobTitle,
-      department: jobDepartment,
+      position: job.title,
+      department: job.department,
       cover_letter: coverLetter || 'No cover letter provided',
       resume_name: resumeFile.name,
       resume_data: resumeBase64
@@ -193,13 +201,78 @@ function JobApplication() {
           </button>
           <h1 className="application-hero-title">Apply for Position</h1>
           <div className="application-job-info">
-            <h2 className="application-job-title">{jobTitle}</h2>
-            {jobDepartment && (
-              <p className="application-job-department">{jobDepartment}</p>
+            <h2 className="application-job-title">{job.title}</h2>
+            {job.department && (
+              <p className="application-job-department">{job.department}</p>
+            )}
+            {(job.location || job.type) && (
+              <div className="application-job-meta">
+                {job.location && (
+                  <span className="job-meta-item">
+                    <i className="fas fa-map-marker-alt"></i> {job.location}
+                  </span>
+                )}
+                {job.type && (
+                  <span className="job-meta-item">
+                    <i className="fas fa-clock"></i> {job.type}
+                  </span>
+                )}
+              </div>
             )}
           </div>
         </div>
       </section>
+
+      {/* Job Details Section */}
+      {(job.description || job.responsibilities?.length > 0 || job.qualifications?.length > 0) && (
+        <section className="job-details-section">
+          <div className="job-details-container" data-aos="fade-up">
+            {/* Job Description */}
+            {job.description && (
+              <div className="job-detail-block">
+                <h3><i className="fas fa-briefcase"></i> About This Role</h3>
+                <p>{job.description}</p>
+              </div>
+            )}
+
+            {/* Key Skills */}
+            {job.requirements?.length > 0 && (
+              <div className="job-detail-block">
+                <h3><i className="fas fa-star"></i> Key Skills</h3>
+                <div className="job-skills-tags">
+                  {job.requirements.map((skill, index) => (
+                    <span key={index} className="skill-tag">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Responsibilities */}
+            {job.responsibilities?.length > 0 && (
+              <div className="job-detail-block">
+                <h3><i className="fas fa-tasks"></i> Responsibilities</h3>
+                <ul className="job-detail-list">
+                  {job.responsibilities.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Qualifications */}
+            {job.qualifications?.length > 0 && (
+              <div className="job-detail-block">
+                <h3><i className="fas fa-graduation-cap"></i> Qualifications</h3>
+                <ul className="job-detail-list">
+                  {job.qualifications.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Application Form Section */}
       <section className="application-form-section">
