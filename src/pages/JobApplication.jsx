@@ -3,6 +3,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import SEO from '../components/SEO';
 
 function JobApplication() {
   const [statusMessage, setStatusMessage] = useState('');
@@ -27,9 +28,8 @@ function JobApplication() {
   };
 
   useEffect(() => {
-    document.title = `Apply - ${job.title} - Prestige Griffin`;
     emailjs.init("SMObHLtyNQbqvGQEU");
-  }, [job.title]);
+  }, []);
 
   const validateName = (name) => {
     if (!name || name.trim().length === 0) {
@@ -193,6 +193,13 @@ function JobApplication() {
 
   return (
     <div className="job-application-page">
+      <SEO
+        title={`Apply - ${job.title}`}
+        description={`Apply for the ${job.title} position at Prestige Griffin. ${job.department ? `Join our ${job.department} team.` : ''} Submit your application today.`}
+        canonical={`/careers/apply/${encodeURIComponent(job.title)}`}
+        noindex={true}
+      />
+
       {/* Hero Section */}
       <section className="application-hero-section">
         <div className="application-hero-content" data-aos="fade-up">

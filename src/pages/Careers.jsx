@@ -1,12 +1,8 @@
-import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 function Careers() {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    document.title = 'Careers - Prestige Griffin';
-  }, []);
 
   const handleApply = (jobDetails) => {
     navigate(`/careers/apply/${encodeURIComponent(jobDetails.title)}`, {
@@ -16,6 +12,12 @@ function Careers() {
 
   return (
     <div className="careers-page">
+      <SEO
+        title="Career Opportunities"
+        description="Join Prestige Griffin and build your future with a dynamic team committed to excellence and innovation. Explore exciting career opportunities in finance, technology, defense, and commodities advisory."
+        canonical="/careers"
+      />
+
       {/* Hero Section */}
       <section className="page-hero-section">
         <div className="page-hero-content" data-aos="fade-up">

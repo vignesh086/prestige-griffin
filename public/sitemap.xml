@@ -7,7 +7,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://prestigegriffin.com/</loc>
-    <lastmod>2025-12-06</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,15 +15,31 @@
   <!-- About Page -->
   <url>
     <loc>https://prestigegriffin.com/about</loc>
-    <lastmod>2025-12-06</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://prestigegriffin.com/services</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Careers Page -->
+  <url>
+    <loc>https://prestigegriffin.com/careers</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Contact Page -->
   <url>
     <loc>https://prestigegriffin.com/contact</loc>
-    <lastmod>2025-12-06</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -31,9 +47,33 @@
   <!-- Get in Touch Page -->
   <url>
     <loc>https://prestigegriffin.com/get-in-touch</loc>
-    <lastmod>2025-12-06</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://prestigegriffin.com/privacy</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms and Conditions -->
+  <url>
+    <loc>https://prestigegriffin.com/terms</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Disclaimer -->
+  <url>
+    <loc>https://prestigegriffin.com/disclaimer</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

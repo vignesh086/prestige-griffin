@@ -1,13 +1,15 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 function Home() {
-  useEffect(() => {
-    document.title = 'Prestige Griffin - Investing in Strategic Growth';
-  }, []);
-
   return (
     <div className="home-page">
+      <SEO
+        title="Investing in Strategic Growth"
+        description="Prestige Griffin is a premier advisory firm providing strategic solutions in finance, banking, technology, defense, and commodities trading. Expert insights and innovative strategies for long-term growth."
+        canonical="/"
+      />
+
       {/* Hero Section - AMAP Style */}
       <section className="hero-section">
         <div className="hero-content" data-aos="fade-up">

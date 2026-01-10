@@ -1,14 +1,20 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 function TermsAndConditions() {
   useEffect(() => {
-    document.title = 'Terms and Conditions - Prestige Griffin';
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="legal-page">
+      <SEO
+        title="Terms and Conditions"
+        description="Review Prestige Griffin's terms and conditions for using our website and advisory services. Understand your rights and responsibilities."
+        canonical="/terms"
+        noindex={true}
+      />
       <section className="legal-hero-section">
         <div className="legal-hero-content" data-aos="fade-up">
           <h1 className="legal-hero-title">Terms and Conditions</h1>

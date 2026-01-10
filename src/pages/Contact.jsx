@@ -1,12 +1,8 @@
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 function Contact() {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    document.title = 'Contact Us - Prestige Griffin';
-  }, []);
 
   const handleCardClick = (inquiryType) => {
     navigate('/get-in-touch', { state: { inquiryType } });
@@ -14,6 +10,11 @@ function Contact() {
 
   return (
     <section className="intro contact-page">
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Prestige Griffin for strategic advisory solutions in finance, technology, defense, and commodities. Let's discuss how we can help your business grow."
+        canonical="/contact"
+      />
       <div className="contact-page-content">
         {/* Hero Section */}
         <div className="contact-hero" data-aos="fade-up">
