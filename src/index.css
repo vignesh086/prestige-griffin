@@ -169,13 +169,13 @@ header.scrolled {
 }
 
 .brand img {
-  height: 60px;
+  height: 80px;
   transition: var(--transition-smooth);
   border-radius: 8px;
 }
 
 header.scrolled .brand img {
-  height: 50px;
+  height: 65px;
 }
 
 .brand h1 {
@@ -1337,7 +1337,7 @@ nav a.active::after {
 }
 
 .footer-brand .footer-logo img {
-  height: 50px;
+  height: 70px;
   border-radius: 8px;
 }
 
