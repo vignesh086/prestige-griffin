@@ -19,35 +19,101 @@ function About() {
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="mission-vision-section">
-        <div className="mission-vision-content" data-aos="fade-up" data-aos-delay="100">
-          <h2 className="section-title">Our Mission</h2>
-          <p className="section-description">
-            At Prestige Griffin, our mission is to empower businesses with actionable insights, cutting-edge intelligence, and innovative strategies that drive sustainable growth and lasting impact. We are committed to delivering excellence in every engagement, helping our clients navigate the complexities of modern industries with confidence and clarity.
-          </p>
+      {/* Mission & Vision Section - Modernized */}
+      <section className="mission-vision-section-modern">
+        <div className="mv-card mission-card" data-aos="fade-right" data-aos-delay="100">
+          <div className="mv-card-accent"></div>
+          <div className="mv-card-content">
+            <div className="mv-icon-wrapper">
+              <i className="fas fa-bullseye"></i>
+            </div>
+            <h2 className="mv-title">Our Mission</h2>
+            <div className="mv-divider"></div>
+            <p className="mv-description">
+              At Prestige Griffin, our mission is to empower businesses with actionable insights, cutting-edge intelligence, and innovative strategies that drive sustainable growth and lasting impact. We are committed to delivering excellence in every engagement, helping our clients navigate the complexities of modern industries with confidence and clarity.
+            </p>
+          </div>
+          <div className="mv-card-glow"></div>
         </div>
-        <div className="mission-vision-content" data-aos="fade-up" data-aos-delay="200">
-          <h2 className="section-title">Our Vision</h2>
-          <p className="section-description">
-            We envision a future where businesses thrive through strategic foresight, responsible innovation, and collaborative partnerships. By bridging the gap between ambition and execution, we aim to be the trusted advisor for organizations seeking to create meaningful value and sustainable prosperity in an ever-evolving global landscape.
-          </p>
+
+        <div className="mv-card vision-card" data-aos="fade-left" data-aos-delay="200">
+          <div className="mv-card-accent"></div>
+          <div className="mv-card-content">
+            <div className="mv-icon-wrapper">
+              <i className="fas fa-eye"></i>
+            </div>
+            <h2 className="mv-title">Our Vision</h2>
+            <div className="mv-divider"></div>
+            <p className="mv-description">
+              We envision a future where businesses thrive through strategic foresight, responsible innovation, and collaborative partnerships. By bridging the gap between ambition and execution, we aim to be the trusted advisor for organizations seeking to create meaningful value and sustainable prosperity in an ever-evolving global landscape.
+            </p>
+          </div>
+          <div className="mv-card-glow"></div>
         </div>
       </section>
 
-      {/* Who We Are Section */}
-      <section className="who-we-are-section">
-        <div className="who-we-are-content" data-aos="fade-up">
-          <h2 className="section-title">Who We Are</h2>
-          <p className="section-description">
-            Prestige Griffin is a premier advisory firm providing strategic solutions in <strong>finance & banking</strong>, <strong>AI & technology</strong>, <strong>defense</strong>, and <strong>commodities trading</strong>. Founded on principles of integrity, innovation, and excellence, we have established ourselves as trusted partners to businesses, governments, and institutions worldwide.
-          </p>
-          <p className="section-description">
-            Our team comprises seasoned professionals with decades of combined experience across multiple sectors. From financial analysts and technology architects to defense strategists and commodities specialists, we bring together diverse expertise to deliver comprehensive, multidisciplinary solutions.
-          </p>
-          <p className="section-description">
-            We understand that every client is unique, with distinct challenges, opportunities, and aspirations. That's why we take a bespoke approach to every engagement, crafting tailored strategies that align with your specific goals and deliver measurable results.
-          </p>
+      {/* Who We Are Section - Modernized */}
+      <section className="who-we-are-section-modern">
+        <div className="wwa-container" data-aos="fade-up">
+          <div className="wwa-header">
+            <span className="wwa-label">About Us</span>
+            <h2 className="wwa-title">Who We Are</h2>
+            <div className="wwa-title-accent"></div>
+          </div>
+
+          <div className="wwa-intro">
+            <p>
+              Prestige Griffin is a premier advisory firm providing strategic solutions across multiple industries. Founded on principles of integrity, innovation, and excellence, we have established ourselves as trusted partners to businesses, governments, and institutions worldwide.
+            </p>
+          </div>
+
+          <div className="wwa-sectors-grid">
+            <div className="wwa-sector-card" data-aos="zoom-in" data-aos-delay="100">
+              <div className="sector-icon-ring">
+                <i className="fas fa-chart-line"></i>
+              </div>
+              <h3>Finance & Banking</h3>
+              <p>Strategic financial advisory and banking solutions</p>
+            </div>
+            <div className="wwa-sector-card" data-aos="zoom-in" data-aos-delay="200">
+              <div className="sector-icon-ring">
+                <i className="fas fa-microchip"></i>
+              </div>
+              <h3>AI & Technology</h3>
+              <p>Cutting-edge tech integration and AI strategies</p>
+            </div>
+            <div className="wwa-sector-card" data-aos="zoom-in" data-aos-delay="300">
+              <div className="sector-icon-ring">
+                <i className="fas fa-shield-alt"></i>
+              </div>
+              <h3>Defense</h3>
+              <p>Security consulting and defense sector expertise</p>
+            </div>
+            <div className="wwa-sector-card" data-aos="zoom-in" data-aos-delay="400">
+              <div className="sector-icon-ring">
+                <i className="fas fa-globe-americas"></i>
+              </div>
+              <h3>Commodities Trading</h3>
+              <p>Global commodities market intelligence</p>
+            </div>
+          </div>
+
+          <div className="wwa-team-info" data-aos="fade-up" data-aos-delay="300">
+            <div className="team-info-card">
+              <i className="fas fa-users"></i>
+              <div className="team-info-text">
+                <h4>Expert Team</h4>
+                <p>Our team comprises seasoned professionals with decades of combined experience across multiple sectors—from financial analysts and technology architects to defense strategists and commodities specialists.</p>
+              </div>
+            </div>
+            <div className="team-info-card">
+              <i className="fas fa-fingerprint"></i>
+              <div className="team-info-text">
+                <h4>Bespoke Solutions</h4>
+                <p>We understand that every client is unique. That's why we take a bespoke approach to every engagement, crafting tailored strategies that align with your specific goals and deliver measurable results.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -100,28 +166,73 @@ function About() {
         </div>
       </section>
 
-      {/* Our Approach Section */}
-      <section className="approach-section">
-        <div className="approach-content" data-aos="fade-up">
-          <h2 className="section-title">Our Approach</h2>
-          <p className="section-description">
-            At Prestige Griffin, we combine deep industry knowledge with analytical rigor and creative problem-solving to deliver solutions that work. Our process is built on three pillars:
+      {/* Our Approach Section - Modernized with Timeline */}
+      <section className="approach-section-modern">
+        <div className="approach-header" data-aos="fade-up">
+          <span className="approach-label">How We Work</span>
+          <h2 className="approach-title">Our Approach</h2>
+          <p className="approach-subtitle">
+            We combine deep industry knowledge with analytical rigor and creative problem-solving to deliver solutions that work.
           </p>
-          <div className="approach-steps">
-            <div className="approach-step" data-aos="fade-up" data-aos-delay="100">
-              <div className="step-number">01</div>
+        </div>
+
+        <div className="approach-timeline">
+          <div className="timeline-connector"></div>
+
+          <div className="timeline-step" data-aos="fade-up" data-aos-delay="100">
+            <div className="step-marker">
+              <span className="step-number-modern">01</span>
+              <div className="step-pulse"></div>
+            </div>
+            <div className="step-content">
+              <div className="step-icon-modern">
+                <i className="fas fa-search"></i>
+              </div>
               <h3>Understand</h3>
               <p>We begin by deeply understanding your business, industry dynamics, challenges, and objectives. Through comprehensive research and stakeholder engagement, we gain the insights needed to craft effective strategies.</p>
+              <div className="step-highlights">
+                <span><i className="fas fa-check"></i> Deep Discovery</span>
+                <span><i className="fas fa-check"></i> Stakeholder Engagement</span>
+                <span><i className="fas fa-check"></i> Industry Analysis</span>
+              </div>
             </div>
-            <div className="approach-step" data-aos="fade-up" data-aos-delay="200">
-              <div className="step-number">02</div>
+          </div>
+
+          <div className="timeline-step" data-aos="fade-up" data-aos-delay="200">
+            <div className="step-marker">
+              <span className="step-number-modern">02</span>
+              <div className="step-pulse"></div>
+            </div>
+            <div className="step-content">
+              <div className="step-icon-modern">
+                <i className="fas fa-chess"></i>
+              </div>
               <h3>Strategize</h3>
               <p>Leveraging our expertise and analytical capabilities, we develop tailored strategies that address your unique needs. We balance risk and opportunity, ensuring our recommendations are both ambitious and achievable.</p>
+              <div className="step-highlights">
+                <span><i className="fas fa-check"></i> Custom Solutions</span>
+                <span><i className="fas fa-check"></i> Risk Assessment</span>
+                <span><i className="fas fa-check"></i> Strategic Planning</span>
+              </div>
             </div>
-            <div className="approach-step" data-aos="fade-up" data-aos-delay="300">
-              <div className="step-number">03</div>
+          </div>
+
+          <div className="timeline-step" data-aos="fade-up" data-aos-delay="300">
+            <div className="step-marker">
+              <span className="step-number-modern">03</span>
+              <div className="step-pulse"></div>
+            </div>
+            <div className="step-content">
+              <div className="step-icon-modern">
+                <i className="fas fa-rocket"></i>
+              </div>
               <h3>Execute</h3>
               <p>We partner with you throughout implementation, providing hands-on support, monitoring progress, and adapting as needed. Our commitment doesn't end with recommendations—we ensure successful execution and measurable results.</p>
+              <div className="step-highlights">
+                <span><i className="fas fa-check"></i> Hands-on Support</span>
+                <span><i className="fas fa-check"></i> Progress Monitoring</span>
+                <span><i className="fas fa-check"></i> Measurable Results</span>
+              </div>
             </div>
           </div>
         </div>
