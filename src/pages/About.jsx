@@ -238,16 +238,92 @@ function About() {
         </div>
       </section>
 
-      {/* Global Reach Section */}
-      <section className="global-reach-section">
-        <div className="global-reach-content" data-aos="fade-up">
-          <h2 className="section-title">Global Reach, Local Expertise</h2>
-          <p className="section-description">
-            With a presence across key markets and an extensive network of partners, Prestige Griffin delivers global insights with local relevance. Whether you're navigating international markets, managing cross-border investments, or seeking strategic partnerships, we provide the expertise and connections you need to succeed.
-          </p>
-          <p className="section-description">
-            Our diverse team brings cultural understanding and regional knowledge that enables us to operate effectively across different geographies, regulatory environments, and business landscapes.
-          </p>
+      {/* Global Reach Section - Modernized */}
+      <section className="global-reach-section-modern">
+        <div className="gr-container">
+          <div className="gr-header" data-aos="fade-up">
+            <span className="gr-label">Worldwide Presence</span>
+            <h2 className="gr-title">Global Reach, Local Expertise</h2>
+            <div className="gr-title-accent"></div>
+          </div>
+
+          <div className="gr-content-wrapper">
+            <div className="gr-main-content" data-aos="fade-right" data-aos-delay="100">
+              <div className="gr-globe-visual">
+                <div className="globe-ring globe-ring-1"></div>
+                <div className="globe-ring globe-ring-2"></div>
+                <div className="globe-ring globe-ring-3"></div>
+                <div className="globe-icon-wrapper">
+                  <i className="fas fa-globe"></i>
+                </div>
+                <div className="globe-dots">
+                  <span className="globe-dot dot-1"></span>
+                  <span className="globe-dot dot-2"></span>
+                  <span className="globe-dot dot-3"></span>
+                  <span className="globe-dot dot-4"></span>
+                  <span className="globe-dot dot-5"></span>
+                </div>
+              </div>
+              <div className="gr-description">
+                <p>
+                  With a presence across key markets and an extensive network of partners, Prestige Griffin delivers global insights with local relevance. Whether you're navigating international markets, managing cross-border investments, or seeking strategic partnerships, we provide the expertise and connections you need to succeed.
+                </p>
+              </div>
+            </div>
+
+            <div className="gr-features-grid" data-aos="fade-left" data-aos-delay="200">
+              <div className="gr-feature-card">
+                <div className="gr-feature-icon">
+                  <i className="fas fa-network-wired"></i>
+                </div>
+                <h3>Global Network</h3>
+                <p>Extensive partnerships across key international markets and financial centers</p>
+              </div>
+              <div className="gr-feature-card">
+                <div className="gr-feature-icon">
+                  <i className="fas fa-exchange-alt"></i>
+                </div>
+                <h3>Cross-Border Expertise</h3>
+                <p>Seamless navigation of international regulations and investment landscapes</p>
+              </div>
+              <div className="gr-feature-card">
+                <div className="gr-feature-icon">
+                  <i className="fas fa-language"></i>
+                </div>
+                <h3>Cultural Understanding</h3>
+                <p>Diverse team with regional knowledge and cultural intelligence</p>
+              </div>
+              <div className="gr-feature-card">
+                <div className="gr-feature-icon">
+                  <i className="fas fa-handshake"></i>
+                </div>
+                <h3>Strategic Partnerships</h3>
+                <p>Strong relationships with local experts and industry leaders worldwide</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="gr-stats-bar" data-aos="fade-up" data-aos-delay="300">
+            <div className="gr-stat">
+              <span className="gr-stat-number">50+</span>
+              <span className="gr-stat-label">Countries Served</span>
+            </div>
+            <div className="gr-stat-divider"></div>
+            <div className="gr-stat">
+              <span className="gr-stat-number">200+</span>
+              <span className="gr-stat-label">Global Partners</span>
+            </div>
+            <div className="gr-stat-divider"></div>
+            <div className="gr-stat">
+              <span className="gr-stat-number">15+</span>
+              <span className="gr-stat-label">Years Experience</span>
+            </div>
+            <div className="gr-stat-divider"></div>
+            <div className="gr-stat">
+              <span className="gr-stat-number">24/7</span>
+              <span className="gr-stat-label">Global Support</span>
+            </div>
+          </div>
         </div>
       </section>
     </div>
