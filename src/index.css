@@ -2408,30 +2408,55 @@ nav a.active::after {
   font-family: 'Clash Display', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--bg-dark);
   line-height: 1;
   position: relative;
   z-index: 2;
-  text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
 }
 
 @media (max-width: 768px) {
   .step-number-modern {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    width: 56px;
+    height: 56px;
   }
 }
 
 .step-pulse {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background: var(--gold);
+  width: 90px;
+  height: 90px;
+  background: transparent;
+  border: 2px solid rgba(212, 175, 55, 0.3);
   border-radius: 50%;
-  top: 10px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
-  animation: pulse 2s infinite;
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
 }
 
 @keyframes pulse {
@@ -4325,6 +4350,801 @@ nav a.active::after {
   .legal-section p,
   .legal-section ul li {
     font-size: 0.9rem;
+  }
+}
+
+/* ==========================================
+   CAREERS PAGE - MODERNIZED STYLES
+   ========================================== */
+
+/* Why Join Us Section - Modern */
+.why-join-section-modern {
+  padding: var(--space-20) var(--space-6);
+  background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(15, 17, 21, 1) 100%);
+  position: relative;
+}
+
+.why-join-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-join-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.why-join-label {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--bg-dark);
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-4);
+}
+
+.why-join-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  font-weight: 700;
+}
+
+.why-join-title-accent {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.why-join-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--space-12);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.benefits-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.benefit-card-modern {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.benefit-card-modern:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-card-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.benefit-card-modern:hover .benefit-card-accent {
+  transform: scaleX(1);
+}
+
+.benefit-number {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.5;
+  letter-spacing: 0.05em;
+}
+
+.benefit-icon-modern {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+  transition: all 0.3s ease;
+}
+
+.benefit-card-modern:hover .benefit-icon-modern {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  border-color: var(--gold);
+}
+
+.benefit-icon-modern i {
+  font-size: 1.5rem;
+  color: var(--gold);
+  transition: color 0.3s ease;
+}
+
+.benefit-card-modern:hover .benefit-icon-modern i {
+  color: var(--bg-dark);
+}
+
+.benefit-card-modern h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  font-weight: 600;
+}
+
+.benefit-card-modern > p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+.benefit-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.benefit-highlights span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.benefit-highlights i {
+  color: var(--gold);
+  font-size: 0.75rem;
+}
+
+/* Open Positions Section - Modern */
+.positions-section-modern {
+  padding: var(--space-20) var(--space-6);
+  background: rgba(15, 17, 21, 1);
+  position: relative;
+}
+
+.positions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.positions-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.positions-label {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--bg-dark);
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-4);
+}
+
+.positions-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  font-weight: 700;
+}
+
+.positions-title-accent {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+  margin: 0 auto var(--space-4);
+  border-radius: 2px;
+}
+
+.positions-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.positions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.position-card-modern {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: var(--space-6);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.position-card-modern:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.position-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+}
+
+.position-card-modern:hover .position-card-accent {
+  transform: scaleY(1);
+}
+
+.position-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.position-card-modern:hover .position-icon-wrapper {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  border-color: var(--gold);
+}
+
+.position-icon-wrapper i {
+  font-size: 1.25rem;
+  color: var(--gold);
+  transition: color 0.3s ease;
+}
+
+.position-card-modern:hover .position-icon-wrapper i {
+  color: var(--bg-dark);
+}
+
+.position-content {
+  flex: 1;
+}
+
+.position-header-modern {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.position-header-modern h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.position-department-badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--gold);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.position-meta-modern {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.meta-item i {
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
+.position-description-modern {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+.position-tags-modern {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.tag-modern {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.position-card-modern:hover .tag-modern {
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.apply-btn-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apply-btn-modern:hover {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--bg-dark);
+  transform: translateX(4px);
+}
+
+.apply-btn-modern i {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
+}
+
+.apply-btn-modern:hover i {
+  transform: translateX(4px);
+}
+
+/* Careers CTA Section - Modern */
+.careers-cta-section-modern {
+  padding: var(--space-20) var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.careers-cta-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.careers-cta-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(15, 17, 21, 0.95) 50%, rgba(212, 175, 55, 0.05) 100%);
+}
+
+.careers-cta-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.5;
+}
+
+.careers-cta-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.careers-cta-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-6);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+}
+
+.careers-cta-icon-wrapper i {
+  font-size: 2rem;
+  color: var(--bg-dark);
+}
+
+.careers-cta-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  font-weight: 700;
+}
+
+.careers-cta-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+
+.careers-cta-features {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.cta-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.cta-feature i {
+  color: var(--gold);
+}
+
+.careers-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--bg-dark);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+}
+
+.careers-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+}
+
+.careers-cta-button i {
+  transition: transform 0.3s ease;
+}
+
+.careers-cta-button:hover i {
+  transform: translateX(4px);
+}
+
+/* Careers Page Responsive */
+@media (max-width: 1024px) {
+  .benefits-grid-modern {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .positions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-join-section-modern,
+  .positions-section-modern {
+    padding: var(--space-16) var(--space-4);
+  }
+
+  .benefits-grid-modern {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .benefit-card-modern {
+    padding: var(--space-6);
+  }
+
+  .position-card-modern {
+    flex-direction: column;
+    padding: var(--space-6);
+  }
+
+  .position-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .position-header-modern {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .careers-cta-features {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .position-meta-modern {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .careers-cta-button {
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================
+   Z FOLD 7 OPTIMIZATION
+   Cover Screen: ~320-375px
+   Unfolded Screen: ~882px
+   ========================================== */
+
+/* Z Fold 7 Cover Screen (Narrow) */
+@media (max-width: 380px) {
+  /* Global adjustments */
+  .container {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  /* Hero sections */
+  .page-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .page-hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Our Approach - Timeline */
+  .timeline-step {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .step-marker {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: var(--space-2);
+  }
+
+  .step-number-modern {
+    font-size: 1.25rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .step-pulse {
+    width: 68px;
+    height: 68px;
+  }
+
+  .step-content {
+    padding: var(--space-5);
+  }
+
+  .step-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .step-content > p {
+    font-size: 0.9rem;
+  }
+
+  .timeline-connector {
+    left: 24px;
+  }
+
+  /* Mission & Vision Cards */
+  .mv-card {
+    padding: var(--space-5);
+  }
+
+  .mv-card h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Who We Are */
+  .wwa-sector-card {
+    padding: var(--space-4);
+  }
+
+  .sector-icon-ring {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Global Reach */
+  .gr-feature-card {
+    padding: var(--space-4);
+  }
+
+  .gr-stat-item h4 {
+    font-size: 1.5rem;
+  }
+
+  /* Home page */
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .stat-card {
+    padding: var(--space-4);
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+  }
+
+  /* Services page */
+  .services-overview {
+    padding: var(--space-8) var(--space-3);
+  }
+
+  .key-service-card {
+    padding: var(--space-4);
+  }
+
+  .key-service-card h4 {
+    font-size: 1rem;
+  }
+
+  /* Careers page */
+  .benefit-card-modern {
+    padding: var(--space-4);
+  }
+
+  .benefit-icon-modern {
+    width: 48px;
+    height: 48px;
+  }
+
+  .position-card-modern {
+    padding: var(--space-4);
+  }
+
+  .position-header-modern h3 {
+    font-size: 1.1rem;
+  }
+
+  .apply-btn-modern {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* Navigation */
+  .nav-links {
+    gap: var(--space-2);
+  }
+
+  /* Footer */
+  .footer-content {
+    padding: var(--space-6) var(--space-3);
+  }
+}
+
+/* Z Fold 7 Unfolded Screen */
+@media (min-width: 820px) and (max-width: 920px) {
+  /* Optimize grid layouts for ~882px width */
+  .benefits-grid-modern {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .positions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .key-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wwa-sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gr-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Adjust hero content */
+  .hero-content {
+    max-width: 100%;
+    padding: 0 var(--space-6);
+  }
+
+  /* Timeline adjustments */
+  .step-marker {
+    width: 80px;
+  }
+
+  .step-number-modern {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Z Fold 7 Landscape (Cover Screen) */
+@media (max-height: 400px) and (orientation: landscape) {
+  .page-hero-section {
+    padding: var(--space-12) var(--space-4);
+    min-height: auto;
+  }
+
+  .hero-section-modern {
+    min-height: 100vh;
+    padding-top: var(--space-16);
+  }
+
+  .hero-title {
+    font-size: 2rem;
   }
 }
 
