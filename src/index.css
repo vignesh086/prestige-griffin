@@ -4360,7 +4360,7 @@ nav a.active::after {
 /* Why Join Us Section - Modern */
 .why-join-section-modern {
   padding: var(--space-20) var(--space-6);
-  background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(15, 17, 21, 1) 100%);
+  background: linear-gradient(180deg, rgba(61, 0, 0, 0.4) 0%, rgba(61, 0, 0, 0.6) 100%);
   position: relative;
 }
 
@@ -4377,7 +4377,7 @@ nav a.active::after {
 .why-join-label {
   display: inline-block;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-  color: var(--bg-dark);
+  color: var(--darker-red);
   padding: 0.5rem 1.25rem;
   border-radius: 30px;
   font-size: 0.75rem;
@@ -4389,7 +4389,7 @@ nav a.active::after {
 
 .why-join-title {
   font-size: clamp(2rem, 4vw, 2.75rem);
-  color: var(--text-primary);
+  color: var(--gold);
   margin-bottom: var(--space-4);
   font-weight: 700;
 }
@@ -4406,7 +4406,7 @@ nav a.active::after {
   text-align: center;
   max-width: 800px;
   margin: 0 auto var(--space-12);
-  color: var(--text-secondary);
+  color: var(--cream);
   font-size: 1.1rem;
   line-height: 1.8;
 }
@@ -4418,7 +4418,7 @@ nav a.active::after {
 }
 
 .benefit-card-modern {
-  background: rgba(255, 255, 255, 0.02);
+  background: linear-gradient(145deg, rgba(61, 0, 0, 0.5), rgba(92, 0, 0, 0.3));
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
   padding: var(--space-8);
@@ -4490,16 +4490,17 @@ nav a.active::after {
 
 .benefit-card-modern h3 {
   font-size: 1.25rem;
-  color: var(--text-primary);
+  color: var(--gold);
   margin-bottom: var(--space-3);
   font-weight: 600;
 }
 
 .benefit-card-modern > p {
-  color: var(--text-secondary);
+  color: var(--cream);
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: var(--space-4);
+  opacity: 0.9;
 }
 
 .benefit-highlights {
@@ -4513,7 +4514,8 @@ nav a.active::after {
   align-items: center;
   gap: var(--space-2);
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--cream);
+  opacity: 0.8;
 }
 
 .benefit-highlights i {
@@ -4524,7 +4526,7 @@ nav a.active::after {
 /* Open Positions Section - Modern */
 .positions-section-modern {
   padding: var(--space-20) var(--space-6);
-  background: rgba(15, 17, 21, 1);
+  background: linear-gradient(180deg, rgba(92, 0, 0, 0.5) 0%, rgba(61, 0, 0, 0.6) 100%);
   position: relative;
 }
 
@@ -4541,7 +4543,7 @@ nav a.active::after {
 .positions-label {
   display: inline-block;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-  color: var(--bg-dark);
+  color: var(--darker-red);
   padding: 0.5rem 1.25rem;
   border-radius: 30px;
   font-size: 0.75rem;
@@ -4553,7 +4555,7 @@ nav a.active::after {
 
 .positions-title {
   font-size: clamp(2rem, 4vw, 2.75rem);
-  color: var(--text-primary);
+  color: var(--gold);
   margin-bottom: var(--space-4);
   font-weight: 700;
 }
@@ -4567,7 +4569,7 @@ nav a.active::after {
 }
 
 .positions-subtitle {
-  color: var(--text-secondary);
+  color: var(--cream);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
@@ -4580,7 +4582,7 @@ nav a.active::after {
 }
 
 .position-card-modern {
-  background: rgba(255, 255, 255, 0.02);
+  background: linear-gradient(145deg, rgba(61, 0, 0, 0.6), rgba(92, 0, 0, 0.4));
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
   padding: var(--space-8);
@@ -4656,7 +4658,7 @@ nav a.active::after {
 
 .position-header-modern h3 {
   font-size: 1.25rem;
-  color: var(--text-primary);
+  color: var(--gold);
   font-weight: 600;
   margin: 0;
 }
@@ -4684,8 +4686,9 @@ nav a.active::after {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--text-muted);
+  color: var(--cream);
   font-size: 0.85rem;
+  opacity: 0.8;
 }
 
 .meta-item i {
@@ -4694,10 +4697,11 @@ nav a.active::after {
 }
 
 .position-description-modern {
-  color: var(--text-secondary);
+  color: var(--cream);
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: var(--space-4);
+  opacity: 0.9;
 }
 
 .position-tags-modern {
@@ -4708,9 +4712,9 @@ nav a.active::after {
 }
 
 .tag-modern {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-muted);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--cream);
   padding: 0.4rem 0.85rem;
   border-radius: 6px;
   font-size: 0.8rem;
@@ -4738,7 +4742,7 @@ nav a.active::after {
 
 .apply-btn-modern:hover {
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-  color: var(--bg-dark);
+  color: var(--darker-red);
   transform: translateX(4px);
 }
 
@@ -4773,7 +4777,7 @@ nav a.active::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(15, 17, 21, 0.95) 50%, rgba(212, 175, 55, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.6) 0%, rgba(61, 0, 0, 0.8) 50%, rgba(92, 0, 0, 0.6) 100%);
 }
 
 .careers-cta-pattern {
@@ -4809,18 +4813,18 @@ nav a.active::after {
 
 .careers-cta-icon-wrapper i {
   font-size: 2rem;
-  color: var(--bg-dark);
+  color: var(--darker-red);
 }
 
 .careers-cta-title {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
-  color: var(--text-primary);
+  color: var(--gold);
   margin-bottom: var(--space-4);
   font-weight: 700;
 }
 
 .careers-cta-description {
-  color: var(--text-secondary);
+  color: var(--cream);
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: var(--space-6);
@@ -4838,7 +4842,7 @@ nav a.active::after {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--text-muted);
+  color: var(--cream);
   font-size: 0.95rem;
 }
 
@@ -4851,7 +4855,7 @@ nav a.active::after {
   align-items: center;
   gap: var(--space-3);
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-  color: var(--bg-dark);
+  color: var(--darker-red);
   padding: 1rem 2.5rem;
   border-radius: 50px;
   font-size: 1rem;
