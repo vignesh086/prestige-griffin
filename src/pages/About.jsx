@@ -176,21 +176,24 @@ function About() {
           </p>
         </div>
 
-        <div className="approach-timeline">
-          <div className="timeline-connector"></div>
-
-          <div className="timeline-step" data-aos="fade-up" data-aos-delay="100">
-            <div className="step-marker">
-              <span className="step-number-modern">01</span>
-              <div className="step-pulse"></div>
+        <div className="approach-timeline-v2">
+          <div className="timeline-step-v2" data-aos="fade-up" data-aos-delay="100">
+            <div className="step-number-side">
+              <span className="number-text">1</span>
             </div>
-            <div className="step-content">
-              <div className="step-icon-modern">
-                <i className="fas fa-search"></i>
+            <div className="step-line-container">
+              <div className="step-dot"></div>
+              <div className="step-line"></div>
+            </div>
+            <div className="step-content-v2">
+              <div className="step-header-v2">
+                <div className="step-icon-v2">
+                  <i className="fas fa-search"></i>
+                </div>
+                <h3>Understand</h3>
               </div>
-              <h3>Understand</h3>
               <p>We begin by deeply understanding your business, industry dynamics, challenges, and objectives. Through comprehensive research and stakeholder engagement, we gain the insights needed to craft effective strategies.</p>
-              <div className="step-highlights">
+              <div className="step-highlights-v2">
                 <span><i className="fas fa-check"></i> Deep Discovery</span>
                 <span><i className="fas fa-check"></i> Stakeholder Engagement</span>
                 <span><i className="fas fa-check"></i> Industry Analysis</span>
@@ -198,18 +201,23 @@ function About() {
             </div>
           </div>
 
-          <div className="timeline-step" data-aos="fade-up" data-aos-delay="200">
-            <div className="step-marker">
-              <span className="step-number-modern">02</span>
-              <div className="step-pulse"></div>
+          <div className="timeline-step-v2" data-aos="fade-up" data-aos-delay="200">
+            <div className="step-number-side">
+              <span className="number-text">2</span>
             </div>
-            <div className="step-content">
-              <div className="step-icon-modern">
-                <i className="fas fa-chess"></i>
+            <div className="step-line-container">
+              <div className="step-dot"></div>
+              <div className="step-line"></div>
+            </div>
+            <div className="step-content-v2">
+              <div className="step-header-v2">
+                <div className="step-icon-v2">
+                  <i className="fas fa-chess"></i>
+                </div>
+                <h3>Strategize</h3>
               </div>
-              <h3>Strategize</h3>
               <p>Leveraging our expertise and analytical capabilities, we develop tailored strategies that address your unique needs. We balance risk and opportunity, ensuring our recommendations are both ambitious and achievable.</p>
-              <div className="step-highlights">
+              <div className="step-highlights-v2">
                 <span><i className="fas fa-check"></i> Custom Solutions</span>
                 <span><i className="fas fa-check"></i> Risk Assessment</span>
                 <span><i className="fas fa-check"></i> Strategic Planning</span>
@@ -217,18 +225,23 @@ function About() {
             </div>
           </div>
 
-          <div className="timeline-step" data-aos="fade-up" data-aos-delay="300">
-            <div className="step-marker">
-              <span className="step-number-modern">03</span>
-              <div className="step-pulse"></div>
+          <div className="timeline-step-v2" data-aos="fade-up" data-aos-delay="300">
+            <div className="step-number-side">
+              <span className="number-text">3</span>
             </div>
-            <div className="step-content">
-              <div className="step-icon-modern">
-                <i className="fas fa-rocket"></i>
+            <div className="step-line-container">
+              <div className="step-dot"></div>
+              <div className="step-line last"></div>
+            </div>
+            <div className="step-content-v2">
+              <div className="step-header-v2">
+                <div className="step-icon-v2">
+                  <i className="fas fa-rocket"></i>
+                </div>
+                <h3>Execute</h3>
               </div>
-              <h3>Execute</h3>
               <p>We partner with you throughout implementation, providing hands-on support, monitoring progress, and adapting as needed. Our commitment doesn't end with recommendations—we ensure successful execution and measurable results.</p>
-              <div className="step-highlights">
+              <div className="step-highlights-v2">
                 <span><i className="fas fa-check"></i> Hands-on Support</span>
                 <span><i className="fas fa-check"></i> Progress Monitoring</span>
                 <span><i className="fas fa-check"></i> Measurable Results</span>
