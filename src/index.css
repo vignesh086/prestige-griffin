@@ -2408,30 +2408,55 @@ nav a.active::after {
   font-family: 'Clash Display', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--bg-dark);
   line-height: 1;
   position: relative;
   z-index: 2;
-  text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
 }
 
 @media (max-width: 768px) {
   .step-number-modern {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    width: 56px;
+    height: 56px;
   }
 }
 
 .step-pulse {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background: var(--gold);
+  width: 90px;
+  height: 90px;
+  background: transparent;
+  border: 2px solid rgba(212, 175, 55, 0.3);
   border-radius: 50%;
-  top: 10px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
-  animation: pulse 2s infinite;
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
 }
 
 @keyframes pulse {
@@ -4908,6 +4933,218 @@ nav a.active::after {
   .careers-cta-button {
     padding: 0.875rem 2rem;
     font-size: 0.95rem;
+  }
+}
+
+/* ==========================================
+   Z FOLD 7 OPTIMIZATION
+   Cover Screen: ~320-375px
+   Unfolded Screen: ~882px
+   ========================================== */
+
+/* Z Fold 7 Cover Screen (Narrow) */
+@media (max-width: 380px) {
+  /* Global adjustments */
+  .container {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  /* Hero sections */
+  .page-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .page-hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Our Approach - Timeline */
+  .timeline-step {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .step-marker {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: var(--space-2);
+  }
+
+  .step-number-modern {
+    font-size: 1.25rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .step-pulse {
+    width: 68px;
+    height: 68px;
+  }
+
+  .step-content {
+    padding: var(--space-5);
+  }
+
+  .step-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .step-content > p {
+    font-size: 0.9rem;
+  }
+
+  .timeline-connector {
+    left: 24px;
+  }
+
+  /* Mission & Vision Cards */
+  .mv-card {
+    padding: var(--space-5);
+  }
+
+  .mv-card h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Who We Are */
+  .wwa-sector-card {
+    padding: var(--space-4);
+  }
+
+  .sector-icon-ring {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Global Reach */
+  .gr-feature-card {
+    padding: var(--space-4);
+  }
+
+  .gr-stat-item h4 {
+    font-size: 1.5rem;
+  }
+
+  /* Home page */
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .stat-card {
+    padding: var(--space-4);
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+  }
+
+  /* Services page */
+  .services-overview {
+    padding: var(--space-8) var(--space-3);
+  }
+
+  .key-service-card {
+    padding: var(--space-4);
+  }
+
+  .key-service-card h4 {
+    font-size: 1rem;
+  }
+
+  /* Careers page */
+  .benefit-card-modern {
+    padding: var(--space-4);
+  }
+
+  .benefit-icon-modern {
+    width: 48px;
+    height: 48px;
+  }
+
+  .position-card-modern {
+    padding: var(--space-4);
+  }
+
+  .position-header-modern h3 {
+    font-size: 1.1rem;
+  }
+
+  .apply-btn-modern {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* Navigation */
+  .nav-links {
+    gap: var(--space-2);
+  }
+
+  /* Footer */
+  .footer-content {
+    padding: var(--space-6) var(--space-3);
+  }
+}
+
+/* Z Fold 7 Unfolded Screen */
+@media (min-width: 820px) and (max-width: 920px) {
+  /* Optimize grid layouts for ~882px width */
+  .benefits-grid-modern {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .positions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .key-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wwa-sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gr-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Adjust hero content */
+  .hero-content {
+    max-width: 100%;
+    padding: 0 var(--space-6);
+  }
+
+  /* Timeline adjustments */
+  .step-marker {
+    width: 80px;
+  }
+
+  .step-number-modern {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Z Fold 7 Landscape (Cover Screen) */
+@media (max-height: 400px) and (orientation: landscape) {
+  .page-hero-section {
+    padding: var(--space-12) var(--space-4);
+    min-height: auto;
+  }
+
+  .hero-section-modern {
+    min-height: 100vh;
+    padding-top: var(--space-16);
+  }
+
+  .hero-title {
+    font-size: 2rem;
   }
 }
 
