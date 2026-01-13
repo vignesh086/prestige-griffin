@@ -6,7 +6,7 @@ function Home() {
     <div className="home-page">
       <SEO
         title="Investing in Strategic Growth"
-        description="Prestige Griffin is a premier advisory firm providing strategic solutions in finance, banking, technology, defense, and commodities trading. Expert insights and innovative strategies for long-term growth."
+        description="Prestige Griffin is a premier advisory firm providing strategic solutions in finance, banking, technology, defense and arms, and commodities trading. Expert insights and innovative strategies for long-term growth."
         canonical="/"
       />
 
@@ -62,7 +62,7 @@ function Home() {
           <div className="intro-content-grid">
             <div className="intro-text" data-aos="fade-right" data-aos-delay="100">
               <p className="intro-description-modern">
-                Prestige Griffin is a premier advisory firm specializing in <strong>finance & banking</strong>, <strong>AI & technology</strong>, <strong>defense</strong>, and <strong>commodities trading</strong>. We provide comprehensive strategic solutions spanning from early-stage consulting to full-scale implementation.
+                Prestige Griffin is a premier advisory firm specializing in <strong>finance & banking</strong>, <strong>AI & technology</strong>, <strong>defense and arms</strong>, and <strong>commodities trading</strong>. We provide comprehensive strategic solutions spanning from early-stage consulting to full-scale implementation.
               </p>
               <p className="intro-description-modern">
                 Our multidisciplinary approach combines deep industry expertise with cutting-edge innovation, ensuring our clients stay ahead in an ever-evolving global landscape.
@@ -172,8 +172,8 @@ function Home() {
               <div className="service-icon-modern">
                 <i className="fas fa-shield-alt"></i>
               </div>
-              <h3>Defense</h3>
-              <p>Strategic insights and partnerships in defense, ensuring secure and sustainable security investments with ethical considerations.</p>
+              <h3>Defense and Arms</h3>
+              <p>Strategic insights and partnerships in defense and arms, ensuring secure and sustainable security investments with ethical considerations.</p>
               <div className="service-tags">
                 <span>Security Consulting</span>
                 <span>Strategic Defense</span>

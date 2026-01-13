@@ -5,7 +5,7 @@ function About() {
     <div className="about-page">
       <SEO
         title="About Us"
-        description="Learn about Prestige Griffin's mission, vision, and values. We are a premier advisory firm providing strategic solutions in finance, technology, defense, and commodities with a global reach."
+        description="Learn about Prestige Griffin's mission, vision, and values. We are a premier advisory firm providing strategic solutions in finance, technology, defense and arms, and commodities with a global reach."
         canonical="/about"
       />
 
@@ -86,8 +86,8 @@ function About() {
               <div className="sector-icon-ring">
                 <i className="fas fa-shield-alt"></i>
               </div>
-              <h3>Defense</h3>
-              <p>Security consulting and defense sector expertise</p>
+              <h3>Defense and Arms</h3>
+              <p>Security consulting and defense and arms sector expertise</p>
             </div>
             <div className="wwa-sector-card" data-aos="zoom-in" data-aos-delay="400">
               <div className="sector-icon-ring">
@@ -103,7 +103,7 @@ function About() {
               <i className="fas fa-users"></i>
               <div className="team-info-text">
                 <h4>Expert Team</h4>
-                <p>Our team comprises seasoned professionals with decades of combined experience across multiple sectors—from financial analysts and technology architects to defense strategists and commodities specialists.</p>
+                <p>Our team comprises seasoned professionals with decades of combined experience across multiple sectors—from financial analysts and technology architects to defense and arms strategists and commodities specialists.</p>
               </div>
             </div>
             <div className="team-info-card">

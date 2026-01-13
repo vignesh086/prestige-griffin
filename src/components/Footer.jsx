@@ -32,7 +32,7 @@ function Footer() {
           <nav className="footer-nav">
             <Link to="/services">Finance & Banking</Link>
             <Link to="/services">AI & Technology</Link>
-            <Link to="/services">Defense</Link>
+            <Link to="/services">Defense and Arms</Link>
             <Link to="/services">Commodities</Link>
           </nav>
         </div>

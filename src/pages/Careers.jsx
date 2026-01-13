@@ -14,7 +14,7 @@ function Careers() {
     <div className="careers-page">
       <SEO
         title="Career Opportunities"
-        description="Join Prestige Griffin and build your future with a dynamic team committed to excellence and innovation. Explore exciting career opportunities in finance, technology, defense, and commodities advisory."
+        description="Join Prestige Griffin and build your future with a dynamic team committed to excellence and innovation. Explore exciting career opportunities in finance, technology, defense and arms, and commodities advisory."
         canonical="/careers"
       />
 
