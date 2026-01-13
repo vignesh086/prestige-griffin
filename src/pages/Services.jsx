@@ -64,7 +64,7 @@ function Services() {
               <i className="fas fa-university"></i>
             </div>
             <div className="service-block-title">
-              <span className="service-number">01</span>
+              <span className="service-number">1</span>
               <h2>Finance & Banking</h2>
             </div>
           </div>
@@ -130,7 +130,7 @@ function Services() {
               <i className="fas fa-microchip"></i>
             </div>
             <div className="service-block-title">
-              <span className="service-number">02</span>
+              <span className="service-number">2</span>
               <h2>AI & Technology</h2>
             </div>
           </div>
@@ -196,7 +196,7 @@ function Services() {
               <i className="fas fa-shield-alt"></i>
             </div>
             <div className="service-block-title">
-              <span className="service-number">03</span>
+              <span className="service-number">3</span>
               <h2>Defense and Arms</h2>
             </div>
           </div>
@@ -262,7 +262,7 @@ function Services() {
               <i className="fas fa-oil-can"></i>
             </div>
             <div className="service-block-title">
-              <span className="service-number">04</span>
+              <span className="service-number">4</span>
               <h2>Commodities</h2>
             </div>
           </div>

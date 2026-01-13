@@ -50,7 +50,7 @@ function Contact() {
               onClick={() => handleCardClick('Business Partnership')}
             >
               <div className="card-accent-line"></div>
-              <div className="card-number">01</div>
+              <div className="card-number">1</div>
               <div className="card-icon-wrapper">
                 <i className="fas fa-handshake"></i>
               </div>
@@ -71,7 +71,7 @@ function Contact() {
               onClick={() => handleCardClick('Project Inquiry')}
             >
               <div className="card-accent-line"></div>
-              <div className="card-number">02</div>
+              <div className="card-number">2</div>
               <div className="card-icon-wrapper">
                 <i className="fas fa-lightbulb"></i>
               </div>
@@ -92,7 +92,7 @@ function Contact() {
               onClick={() => handleCardClick('General Questions')}
             >
               <div className="card-accent-line"></div>
-              <div className="card-number">03</div>
+              <div className="card-number">3</div>
               <div className="card-icon-wrapper">
                 <i className="fas fa-comments"></i>
               </div>
