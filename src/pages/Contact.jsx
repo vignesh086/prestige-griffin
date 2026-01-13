@@ -12,7 +12,7 @@ function Contact() {
     <div className="contact-page-modern">
       <SEO
         title="Contact Us"
-        description="Get in touch with Prestige Griffin for strategic advisory solutions in finance, technology, defense, and commodities. Let's discuss how we can help your business grow."
+        description="Get in touch with Prestige Griffin for strategic advisory solutions in finance, technology, defense and arms, and commodities. Let's discuss how we can help your business grow."
         canonical="/contact"
       />
 

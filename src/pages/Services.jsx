@@ -6,7 +6,7 @@ function Services() {
     <div className="services-page">
       <SEO
         title="Our Services"
-        description="Comprehensive strategic advisory services in Finance & Banking, AI & Technology, Defense, and Commodities. Tailored solutions to drive sustainable growth and competitive advantage."
+        description="Comprehensive strategic advisory services in Finance & Banking, AI & Technology, Defense and Arms, and Commodities. Tailored solutions to drive sustainable growth and competitive advantage."
         canonical="/services"
       />
 
@@ -30,7 +30,7 @@ function Services() {
           </div>
           <div className="overview-text" data-aos="fade-up" data-aos-delay="100">
             <p>
-              At Prestige Griffin, we deliver end-to-end advisory services across four core domains: finance & banking, AI & technology, defense, and commodities trading. Our multidisciplinary expertise enables us to address complex challenges, unlock opportunities, and drive sustainable value for our clients.
+              At Prestige Griffin, we deliver end-to-end advisory services across four core domains: finance & banking, AI & technology, defense and arms, and commodities trading. Our multidisciplinary expertise enables us to address complex challenges, unlock opportunities, and drive sustainable value for our clients.
             </p>
           </div>
           <div className="overview-highlights" data-aos="fade-up" data-aos-delay="200">
