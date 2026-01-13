@@ -42,7 +42,7 @@ function Careers() {
           <div className="benefits-grid-modern">
             <div className="benefit-card-modern" data-aos="zoom-in" data-aos-delay="100">
               <div className="benefit-card-accent"></div>
-              <div className="benefit-number">01</div>
+              <div className="benefit-number">1</div>
               <div className="benefit-icon-modern">
                 <i className="fas fa-chart-line"></i>
               </div>
@@ -55,7 +55,7 @@ function Careers() {
             </div>
             <div className="benefit-card-modern" data-aos="zoom-in" data-aos-delay="200">
               <div className="benefit-card-accent"></div>
-              <div className="benefit-number">02</div>
+              <div className="benefit-number">2</div>
               <div className="benefit-icon-modern">
                 <i className="fas fa-users"></i>
               </div>
@@ -68,7 +68,7 @@ function Careers() {
             </div>
             <div className="benefit-card-modern" data-aos="zoom-in" data-aos-delay="300">
               <div className="benefit-card-accent"></div>
-              <div className="benefit-number">03</div>
+              <div className="benefit-number">3</div>
               <div className="benefit-icon-modern">
                 <i className="fas fa-globe"></i>
               </div>
@@ -81,7 +81,7 @@ function Careers() {
             </div>
             <div className="benefit-card-modern" data-aos="zoom-in" data-aos-delay="400">
               <div className="benefit-card-accent"></div>
-              <div className="benefit-number">04</div>
+              <div className="benefit-number">4</div>
               <div className="benefit-icon-modern">
                 <i className="fas fa-balance-scale"></i>
               </div>

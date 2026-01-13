@@ -140,7 +140,7 @@ function Home() {
           <div className="services-grid-modern">
             <div className="service-card-modern" data-aos="fade-up" data-aos-delay="100">
               <div className="service-card-accent"></div>
-              <div className="service-number">01</div>
+              <div className="service-number">1</div>
               <div className="service-icon-modern">
                 <i className="fas fa-university"></i>
               </div>
@@ -154,7 +154,7 @@ function Home() {
 
             <div className="service-card-modern" data-aos="fade-up" data-aos-delay="200">
               <div className="service-card-accent"></div>
-              <div className="service-number">02</div>
+              <div className="service-number">2</div>
               <div className="service-icon-modern">
                 <i className="fas fa-microchip"></i>
               </div>
@@ -168,7 +168,7 @@ function Home() {
 
             <div className="service-card-modern" data-aos="fade-up" data-aos-delay="300">
               <div className="service-card-accent"></div>
-              <div className="service-number">03</div>
+              <div className="service-number">3</div>
               <div className="service-icon-modern">
                 <i className="fas fa-shield-alt"></i>
               </div>
@@ -182,7 +182,7 @@ function Home() {
 
             <div className="service-card-modern" data-aos="fade-up" data-aos-delay="400">
               <div className="service-card-accent"></div>
-              <div className="service-number">04</div>
+              <div className="service-number">4</div>
               <div className="service-icon-modern">
                 <i className="fas fa-oil-can"></i>
               </div>
