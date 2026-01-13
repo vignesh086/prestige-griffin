@@ -7,8 +7,9 @@ import SEO from '../components/SEO';
 
 function GetInTouch() {
   const [statusMessage, setStatusMessage] = useState('');
-  const [statusColor, setStatusColor] = useState('');
+  const [statusType, setStatusType] = useState('');
   const [phoneValue, setPhoneValue] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -27,18 +28,11 @@ function GetInTouch() {
     if (name.trim().length < 2) {
       return 'Name must be at least 2 characters long';
     }
-    // Strict validation: only letters, spaces, hyphens, and apostrophes
-    // No numbers or special characters allowed
     if (!/^[a-zA-Z\s'-]+$/.test(name)) {
-      return 'Name can only contain letters, spaces, hyphens, and apostrophes. Numbers and special characters are not allowed.';
+      return 'Name can only contain letters, spaces, hyphens, and apostrophes';
     }
-    // Check for numbers explicitly
     if (/\d/.test(name)) {
       return 'Name cannot contain numbers';
-    }
-    // Check for special characters (excluding allowed ones)
-    if (/[^a-zA-Z\s'-]/.test(name)) {
-      return 'Name cannot contain special characters (except hyphens and apostrophes)';
     }
     return null;
   };
@@ -47,18 +41,12 @@ function GetInTouch() {
     if (!email || email.trim().length === 0) {
       return 'Email is required';
     }
-    // Enhanced email validation with stricter rules
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
-      return 'Please enter a valid email address (e.g., example@domain.com)';
+      return 'Please enter a valid email address';
     }
-    // Check for consecutive dots
     if (/\.\./.test(email)) {
       return 'Email cannot contain consecutive dots';
-    }
-    // Check if email starts or ends with special characters
-    if (/^[._-]|[._-]@/.test(email)) {
-      return 'Email cannot start with a special character';
     }
     return null;
   };
@@ -67,8 +55,6 @@ function GetInTouch() {
     if (!phone || phone.length === 0) {
       return 'Phone number is required';
     }
-    // Phone value comes from PhoneInput in E.164 format (e.g., +1234567890)
-    // Basic validation - the PhoneInput component handles format validation
     if (!phone.startsWith('+')) {
       return 'Please select a country and enter a valid phone number';
     }
@@ -106,33 +92,31 @@ function GetInTouch() {
     const phoneError = validatePhone(phoneValue);
     const messageError = validateMessage(message);
 
-    // Display first error found
     if (nameError) {
-      setStatusMessage(`❌ ${nameError}`);
-      setStatusColor("red");
+      setStatusMessage(nameError);
+      setStatusType("error");
       return;
     }
     if (emailError) {
-      setStatusMessage(`❌ ${emailError}`);
-      setStatusColor("red");
+      setStatusMessage(emailError);
+      setStatusType("error");
       return;
     }
     if (phoneError) {
-      setStatusMessage(`❌ ${phoneError}`);
-      setStatusColor("red");
+      setStatusMessage(phoneError);
+      setStatusType("error");
       return;
     }
     if (messageError) {
-      setStatusMessage(`❌ ${messageError}`);
-      setStatusColor("red");
+      setStatusMessage(messageError);
+      setStatusType("error");
       return;
     }
 
-    // All validations passed, send the form
-    setStatusMessage("Sending message...");
-    setStatusColor("yellow");
+    setIsSubmitting(true);
+    setStatusMessage("Sending your message...");
+    setStatusType("sending");
 
-    // Create temporary inputs for phone and inquiry type
     const form = e.target;
     const phoneInput = document.createElement('input');
     phoneInput.type = 'hidden';
@@ -148,21 +132,21 @@ function GetInTouch() {
 
     emailjs.sendForm("service_lhua6ns", "template_z53lnqk", form)
       .then(() => {
-        setStatusMessage("✅ Message sent successfully!");
-        setStatusColor("lightgreen");
+        setStatusMessage("Message sent successfully! We'll get back to you soon.");
+        setStatusType("success");
         form.reset();
         setPhoneValue('');
         form.removeChild(phoneInput);
         form.removeChild(inquiryInput);
+        setIsSubmitting(false);
 
-        // Redirect back to contact page after 2 seconds
         setTimeout(() => {
           navigate('/contact');
-        }, 2000);
+        }, 2500);
       })
       .catch((error) => {
-        setStatusMessage("❌ Failed to send message. Please try again.");
-        setStatusColor("red");
+        setStatusMessage("Failed to send message. Please try again.");
+        setStatusType("error");
         console.error("EmailJS Error:", error);
         if (form.contains(phoneInput)) {
           form.removeChild(phoneInput);
@@ -170,6 +154,7 @@ function GetInTouch() {
         if (form.contains(inquiryInput)) {
           form.removeChild(inquiryInput);
         }
+        setIsSubmitting(false);
       });
   };
 
@@ -178,7 +163,7 @@ function GetInTouch() {
   };
 
   return (
-    <section className="intro contact-page get-in-touch-page">
+    <div className="get-in-touch-modern">
       <SEO
         title="Get In Touch"
         description="Send us a message and let's start a conversation. Whether you have a project inquiry, partnership opportunity, or general question, we'd love to hear from you."
@@ -186,43 +171,164 @@ function GetInTouch() {
       />
 
       {/* Hero Section */}
-      <div className="contact-hero" data-aos="fade-up">
-        <button className="back-button" onClick={handleBackToContact}>
-          <i className="fas fa-arrow-left"></i> Back
-        </button>
-        <h2 className="contact-title">Get in Touch</h2>
-        <p className="contact-subtitle">{inquiryType}</p>
-      </div>
+      <section className="git-hero-section">
+        <div className="git-hero-background">
+          <div className="git-hero-gradient"></div>
+          <div className="git-hero-pattern"></div>
+        </div>
+        <div className="git-hero-content" data-aos="fade-up">
+          <button className="git-back-button" onClick={handleBackToContact}>
+            <i className="fas fa-arrow-left"></i>
+            <span>Back</span>
+          </button>
+          <span className="git-label">{inquiryType}</span>
+          <h1 className="git-hero-title">Get In Touch</h1>
+          <div className="git-title-accent"></div>
+          <p className="git-hero-subtitle">
+            Fill out the form below and we'll get back to you as soon as possible.
+          </p>
+        </div>
+      </section>
 
-      {/* Contact Form Section */}
-      <div className="form-section" data-aos="fade-up" data-aos-delay="100">
-        <form
-          id="contact-form"
-          className="contact-form"
-          onSubmit={handleSubmit}
-        >
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input type="email" name="email" placeholder="Email Address" required />
-          <div className="phone-input-wrapper">
-            <PhoneInput
-              international
-              defaultCountry="MY"
-              value={phoneValue}
-              onChange={setPhoneValue}
-              placeholder="Phone Number"
-              className="phone-input-custom"
-              required
-            />
+      {/* Form Section */}
+      <section className="git-form-section">
+        <div className="git-form-container">
+          <div className="git-form-wrapper" data-aos="fade-up">
+            <div className="form-header">
+              <div className="form-icon">
+                <i className="fas fa-paper-plane"></i>
+              </div>
+              <h2>Send Us a Message</h2>
+              <p>We'd love to hear from you</p>
+            </div>
+
+            <form
+              id="contact-form"
+              className="modern-contact-form"
+              onSubmit={handleSubmit}
+            >
+              <div className="form-group">
+                <label htmlFor="name">
+                  <i className="fas fa-user"></i>
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">
+                  <i className="fas fa-envelope"></i>
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label>
+                  <i className="fas fa-phone"></i>
+                  Phone Number
+                </label>
+                <div className="phone-input-modern">
+                  <PhoneInput
+                    international
+                    defaultCountry="MY"
+                    value={phoneValue}
+                    onChange={setPhoneValue}
+                    placeholder="Enter your phone number"
+                    className="phone-input-styled"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">
+                  <i className="fas fa-comment-alt"></i>
+                  Your Message
+                </label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  name="message"
+                  placeholder="Tell us about your project or inquiry..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className={`submit-button-modern ${isSubmitting ? 'submitting' : ''}`}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <span className="spinner"></span>
+                    <span>Sending...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <i className="fas fa-paper-plane"></i>
+                  </>
+                )}
+              </button>
+
+              {statusMessage && (
+                <div className={`status-message-modern ${statusType}`}>
+                  {statusType === 'success' && <i className="fas fa-check-circle"></i>}
+                  {statusType === 'error' && <i className="fas fa-exclamation-circle"></i>}
+                  {statusType === 'sending' && <i className="fas fa-spinner fa-spin"></i>}
+                  <span>{statusMessage}</span>
+                </div>
+              )}
+            </form>
           </div>
-          <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-          {statusMessage && (
-            <p id="status-message" style={{ color: statusColor }}>
-              {statusMessage}
-            </p>
-          )}
-        </form>
-      </div>
+
+          {/* Side Info */}
+          <div className="git-side-info" data-aos="fade-left" data-aos-delay="200">
+            <div className="side-info-card">
+              <h3>Quick Response</h3>
+              <p>We typically respond within 24 hours during business days.</p>
+            </div>
+            <div className="side-info-card">
+              <h3>Direct Contact</h3>
+              <div className="contact-detail">
+                <i className="fas fa-envelope"></i>
+                <span>info@prestigegriffin.com</span>
+              </div>
+              <div className="contact-detail">
+                <i className="fas fa-phone-alt"></i>
+                <span>+60 12-688 0357</span>
+              </div>
+            </div>
+            <div className="side-info-card whatsapp-card">
+              <h3>Prefer WhatsApp?</h3>
+              <p>Chat with us directly for faster response.</p>
+              <a
+                href="https://wa.me/60126880357"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-button"
+              >
+                <i className="fab fa-whatsapp"></i>
+                <span>Open WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* WhatsApp Floating Button */}
       <a
@@ -236,7 +342,7 @@ function GetInTouch() {
       >
         <i className="fab fa-whatsapp"></i>
       </a>
-    </section>
+    </div>
   );
 }
 

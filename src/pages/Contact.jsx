@@ -9,61 +9,142 @@ function Contact() {
   };
 
   return (
-    <section className="intro contact-page">
+    <div className="contact-page-modern">
       <SEO
         title="Contact Us"
         description="Get in touch with Prestige Griffin for strategic advisory solutions in finance, technology, defense, and commodities. Let's discuss how we can help your business grow."
         canonical="/contact"
       />
-      <div className="contact-page-content">
-        {/* Hero Section */}
-        <div className="contact-hero" data-aos="fade-up">
-          <h2 className="contact-title">How can we help?</h2>
-          <p className="contact-subtitle">Let's talk about your project</p>
+
+      {/* Hero Section */}
+      <section className="contact-hero-modern">
+        <div className="contact-hero-background">
+          <div className="contact-hero-gradient"></div>
+          <div className="contact-hero-pattern"></div>
+          <div className="contact-hero-glow"></div>
         </div>
+        <div className="contact-hero-content" data-aos="fade-up">
+          <span className="contact-label">Contact Us</span>
+          <h1 className="contact-hero-title">How Can We Help?</h1>
+          <div className="contact-title-accent"></div>
+          <p className="contact-hero-subtitle">
+            Let's talk about your project and explore how we can create something extraordinary together.
+          </p>
+        </div>
+      </section>
 
-        {/* Interaction Cards */}
-        <div className="contact-cards" data-aos="fade-up" data-aos-delay="100">
-          <div
-            className="contact-card"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            onClick={() => handleCardClick('Business Partnership')}
-          >
-            <div className="card-icon">
-              <i className="fas fa-briefcase"></i>
-            </div>
-            <h3>Business Partnership</h3>
-            <p>Let's make something special together</p>
+      {/* Inquiry Cards Section */}
+      <section className="contact-cards-section">
+        <div className="contact-cards-container">
+          <div className="contact-cards-header" data-aos="fade-up">
+            <span className="cards-label">Get Started</span>
+            <h2 className="cards-title">Choose Your Inquiry Type</h2>
+            <div className="cards-title-accent"></div>
           </div>
 
-          <div
-            className="contact-card"
-            data-aos="fade-up"
-            data-aos-delay="300"
-            onClick={() => handleCardClick('Project Inquiry')}
-          >
-            <div className="card-icon">
-              <i className="fas fa-lightbulb"></i>
+          <div className="contact-cards-grid">
+            <div
+              className="contact-card-modern"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              onClick={() => handleCardClick('Business Partnership')}
+            >
+              <div className="card-accent-line"></div>
+              <div className="card-number">01</div>
+              <div className="card-icon-wrapper">
+                <i className="fas fa-handshake"></i>
+              </div>
+              <div className="card-content">
+                <h3>Business Partnership</h3>
+                <p>Let's collaborate and create something extraordinary together. We're always open to strategic partnerships.</p>
+                <div className="card-cta">
+                  <span>Start Discussion</span>
+                  <i className="fas fa-arrow-right"></i>
+                </div>
+              </div>
             </div>
-            <h3>Project Inquiry</h3>
-            <p>Have a project in mind? We'd love to hear about it</p>
-          </div>
 
-          <div
-            className="contact-card"
-            data-aos="fade-up"
-            data-aos-delay="400"
-            onClick={() => handleCardClick('General Questions')}
-          >
-            <div className="card-icon">
-              <i className="fas fa-coffee"></i>
+            <div
+              className="contact-card-modern"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              onClick={() => handleCardClick('Project Inquiry')}
+            >
+              <div className="card-accent-line"></div>
+              <div className="card-number">02</div>
+              <div className="card-icon-wrapper">
+                <i className="fas fa-lightbulb"></i>
+              </div>
+              <div className="card-content">
+                <h3>Project Inquiry</h3>
+                <p>Have a project in mind? We'd love to hear about it and explore how we can bring your vision to life.</p>
+                <div className="card-cta">
+                  <span>Share Your Project</span>
+                  <i className="fas fa-arrow-right"></i>
+                </div>
+              </div>
             </div>
-            <h3>General Questions</h3>
-            <p>Any burning questions? Let's chat</p>
+
+            <div
+              className="contact-card-modern"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              onClick={() => handleCardClick('General Questions')}
+            >
+              <div className="card-accent-line"></div>
+              <div className="card-number">03</div>
+              <div className="card-icon-wrapper">
+                <i className="fas fa-comments"></i>
+              </div>
+              <div className="card-content">
+                <h3>General Questions</h3>
+                <p>Any questions about our services or how we work? Let's chat and find the answers together.</p>
+                <div className="card-cta">
+                  <span>Ask Us Anything</span>
+                  <i className="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Contact Info Section */}
+      <section className="contact-info-section">
+        <div className="contact-info-container">
+          <div className="contact-info-header" data-aos="fade-up">
+            <span className="info-label">Reach Out</span>
+            <h2 className="info-title">Other Ways to Connect</h2>
+            <div className="info-title-accent"></div>
+          </div>
+
+          <div className="contact-info-grid">
+            <div className="info-card" data-aos="fade-up" data-aos-delay="100">
+              <div className="info-icon">
+                <i className="fas fa-envelope"></i>
+              </div>
+              <h4>Email Us</h4>
+              <p>info@prestigegriffin.com</p>
+            </div>
+
+            <div className="info-card" data-aos="fade-up" data-aos-delay="200">
+              <div className="info-icon">
+                <i className="fas fa-phone-alt"></i>
+              </div>
+              <h4>Call Us</h4>
+              <p>+60 12-688 0357</p>
+            </div>
+
+            <div className="info-card" data-aos="fade-up" data-aos-delay="300">
+              <div className="info-icon">
+                <i className="fab fa-whatsapp"></i>
+              </div>
+              <h4>WhatsApp</h4>
+              <p>Chat with us directly</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* WhatsApp Floating Button */}
       <a
@@ -77,7 +158,7 @@ function Contact() {
       >
         <i className="fab fa-whatsapp"></i>
       </a>
-    </section>
+    </div>
   );
 }
 
