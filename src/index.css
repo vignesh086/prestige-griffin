@@ -6389,6 +6389,45 @@ nav a.active::after {
     padding-bottom: max(var(--space-8), env(safe-area-inset-bottom, 0));
   }
 
+  /* Footer - single column on narrow screen */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    text-align: center;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-brand .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-brand .footer-tagline {
+    margin: 0 auto;
+  }
+
+  .footer-links {
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Ensure footer nav links are visible */
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: center;
+  }
+
+  .footer-nav a {
+    display: block;
+    opacity: 0.75;
+    font-size: 0.875rem;
+    padding: var(--space-1) 0;
+  }
+
   /* Prevent text from being too cramped */
   p {
     word-break: break-word;
@@ -6532,13 +6571,71 @@ nav a.active::after {
   }
 
   /* Footer optimization */
-  .footer-content {
-    padding: var(--space-10) var(--space-6);
+  .footer {
+    padding: var(--space-10) var(--space-6) var(--space-6);
   }
 
-  .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .footer-container {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: var(--space-6);
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-nav {
+    display: flex !important;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .footer-nav a {
+    display: block;
+    opacity: 0.75;
+    font-size: 0.875rem;
+  }
+}
+
+/* Z Fold 7 Extended Range (920-1024px) - covers tablet-like mode */
+@media (min-width: 920px) and (max-width: 1024px) {
+  /* Keep 4-column footer layout */
+  .footer-container {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  /* Ensure footer links are visible */
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .footer-nav a {
+    display: block;
+    opacity: 0.75;
+  }
+
+  /* Grid layouts */
+  .benefits-grid-modern,
+  .key-services-grid,
+  .wwa-sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    gap: var(--space-5);
+  }
+
+  nav a {
+    font-size: 0.9rem;
   }
 }
 
