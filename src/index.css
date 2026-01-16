@@ -87,6 +87,10 @@ body {
   padding-top: 100px;
   word-spacing: 0.05em;
   letter-spacing: 0.01em;
+  /* Safe area insets for foldable devices and notched screens */
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0);
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 /* Typography */
@@ -281,6 +285,9 @@ header {
   z-index: 1000;
   background: transparent;
   padding: var(--space-6) var(--space-12);
+  padding-left: max(var(--space-12), env(safe-area-inset-left, 0));
+  padding-right: max(var(--space-12), env(safe-area-inset-right, 0));
+  padding-top: max(var(--space-6), env(safe-area-inset-top, 0));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6068,26 +6075,44 @@ nav a.active::after {
 }
 
 /* ==========================================
-   Z FOLD 7 OPTIMIZATION
-   Cover Screen: ~320-375px
-   Unfolded Screen: ~882px
+   Z FOLD 7 CHROME BROWSER OPTIMIZATION
+   Cover Screen: ~320-375px (374px typical)
+   Unfolded Screen: ~882px (820-920px range)
+   Chrome DevTools: Galaxy Z Fold 5 preset works
    ========================================== */
 
 /* Z Fold 7 Cover Screen (Narrow) */
 @media (max-width: 380px) {
-  /* Global adjustments */
+  /* Global adjustments with safe area */
   .container {
-    padding-left: var(--space-3);
-    padding-right: var(--space-3);
+    padding-left: max(var(--space-3), env(safe-area-inset-left, 0));
+    padding-right: max(var(--space-3), env(safe-area-inset-right, 0));
+  }
+
+  /* Header adjustments for narrow screen */
+  header {
+    padding: var(--space-4) var(--space-3);
+    padding-left: max(var(--space-3), env(safe-area-inset-left, 0));
+    padding-right: max(var(--space-3), env(safe-area-inset-right, 0));
+  }
+
+  header.scrolled {
+    padding: var(--space-3) var(--space-3);
+  }
+
+  .logo img {
+    height: 40px;
   }
 
   /* Hero sections */
   .page-hero-title {
     font-size: 1.5rem;
+    line-height: 1.3;
   }
 
   .page-hero-subtitle {
     font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   /* Our Approach - Timeline V2 */
@@ -6333,35 +6358,121 @@ nav a.active::after {
   .side-info-card h3 {
     font-size: 1rem;
   }
+
+  /* Ensure minimum touch targets (48px) for accessibility */
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .submit-button-modern,
+  .careers-cta-button,
+  .apply-btn-modern,
+  nav a,
+  .hamburger {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  /* WhatsApp button optimization */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: max(20px, env(safe-area-inset-bottom, 0));
+    right: max(15px, env(safe-area-inset-right, 0));
+  }
+
+  .whatsapp-float i {
+    font-size: 1.5rem;
+  }
+
+  /* Footer safe area */
+  footer {
+    padding-bottom: max(var(--space-8), env(safe-area-inset-bottom, 0));
+  }
+
+  /* Prevent text from being too cramped */
+  p {
+    word-break: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
 }
 
-/* Z Fold 7 Unfolded Screen */
+/* Z Fold 7 Unfolded Screen (Main Display ~882px) */
 @media (min-width: 820px) and (max-width: 920px) {
   /* Optimize grid layouts for ~882px width */
   .benefits-grid-modern {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
   }
 
   .positions-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-4);
   }
 
   .key-services-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
   }
 
   .wwa-sectors-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
   }
 
   .gr-features-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+
+  /* Stats grid optimization */
+  .stats-modern,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  /* Header optimization for unfolded view */
+  header {
+    padding: var(--space-5) var(--space-8);
+  }
+
+  header.scrolled {
+    padding: var(--space-4) var(--space-8);
+  }
+
+  /* Navigation - keep horizontal but optimize spacing */
+  nav {
+    gap: var(--space-4);
+  }
+
+  nav a {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.9rem;
   }
 
   /* Adjust hero content */
   .hero-content {
     max-width: 100%;
     padding: 0 var(--space-6);
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+  /* Page hero sections */
+  .page-hero-section {
+    padding: var(--space-16) var(--space-6);
+  }
+
+  .page-hero-title {
+    font-size: 2.5rem;
   }
 
   /* Timeline V2 adjustments */
@@ -6371,6 +6482,20 @@ nav a.active::after {
 
   .number-text {
     font-size: 3rem;
+  }
+
+  /* Section padding optimization */
+  section {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+
+  /* Card optimizations for the wider but not desktop view */
+  .stat-card,
+  .benefit-card-modern,
+  .key-service-card,
+  .position-card-modern {
+    padding: var(--space-5);
   }
 
   /* Contact page */
@@ -6398,6 +6523,22 @@ nav a.active::after {
   .git-side-info {
     flex: 1;
     flex-direction: column;
+  }
+
+  /* Mission/Vision cards */
+  .mv-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+
+  /* Footer optimization */
+  .footer-content {
+    padding: var(--space-10) var(--space-6);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
   }
 }
 
@@ -6492,5 +6633,126 @@ nav a.active::after {
   header,
   .whatsapp-float {
     display: none;
+  }
+}
+
+/* ==========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   Disable hover effects on touch devices
+   for better mobile/foldable experience
+   ========================================== */
+
+/* Detect touch devices and disable hover animations */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable transform hover effects on touch */
+  .stat-card:hover,
+  .benefit-card-modern:hover,
+  .key-service-card:hover,
+  .position-card-modern:hover,
+  .mv-card:hover,
+  .wwa-sector-card:hover,
+  .gr-feature-card:hover,
+  .contact-card-modern:hover,
+  .side-info-card:hover {
+    transform: none;
+  }
+
+  /* Keep border/glow effects but remove transform */
+  .stat-card:hover,
+  .benefit-card-modern:hover,
+  .key-service-card:hover {
+    border-color: var(--gold);
+  }
+
+  /* Improve tap feedback */
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  button,
+  a {
+    -webkit-tap-highlight-color: rgba(212, 175, 55, 0.2);
+  }
+
+  /* Prevent accidental double-tap zoom */
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
+}
+
+/* ==========================================
+   FOLDABLE DEVICE SPANNING/POSTURE SUPPORT
+   For devices that support screen spanning
+   ========================================== */
+
+/* Horizontal fold (tablet mode) */
+@media (horizontal-viewport-segments: 2) {
+  /* When device is folded with hinge horizontal */
+  .hero-section-modern,
+  .page-hero-section {
+    /* Avoid content across the fold */
+    padding-top: calc(var(--space-16) + env(viewport-segment-top 0 0, 0px));
+  }
+}
+
+/* Vertical fold (book mode) - Z Fold unfolded */
+@media (vertical-viewport-segments: 2) {
+  /* Two-column layout respecting the fold */
+  .git-form-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .git-form-wrapper {
+    flex: 1;
+    max-width: env(viewport-segment-width 0 0, 50%);
+  }
+
+  .git-side-info {
+    flex: 1;
+    max-width: env(viewport-segment-width 1 0, 50%);
+    margin-left: env(viewport-segment-left 1 0, 0px);
+  }
+}
+
+/* ==========================================
+   CHROME MOBILE BROWSER SPECIFIC FIXES
+   ========================================== */
+
+/* Fix for Chrome mobile address bar behavior */
+@supports (-webkit-touch-callout: none) {
+  .hero-section-modern,
+  .page-hero-section,
+  .contact-hero-modern,
+  .git-hero-section {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Fix for 100vh issue on mobile Chrome */
+@media (max-width: 920px) {
+  .hero-section-modern {
+    min-height: 100svh; /* Small viewport height */
+  }
+}
+
+/* Smooth scrolling for Chrome on foldables */
+@media (max-width: 920px) {
+  html {
+    scroll-padding-top: 80px; /* Account for fixed header */
+  }
+
+  /* Prevent horizontal overflow on narrow screens */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
