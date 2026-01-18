@@ -14,6 +14,10 @@ function Contact() {
         title="Contact Us"
         description="Get in touch with Prestige Griffin for strategic advisory solutions in finance, technology, defense and arms, and commodities. Let's discuss how we can help your business grow."
         canonical="/contact"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" }
+        ]}
       />
 
       {/* Hero Section */}

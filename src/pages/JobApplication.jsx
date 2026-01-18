@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import SEO from '../components/SEO';
+import { trackFormSubmission } from '../utils/analytics';
 
 function JobApplication() {
   const [statusMessage, setStatusMessage] = useState('');
@@ -161,6 +162,7 @@ function JobApplication() {
       .then(() => {
         setStatusMessage("Application submitted successfully! We'll be in touch soon.");
         setStatusColor("#4ade80");
+        trackFormSubmission('job_application');
         e.target.reset();
         setPhoneValue('');
         setResumeFile(null);

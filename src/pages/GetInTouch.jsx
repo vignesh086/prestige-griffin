@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import SEO from '../components/SEO';
+import { trackFormSubmission } from '../utils/analytics';
 
 function GetInTouch() {
   const [statusMessage, setStatusMessage] = useState('');
@@ -134,6 +135,7 @@ function GetInTouch() {
       .then(() => {
         setStatusMessage("Message sent successfully! We'll get back to you soon.");
         setStatusType("success");
+        trackFormSubmission('contact_form');
         form.reset();
         setPhoneValue('');
         form.removeChild(phoneInput);
@@ -168,6 +170,11 @@ function GetInTouch() {
         title="Get In Touch"
         description="Send us a message and let's start a conversation. Whether you have a project inquiry, partnership opportunity, or general question, we'd love to hear from you."
         canonical="/get-in-touch"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+          { name: "Get In Touch", path: "/get-in-touch" }
+        ]}
       />
 
       {/* Hero Section */}

@@ -4,6 +4,70 @@ import SEO from '../components/SEO';
 function Careers() {
   const navigate = useNavigate();
 
+  // Job postings data for SEO schema
+  const jobPostings = [
+    {
+      title: "Senior Financial Analyst",
+      description: "Lead financial analysis and strategic planning initiatives for high-profile clients. Requires expertise in global markets, investment strategies, and risk management.",
+      department: "Finance & Banking",
+      location: "Global / Remote",
+      locationType: "TELECOMMUTE",
+      skills: ["Financial Modeling", "Investment Strategy", "Risk Analysis"],
+      datePosted: "2025-01-01",
+      validThrough: "2025-12-31"
+    },
+    {
+      title: "AI Solutions Architect",
+      description: "Design and implement cutting-edge AI solutions for clients across diverse industries. Drive digital transformation through innovative technology integration.",
+      department: "AI & Technology",
+      location: "Hybrid",
+      locationType: "TELECOMMUTE",
+      skills: ["Machine Learning", "Cloud Architecture", "Digital Transformation"],
+      datePosted: "2025-01-01",
+      validThrough: "2025-12-31"
+    },
+    {
+      title: "Defense Strategy Consultant",
+      description: "Provide strategic advisory services to defense sector clients. Ensure compliance with international regulations while delivering sustainable security solutions.",
+      department: "Defense and Arms",
+      location: "On-site",
+      locationType: "IN_PERSON",
+      skills: ["Strategic Planning", "Compliance", "Government Relations"],
+      datePosted: "2025-01-01",
+      validThrough: "2025-12-31"
+    },
+    {
+      title: "Commodities Trading Specialist",
+      description: "Execute and manage commodity trading strategies in oil, gas, and raw materials markets. Build and maintain strategic partnerships across global networks.",
+      department: "Commodities",
+      location: "Global / Remote",
+      locationType: "TELECOMMUTE",
+      skills: ["Commodities Trading", "Market Analysis", "Risk Management"],
+      datePosted: "2025-01-01",
+      validThrough: "2025-12-31"
+    },
+    {
+      title: "Business Development Manager",
+      description: "Identify and pursue new business opportunities, build client relationships, and drive revenue growth across all service lines.",
+      department: "Business Development",
+      location: "Hybrid",
+      locationType: "TELECOMMUTE",
+      skills: ["Client Relations", "Strategic Partnerships", "Revenue Growth"],
+      datePosted: "2025-01-01",
+      validThrough: "2025-12-31"
+    },
+    {
+      title: "Operations Coordinator",
+      description: "Support day-to-day operations, coordinate cross-functional projects, and ensure seamless execution of client engagements.",
+      department: "Operations",
+      location: "Remote",
+      locationType: "TELECOMMUTE",
+      skills: ["Project Management", "Process Optimization", "Team Coordination"],
+      datePosted: "2025-01-01",
+      validThrough: "2025-12-31"
+    }
+  ];
+
   const handleApply = (jobDetails) => {
     navigate(`/careers/apply/${encodeURIComponent(jobDetails.title)}`, {
       state: { job: jobDetails }
@@ -16,6 +80,11 @@ function Careers() {
         title="Career Opportunities"
         description="Join Prestige Griffin and build your future with a dynamic team committed to excellence and innovation. Explore exciting career opportunities in finance, technology, defense and arms, and commodities advisory."
         canonical="/careers"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Careers", path: "/careers" }
+        ]}
+        jobPostings={jobPostings}
       />
 
       {/* Hero Section */}

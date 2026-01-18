@@ -8,6 +8,10 @@ function Services() {
         title="Our Services"
         description="Comprehensive strategic advisory services in Finance & Banking, AI & Technology, Defense and Arms, and Commodities. Tailored solutions to drive sustainable growth and competitive advantage."
         canonical="/services"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" }
+        ]}
       />
 
       {/* Hero Section */}
