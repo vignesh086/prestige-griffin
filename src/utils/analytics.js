@@ -1,5 +1,4 @@
 // Google Analytics 4 utility functions
-// Replace G-XXXXXXXXXX with your actual GA4 Measurement ID in index.html
 
 /**
  * Track page views - call this on route changes
@@ -8,7 +7,7 @@
  */
 export const trackPageView = (path, title) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', 'G-XXXXXXXXXX', {
+    window.gtag('config', 'G-CE8QZC001F', {
       page_path: path,
       page_title: title,
     });
