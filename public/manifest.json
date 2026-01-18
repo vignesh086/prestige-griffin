@@ -1,0 +1,17 @@
+{
+  "name": "Prestige Griffin",
+  "short_name": "Prestige Griffin",
+  "description": "Premier advisory firm providing strategic solutions in finance, banking, technology, defense and arms, and commodities trading",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "/PG.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
