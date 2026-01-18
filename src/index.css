@@ -3781,7 +3781,7 @@ nav a.active::after {
     display: block;
   }
 
-  nav {
+  header nav {
     position: fixed;
     top: 80px;
     left: 0;
@@ -3799,13 +3799,13 @@ nav a.active::after {
     box-shadow: var(--shadow-xl);
   }
 
-  nav.active {
+  header nav.active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
 
-  nav a {
+  header nav a {
     font-size: 1.125rem;
     padding: var(--space-3) 0;
   }
