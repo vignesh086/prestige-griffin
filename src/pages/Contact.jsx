@@ -109,35 +109,6 @@ function Contact() {
         </div>
       </section>
 
-      {/* Contact Info Section */}
-      <section className="contact-info-section">
-        <div className="contact-info-container">
-          <div className="contact-info-header" data-aos="fade-up">
-            <span className="info-label">Reach Out</span>
-            <h2 className="info-title">Other Ways to Connect</h2>
-            <div className="info-title-accent"></div>
-          </div>
-
-          <div className="contact-info-grid">
-            <div className="info-card" data-aos="fade-up" data-aos-delay="100">
-              <div className="info-icon">
-                <i className="fas fa-envelope"></i>
-              </div>
-              <h4>Email Us</h4>
-              <p>info@prestigegriffin.com</p>
-            </div>
-
-            <div className="info-card" data-aos="fade-up" data-aos-delay="200">
-              <div className="info-icon">
-                <i className="fab fa-whatsapp"></i>
-              </div>
-              <h4>WhatsApp</h4>
-              <p>Chat with us directly</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* WhatsApp Floating Button */}
       <a
         href="https://wa.me/60126880357"
