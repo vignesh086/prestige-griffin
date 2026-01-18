@@ -7,6 +7,10 @@ function About() {
         title="About Us"
         description="Learn about Prestige Griffin's mission, vision, and values. We are a premier advisory firm providing strategic solutions in finance, technology, defense and arms, and commodities with a global reach."
         canonical="/about"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "About Us", path: "/about" }
+        ]}
       />
 
       {/* Hero Section */}
