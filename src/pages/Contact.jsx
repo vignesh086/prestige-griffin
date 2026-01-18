@@ -129,14 +129,6 @@ function Contact() {
 
             <div className="info-card" data-aos="fade-up" data-aos-delay="200">
               <div className="info-icon">
-                <i className="fas fa-phone-alt"></i>
-              </div>
-              <h4>Call Us</h4>
-              <p>+60 12-688 0357</p>
-            </div>
-
-            <div className="info-card" data-aos="fade-up" data-aos-delay="300">
-              <div className="info-icon">
                 <i className="fab fa-whatsapp"></i>
               </div>
               <h4>WhatsApp</h4>
