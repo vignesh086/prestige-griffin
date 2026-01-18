@@ -308,10 +308,6 @@ function GetInTouch() {
                 <i className="fas fa-envelope"></i>
                 <span>info@prestigegriffin.com</span>
               </div>
-              <div className="contact-detail">
-                <i className="fas fa-phone-alt"></i>
-                <span>+60 12-688 0357</span>
-              </div>
             </div>
             <div className="side-info-card whatsapp-card">
               <h3>Prefer WhatsApp?</h3>

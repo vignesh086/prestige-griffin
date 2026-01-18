@@ -257,7 +257,6 @@ function TermsAndConditions() {
             <div className="legal-contact-info">
               <p><strong>Prestige Griffin</strong></p>
               <p>Email: legal@prestigegriffin.com</p>
-              <p>Phone: +60 12-688 0357</p>
             </div>
           </div>
 

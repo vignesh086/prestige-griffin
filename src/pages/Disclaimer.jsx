@@ -253,7 +253,6 @@ function Disclaimer() {
             <div className="legal-contact-info">
               <p><strong>Prestige Griffin</strong></p>
               <p>Email: info@prestigegriffin.com</p>
-              <p>Phone: +60 12-688 0357</p>
             </div>
           </div>
 
