@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import HeroBackground from '../components/HeroBackground';
 
 function About() {
   return (
@@ -15,6 +16,7 @@ function About() {
 
       {/* Hero Section */}
       <section className="page-hero-section">
+        <HeroBackground />
         <div className="page-hero-content" data-aos="fade-up">
           <h1 className="page-hero-title">About Prestige Griffin</h1>
           <p className="page-hero-subtitle">

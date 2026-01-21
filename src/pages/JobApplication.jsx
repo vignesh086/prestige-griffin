@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import SEO from '../components/SEO';
+import HeroBackground from '../components/HeroBackground';
 import { trackFormSubmission } from '../utils/analytics';
 
 function JobApplication() {
@@ -204,6 +205,7 @@ function JobApplication() {
 
       {/* Hero Section */}
       <section className="application-hero-section">
+        <HeroBackground />
         <div className="application-hero-content" data-aos="fade-up">
           <button className="back-button" onClick={handleBackToCareers}>
             <i className="fas fa-arrow-left"></i> Back to Careers

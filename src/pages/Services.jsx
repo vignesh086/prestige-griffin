@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import HeroBackground from '../components/HeroBackground';
 
 function Services() {
   return (
@@ -16,6 +17,7 @@ function Services() {
 
       {/* Hero Section */}
       <section className="page-hero-section">
+        <HeroBackground />
         <div className="page-hero-content" data-aos="fade-up">
           <h1 className="page-hero-title">Our Services</h1>
           <p className="page-hero-subtitle">

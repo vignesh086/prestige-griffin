@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import HeroBackground from '../components/HeroBackground';
 
 function Disclaimer() {
   useEffect(() => {
@@ -16,6 +17,7 @@ function Disclaimer() {
         noindex={true}
       />
       <section className="legal-hero-section">
+        <HeroBackground />
         <div className="legal-hero-content" data-aos="fade-up">
           <h1 className="legal-hero-title">Disclaimer</h1>
           <p className="legal-hero-subtitle">Last Updated: January 2025</p>

@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
+import HeroBackground from '../components/HeroBackground';
 
 function Careers() {
   const navigate = useNavigate();
@@ -89,6 +90,7 @@ function Careers() {
 
       {/* Hero Section */}
       <section className="page-hero-section">
+        <HeroBackground />
         <div className="page-hero-content" data-aos="fade-up">
           <h1 className="page-hero-title">Build Your Future with Us</h1>
           <p className="page-hero-subtitle">
