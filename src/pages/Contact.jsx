@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
+import HeroBackground from '../components/HeroBackground';
 
 function Contact() {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ function Contact() {
 
       {/* Hero Section */}
       <section className="contact-hero-modern">
+        <HeroBackground />
         <div className="contact-hero-background">
           <div className="contact-hero-gradient"></div>
           <div className="contact-hero-pattern"></div>

@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import SEO from '../components/SEO';
+import HeroBackground from '../components/HeroBackground';
 import { trackFormSubmission } from '../utils/analytics';
 
 function GetInTouch() {
@@ -179,6 +180,7 @@ function GetInTouch() {
 
       {/* Hero Section */}
       <section className="git-hero-section">
+        <HeroBackground />
         <div className="git-hero-background">
           <div className="git-hero-gradient"></div>
           <div className="git-hero-pattern"></div>
