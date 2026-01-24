@@ -6575,23 +6575,11 @@ nav a.active::after {
     padding-bottom: max(var(--space-8), env(safe-area-inset-bottom, 0));
   }
 
-  /* Footer - single column on narrow screen */
+  /* Footer - single column on narrow screen (matches mobile view) */
   .footer-container {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: var(--space-8);
     text-align: center;
-  }
-
-  .footer-brand {
-    grid-column: auto;
-  }
-
-  .footer-brand .footer-logo {
-    justify-content: center;
-  }
-
-  .footer-brand .footer-tagline {
-    margin: 0 auto;
   }
 
   .footer-links {
@@ -6599,19 +6587,8 @@ nav a.active::after {
     align-items: center;
   }
 
-  /* Ensure footer nav links are visible */
   .footer-nav {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
     align-items: center;
-  }
-
-  .footer-nav a {
-    display: block;
-    opacity: 0.75;
-    font-size: 0.875rem;
-    padding: var(--space-1) 0;
   }
 
   /* Prevent text from being too cramped */
